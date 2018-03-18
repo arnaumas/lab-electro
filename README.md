@@ -53,3 +53,7 @@ Amb això li dieu a git que guardi els canvis que li heu dit. Siusplau, poseu mi
 i amb això envieu els vostres canvis per les autovies d'internet. Els altres tres, si ho han entès, quan es posin a treballar, abans de res actualitzaran el seu repositori (véase la secció anterior), de manera que així s'asseguren que tenen la versió més actualitzada del repositori, amb els canvis que vosaltres acabeu de publicar.
 
 Quan feu `git push` per primera vegada us demanarà l'usuari i la contrasenya de GitHub. Si la poseu bé no us hauria de donar problemes. 
+
+# Aplicació
+Si tot això se us fa bola, hi ha una (aplicació de GitHub)[https://desktop.github.com] amb la que podeu fer tot això sense el terminal. El procés és el mateix (`pull` -> `add` -> `commit` -> `push`), però us estalvieu el terminal. No sé com funciona massa bé, però m'imagino que hi haurà tutorials per internet i tal. 
+
