@@ -21,6 +21,7 @@ Amb això us descarregareu tot el que estigui a GitHub en aquell moment, i a mé
 La idea de git és que tu edites els arxius com et dóna la gana, amb els programes que vols. I després, amb git fas "commits", és a dir, guardes els canvis conforme els vas fent (si no m'he explicat, m'ho pregunteu en persona). Quan estigueu fent canvis, sempre és útil tenir una finestra de terminal oberta al repositori. I abans de fer res, és recomanable fer
 
 `$ git fetch`
+
 `$ git status`
 
 que us dirà si hi ha canvis nous online que encara no teniu a l'ordinador. Si tot està bé, l'ordinador no us cridarà i podreu fer 
