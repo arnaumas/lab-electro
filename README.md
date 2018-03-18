@@ -55,5 +55,5 @@ i amb això envieu els vostres canvis per les autovies d'internet. Els altres tr
 Quan feu `git push` per primera vegada us demanarà l'usuari i la contrasenya de GitHub. Si la poseu bé no us hauria de donar problemes. 
 
 # Aplicació
-Si tot això se us fa bola, hi ha una (aplicació de GitHub)[https://desktop.github.com] amb la que podeu fer tot això sense el terminal. El procés és el mateix (`pull` -> `add` -> `commit` -> `push`), però us estalvieu el terminal. No sé com funciona massa bé, però m'imagino que hi haurà tutorials per internet i tal. 
+Si tot això se us fa bola, hi ha una [aplicació de GitHub)(https://desktop.github.com) amb la que podeu fer tot això sense el terminal. El procés és el mateix (`pull` -> `add` -> `commit` -> `push`), però us estalvieu el terminal. No sé com funciona massa bé, però m'imagino que hi haurà tutorials per internet i tal. 
 
