@@ -43,11 +43,11 @@ Amb això li esteu dient a git que us interessa guardar els canvis d'aquests fit
 
 `$ git .`
 
-li dieu que us interessen tots. I aleshores, si esteu segurs (no està de més tornar a fer `git status`, i haurieu de veure els arxius que li heu dit com a "Changes to be ocmmited" o alguna cosa així), heu de fer commit:
+li dieu que us interessen tots i us estalvieu afegir-los tots un a un. I aleshores, si esteu segurs (no està de més tornar a fer `git status`, i haurieu de veure els arxius que li heu dit com a "Changes to be commited" o alguna cosa així), heu de fer commit:
 
 `$ git commit -m "Missatge"`
 
-Amb això li dieu a git que guardi els canvis que li heu dit. Siusplau, poseu missatges més o menys intel·ligibles on digueu què heu fet, que va bé quan hi ha 150 commits. Oju, que aquests canvis de moment només estan al vostre repositori local. Per enviar-los a interné, heu de fer un push:
+Amb això li dieu a git que guardi els canvis que li heu dit (quan dic guardar vull dir guardar dins de git. Òbviament els canvis els teniu a l'rdinador. Per cada commit, git guarda una versió del repositori de manera que sempre pots tornar enrer). Siusplau, poseu missatges més o menys intel·ligibles on digueu què heu fet, que va bé quan hi ha 150 commits. Oju, que aquests canvis de moment només estan al vostre repositori local. Per enviar-los a interné, heu de fer un push:
 
 `$ git push`
 
