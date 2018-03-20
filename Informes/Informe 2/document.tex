@@ -18,7 +18,11 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Acla
+Aquest informe presenta els resultats de l'estudi de la força exercida entre dos corrents paral·lels pels quals hi circula la mateixa intensitat. Concretament, s'ha provat experimentalment la dependència lineal entre la força i el quadrat de la intensitat i entre la força i l'invers de la distància entre els fils.
+
+A més, s'ha trobat experimentalment el valor de la constant $\mu_0$ assumint la llei de Biot-Savart, i obtenint $\mu_0=(1.25\pm0.04)\cdot10^{-6}\ \si{N/A^2}$ i $\mu_0=(3.0\pm0.4)\cdot10^{-6}\ \si{N/A^2}$. El primer valor és consistent amb el tabulat, mentre que el segon només n'és de l'ordre. 
+
+Finalment, s'ha mesurat la component radial del camp magnètic terrestre, obtenint un valor de $B=(1.59\pm0.18)\cdot10^{-5}\ \si{T}$, de l'ordre del que descriuen altres articles.
 \end{abstract}
 
 \section{Introducció i Objectius}
@@ -114,7 +118,7 @@ S'ha fixat una intensitat constant de $I=(5.37\pm0.02)\ \si{A}$ i s'ha mesurat l
 \end{table}
 Amb les dades de la Taula 2 s'ha realitzat una regressió lineal entre la força entre corrents, calculada a partir de l'expressió 3, i l'invers de la distància. La regressió, amb un coeficient $r^2=0.932$, es pot veure a la Figura 2.
 
-El pendent obtingut a partir de la regressió és $n=(4.1\pm0.6)\cdot10^{-6}$. A partir d'aquest valor i l'expressió 2 s'ha determinat experimentalment el valor de la constant $\mu_0=(!!!)$.
+El pendent obtingut a partir de la regressió és $n=(4.1\pm0.6)\cdot10^{-6}$. A partir d'aquest valor i l'expressió 2 s'ha determinat experimentalment el valor de la constant $\mu_0=(3.0\pm0.4)\cdot10^{-6}\ \si{N/A^2}$. El resultat no és consistent amb el valor tabulat, possiblement per interferències amb altres elements, però sí de l'orde del valor acceptat.
 
 \subsection{Camp Magnètic Terrestre}
 La Taula 3 mostra tres mesures d'intensitat i les respectives rotacions del dial per tal de compensar la força que el cable pateix degut a la component radial del camp magnètic terrestre. La força s'obté a partir de l'expressió 3, i el camp a partir de l'expressió 2.
@@ -132,7 +136,50 @@ La Taula 3 mostra tres mesures d'intensitat i les respectives rotacions del dial
 
 	\end{tabular}
 \end{table}
-D'aquesta manera, obtenim, a partir de la mitjana aritmètica dels valors de la Taula 3, un valor de la component radial del camp magnètic terrestre de $B=(1.59\pm0.18)\cdot10^{-5}$. El resultat no és consistent amb el valor tabulat del camp magnètic a Madrid l'any 1975, possiblement per interferències amb altres elements.
+D'aquesta manera, obtenim, a partir de la mitjana aritmètica dels valors de la Taula 3, un valor de la component radial del camp magnètic terrestre de $B=(1.59\pm0.18)\cdot10^{-5}\ \si{T}$. El resultat no és consistent amb el valor tabulat del camp magnètic a Madrid l'any 1975, possiblement per interferències amb altres elements, però sí que n'és de l'ordre.
 
 \section{Conclusions}
+Concloem, primer de tot, que existeix una relació lineal entre la força exercida entre dos corrents com els descrits i el quadrat de la intensitat que hi circula, així com amb l'invers de la distància a què es troben, tal com prediu la llei de Biot-Savart.
+
+A més, s'ha pogut determinar experimentalment l'ordre de la constant $\mu_0$ a partir de dues regressions lineals i l'assumpció que la llei de Biot-Savart és vàlida. Les possibles discrepàncies amb el valor real es creuen degudes a possibles interferències amb elements del laboratori o a errors sistemàtics.
+
+Finalment, s'ha determinat també l'ordre del valor de la component radial del camp magnètic terrestre, que coincideix amb el valor tabulat. La component tangencial no s'ha pogut mesurar degut a la disposició de la balança.
+
+
+\section*{Annex}
+
+\begin{table}
+	\centering
+	\caption{HAURIA D'ESTAR DENOTADA PER TAULA A2.1!!! Mesures de la intensitat necessària per contrarrestar la força gravitatòria de cada massa}
+	\vspace{0,2cm}
+	\begin{tabular}{|c|||c||c||c||c||c|}
+		\hline
+		\textbf{Massa} $\si{(mg)}$ &\textbf{5}&\textbf{10}&\textbf{15}&\textbf{20}&\textbf{25} \\\hline
+		\textbf{Mesura 1} $\si{(A)}$ $(\pm0.01\ \si{A})$&2.62&3.70&4.47&5.10&6.05\\\hline
+		\textbf{Mesura 2} $\si{(A)}$ $(\pm0.01\ \si{A})$&2.55&3.40&4.46&5.29&5.99\\\hline
+		\textbf{Mesura 3} $\si{(A)}$ $(\pm0.01\ \si{A})$&2.65&3.58&4.63&5.33&5.94\\\hline
+		\textbf{Mesura 4} $\si{(A)}$ $(\pm0.01\ \si{A})$&2.62&3.64&4.42&5.07&5.40\\\hline
+		\textbf{Mesura 5} $\si{(A)}$ $(\pm0.01\ \si{A})$&2.60&3.71&4.50&5.10&5.21\\\hline
+		\textbf{Mesura 6} $\si{(A)}$ $(\pm0.01\ \si{A})$&2.57&3.68&4.48&5.11&5.63\\\hline
+	\end{tabular}
+\end{table}
+
+
+\begin{table}
+	\centering
+	\caption{HAURIA D'ESTAR DENOTADA PER TAULA A2.2!!! Dades de la regressió lineal entre la força del fil de torsió i la rotació del dial}
+	\vspace{0,2cm}
+	\begin{tabular}{|c|c|}
+		\hline
+\text{Massa} $\si{mg}$ & \textbf{Rotació del dial $(º)$ $(\pm1º)$}\\ \hline
+5 & 13 \\ \hline
+10 & 27 \\ \hline
+15 & 44 \\ \hline
+20 & 63 \\ \hline
+25 & 70 \\ \hline
+	\end{tabular}
+\end{table}
+
+
+
 \end{document}
