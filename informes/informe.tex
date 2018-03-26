@@ -1,4 +1,4 @@
-\documentclass[12pt,catalan]{report}
+\documentclass[12pt]{report}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -6,7 +6,6 @@
 \usepackage[catalan]{babel}
 \usepackage{geometry}
 \usepackage{hyperref}
-\usepackage[noabbrev]{cleveref}
 \usepackage{xcolor}
 \usepackage{multicol}
 \usepackage[bf,sf,small, pagestyles]{titlesec} % Format dels títols de secció
@@ -14,6 +13,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath, amssymb}
 \usepackage{siunitx}
+\usepackage[catalan]{cleveref}
 
 % Marges, etc
 \geometry{
@@ -34,7 +34,7 @@
 }
 
 % Figures
-\graphicspath{{./figs/}}
+\graphicspath{{./informe-2/figs/}}
 
 % Peus de pàgina
 \newpagestyle{pagina}{
@@ -56,7 +56,10 @@
 % Unitats
 \sisetup{
 	inter-unit-product = \ensuremath{ \cdot },
-	allow-number-unit-breaks = true
+	allow-number-unit-breaks = true,
+	detect-family = true,
+	list-final-separator = { i },
+	list-units = single
 }
 % Valor amb incertesa
 \newcommand{\data}[3]{\SI[separate-uncertainty = true]{#1 \pm #2}{#3}}
@@ -72,7 +75,6 @@
 \date{\sffamily 2018}
 
 \begin{document}
-\selectlanguage{catalan}
 \maketitle
 
 \newpage

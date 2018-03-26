@@ -1,5 +1,5 @@
 # Organització del document
-La idea és que hi ha un document base, `informe.tex` que conté el preàmbul (paquets, comandos, etc) per tots els informes. Cada un dels informes hauria d'anar a una carpeta `informes/informe-n` i s'hauria de dir `informe-n.tex`. La primera línia de cada informe hauria de ser `\chapter{<Nom>}`, de manera que dins de l'arxiu base només s'ha de fer `\include{./informe-n/informe-n}` (sense extensió, que sino no funciona. Les figures de cada informe haurien d'anar dins de la carpeta `informes/informe-n/figs. això és important sobretot si hi ha figures fetes amb gnuplot.  
+La idea és que hi ha un document base, `informe.tex` que conté el preàmbul (paquets, comandos, etc) per tots els informes. Cada un dels informes hauria d'anar a una carpeta `informes/informe-n` i s'hauria de dir `informe-n.tex`. La primera línia de cada informe hauria de ser `\chapter{<Nom>}`, de manera que dins de l'arxiu base només s'ha de fer `\include{./informe-n/informe-n}` (sense extensió, que sino no funciona. Les figures de cada informe haurien d'anar dins de la carpeta `informes/informe-n/figs`. això és important sobretot si hi ha figures fetes amb gnuplot.  
 
 # Consells pel LaTeX
 ## Referències
