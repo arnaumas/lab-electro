@@ -7,7 +7,9 @@
 \usepackage{geometry}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{booktabs}
 \usepackage{multicol}
+\usepackage[catalan]{todonotes}
 \usepackage[bf,sf,small, pagestyles]{titlesec} % Format dels títols de secció
 \usepackage[font={footnotesize, sf}, labelfont=bf]{caption} % Format dels peus de figura
 \usepackage{graphicx}
@@ -25,6 +27,8 @@
 	columnsep = 1cm,
 	twoside
 }
+\setlength{\parskip}{0pt}
+\raggedcolumns
 
 % Referències
 \hypersetup{
@@ -70,9 +74,12 @@
 { \setlength{\currentparindent}{\parindent} \noindent \begin{center} \begin{minipage}{0.8\linewidth} \setlength{\parindent}{\currentparindent} \footnotesize \slshape }
 { \end{minipage} \end{center}	\vspace{0.5cm} }
 
+% Títol
 \title{\sffamily \bfseries Laboratori d'Electromagnetisme}
 \author{\sffamily Sandro Barissi, Adrià Marín, Arnau Mas, Robert Prat} 
 \date{\sffamily 2018}
+
+% Arxius a incloure
 
 \begin{document}
 \maketitle
@@ -85,13 +92,13 @@
 % Informe 2
 \include{./informe-2/informe-2-prova}
 
-% Annexes
+% Annexos
 \addcontentsline{toc}{part}{Annexos}
 \appendix
 \titleformat{\chapter}[display]{\centering \bfseries \sffamily \LARGE}{\large \sf Annex \thechapter}{4pt}{}{}
 \titlespacing{\chapter}{0pt}{*2}{*4}
 
-\chapter{Prova}
+\include{./annexos/annex-A}
 
 \end{document}
 
