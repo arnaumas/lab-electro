@@ -76,6 +76,13 @@
 
 	Amb els valors presentats a la \cref{tab:forca v intensitat} s'ha fet una regressió lineal entre la força entre corrents i el quadrat de la intensitat. La regressió, amb un coeficient $r^2=0.999$, es presenta a la Figura 2. \todo[inline]{Arreglar referència}
 
+\begin{figure*}
+\centering
+\input{./informe-2/figs/forca-intensitat.tex}
+\caption{Força en funció del quadrat del corrent}
+\label{fig:forca v intensitat}
+\end{figure*}
+
 	El valor obtingut del pendent de la recta de regressió es de \( m = \data{7.35}{0.08d-6}{N.A^{-2}} \). A partir d'aquest valor i l'\cref{eq:forca i corrent} s'ha determinat \( \mu_0 = \data{1.25}{0.04d-6}{N.A^{-2}} \) que és compatible amb el valor tabulat.
 	\subsection{Força vs. Distància}
 	Primerament, a través d'una regressió lineal amb un factor de correlació $r^2=0.985$ s'ha determinat la dependència lineal entre la força exercida pel fil de torsió i la rotació del dial, amb un valor de la constant de proporcionalitat de \( k = \data{3.2}{0.2d-7}{N} \). Les dades de la regressió es poden veure a la \cref{tab:regressio forca-angle} i a la Figura A2.1, ambdues a l'annex. \todo[inline]{Arreglar referència} Així, la força es pot determinar per
@@ -106,6 +113,13 @@
 	\end{table*}
 
 	Amb les dades de la \cref{tab:forca v desplacament} s'ha realitzat una regressió lineal entre la força entre corrents, calculada a partir de l'\cref{eq:forca i angle}, i l'invers de la distància. La regressió, amb un coeficient $r^2=0.932$, es pot veure a la  Figura 2. \todo[inline]{Arreglar referència}
+
+	\begin{figure*}
+		\centering
+		\input{informe-2/figs/forca-distancia.tex}
+		\caption{Força en funció de l'invers de la separació}
+		\label{fig:forca v distancia}
+	\end{figure*}
 
 	El pendent obtingut a partir de la regressió és \( \data{4.1}{0.6d-6}{} \) $n=(4.1\pm0.6)\cdot10^{-6}$. A partir d'aquest valor i l'\cref{eq:forca magnetica} s'ha determinat experimentalment el valor de la constant \( \mu_0 = \data{3.0}{0.4d-6}{N.A^{-2}} \). El resultat no és consistent amb el valor tabulat, possiblement per interferències amb altres elements, però sí de l'orde del valor acceptat.
 
