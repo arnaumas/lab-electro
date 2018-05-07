@@ -1,0 +1,36 @@
+\chapter{Circuits RLC en sèrie}
+
+\begin{resum}
+abstract
+\end{resum}
+
+\section{Introducció}
+En general, la intensitat que circula per un circuit RLC sotmès a una tensió \( V(t) \) està governada per la següent equació diferencial
+\begin{equation} \label{eq:llei RLC}
+	\frac{d^2 I}{dt^2} + \frac{R}{L} \frac{dI}{dt} + \frac{1}{LC}I = \frac{1}{L}\frac{dV}{dt},
+\end{equation}
+on \( R \) és la resistència, \( L \) és la inductància de la bobina i \( C \) la capacitat del condensador. Podem reescriure l'\cref{eq:llei RLC} per trobar la llei que obeeix la tensió que cau a la resistència, \( V_R \):
+\begin{equation} \label{eq:llei VR}
+	\frac{d^2V_R}{dt^2} + \frac{R}{L}\frac{dV_R}{dt} + \frac{1}{LC}V_R = \frac{R}{L}\frac{dV}{dt}.
+\end{equation}
+Similarment també podem obtenir la llei que governa la caiguda de tensió en la bobina
+\begin{equation} \label{eq:llei VC}
+	\frac{d^2V_C}{dt^2} + \frac{R}{L}\frac{dV_C}{dt} + \frac{1}{LC}V_C = \frac{1}{LC}V.
+\end{equation}
+Observem que totes aquestes equacions són les d'un oscil·lador forçat. la solució general és la suma d'una solució particular, que rep el nom de terme estacionari, i una solució del sistema homogeni, que rep el nom de terme transitori. La forma del terme transitori depèn dels paràmetres del circuit. En concret depèn del valor del discriminant
+\begin{equation*}
+	\Delta = \frac{R^2}{L^2} - \frac{4}{LC}.
+\end{equation*}
+Si \( \Delta < 0 \) el circuit està infraamortit i tenim oscil·lacions a freqüència \( \omega = \frac{1}{2}\sqrt{-\Delta} \). Si \( \Delta > 0 \) aleshores diem que el circuit es troba sobreamortit i no tenim oscil·lacions, només una caiguda exponencial. En el cas que \( \Delta = 0 \) parlem d'amortiment crític. En tots tres casos, el terme transitori va multiplicat per un factor \( e^{-\lambda t} \) on \( \lambda = \frac{R}{2L} \) rep el nom de constant d'amortiment. Per tant decaurà de forma exponencial, raó per la qual rep el nom de transitori. A la primera part de la pràctica analitzem un circuit en el règim transitori ---i.e. abans de que el terme transitori pugui decaure significativament--- i comprovarem com varia l'amortiment del circuit en funció de \( R \).  
+
+Un cas particularment rellevant és el d'un circuit forçat amb una tensió s'entrada sinusoidal. En aquestes condicions podem observar el fenòment de ressonància, que té lloc quan la tensió d'entrada oscil·la a la freqüència característica del circuit, 
+\begin{equation*}
+	\omega_0 = \frac{1}{\sqrt{LC}}.
+\end{equation*}
+En aquestes condicions ---i en general quan la tensió subministrada oscil·la sinusoidalment en el temps---, en el règim estacionari totes les magnituds del circuit oscil·len a la freqüència subministrada \( \omega \). L'amplitud i la diferència de fase d'aquestes oscil·lacions, però, depèn de \( \omega \). A la segona part de la pràctica analitzarem aquest fenomen en el cas particular de la tensió de la resistència, \( V_R \).   
+
+\section{Mètode experimental}
+\subsection{Règim transitori}
+En aquesta part de la pràctica s'analitzarà el comportament d'un circuit RLC en el règim transitori. Sobre un circuit amb una bobina d'inductància \( L = \SI{33}{mH} \), una resistència de \( R = \SI{180}{\ohm} \) i un condensador de capacitat \( C  = \SI{330}{pF} \) s'aplicarà una senyal rectangular periòdica. Amb aquests paràmetres podem determinar la resistència ctítica \( R_C \) del circuit, és a dir, la resistència que fa que el circuit pateixi amortiment crític. El valor de \( R_C \) és \SI{2d4}{\ohm}, de manera que estem en condicions d'infraamortiment. Per a mesurar el període de les oscil·lacions ajustarem la freqüència de la senyal rectangular de manera que un període d'aquesta coincideixi amb 10 oscil·lacions de la tensió al condensador, que s'està mesurant amb un oscil·loscopi. D'aquesta manera, el període
+
+
