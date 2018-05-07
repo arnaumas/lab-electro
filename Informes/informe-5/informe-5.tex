@@ -1,7 +1,7 @@
 
 \chapter{Informe 5}
 \begin{abstract}
-	L'objectiu d'aquesta pràctica és la mesura experimental de la resistivitat d'un metall. Més concretament, s'ha centrat en la dependència de la resistivitat amb la temperatura. La teoria indica que la resistivitat d'un material, i, en conseqüència, la seva resistència, augmenten linealment amb la temperatura. El nostre experiment, realitzat en un rang de temperatures comprès entre els $-150\si{ºC}$ i els $265\si{ºC}$ corrobora aquesta aquesta predicció, ja que la regressió lineal realitzada a partir de les dades de la resistència del metall enfront la temperatura té un coeficient de correlació de 0.998. S'ha calculat també el factor de proporcionalitat entre la resistència i la temperatura, amb un valor de $(0.359\pm0.003)\si{\Omega ºC^{-1}}$, i l'ordenada a l'orige, de valor $(106.9\pm0.4)\si{Omega}$.
+	L'objectiu d'aquesta pràctica és la mesura experimental de la resistivitat d'un metall. Més concretament, s'ha centrat en la dependència de la resistivitat amb la temperatura. La teoria indica que la resistivitat d'un material, i, en conseqüència, la seva resistència, augmenten linealment amb la temperatura. El nostre experiment, realitzat en un rang de temperatures comprès entre els $-150\si{\celsius}$ i els $265\si{\celsius}$ corrobora aquesta aquesta predicció, ja que la regressió lineal realitzada a partir de les dades de la resistència del metall enfront la temperatura té un coeficient de correlació de 0.998. S'ha calculat també el factor de proporcionalitat entre la resistència i la temperatura, amb un valor de $(0.359\pm0.003)\si{\ohm\per\celsius}$, i l'ordenada a l'orige, de valor $(106.9\pm0.4)\si{\ohm}$.
 \end{abstract}
 
 \section{Introducció}
@@ -19,7 +19,7 @@ El nostre objectiu és demostar experimentalment aquesta relació per un materia
 
 L'experiment requereix de la mesura de la temperatura del metall i de la seva resistència en diferents moments.
 
-Per tal de mesurar la temperatura es disposa de dos termòmetres de mercuri graduats cada grau. Un dels dos s'usa en el rang de temperatures altes (fins a uns $300\si{ºC}$) i l'altre, en el rang de temperatures baixes (fins a uns $-200 \si{ºC}$).
+Per tal de mesurar la temperatura es disposa de dos termòmetres de mercuri graduats cada grau. Un dels dos s'usa en el rang de temperatures altes (fins a uns $300\si{\celsius}$) i l'altre, en el rang de temperatures baixes (fins a uns $-200 \si{\celsius}$).
 
 Per tal de mesurar la resitència del material s'ha usat una variació del pont de Wheatstone (veure \ref{fig: <Wheatstone>}), el pont de fil. Com es pot apreciar, el circuit consisteix en quatre resistències connectades en forma de paral·lelogram, tres d'elles conegudes i una desconeguda. Els vèrtex del paral·lelogram s'uneixen amb un amperímetre per tal de mesurar la intensitat que hi circula. El pont estarà balancejat quan l'amperímetre marqui zero, i llavors podrem trobar la resistència desconeguda a partir de l'expressió
 \begin{equation}
@@ -33,14 +33,78 @@ R_1=\frac{x}{L-x}R_2
 \end{equation}
 on $x$ denota la longitud de fil a l'esquerra del cursor i $L$ la longitud total del fil. El muntatge experimental es pot veure en la \ref{fig: <muntatge>}. 
 
-Les altes temperatures s'han obtingut introduint la resistència en un forn. S'ha deixat que aquesta prengués valors de fins a uns $300\si{ºC}$ i s'han pres les mesures mentre es refredava a temperatura ambient. Les baixes temperatures s'han obtingut introduint la resistència en nitrogen líquid, i les mesures s'han pres mentre s'escalfava prop del nitrogen, per tal de reduir la velocitat a què ho feia i no perdre precisió.
+Les altes temperatures s'han obtingut introduint la resistència en un forn. S'ha deixat que aquesta prengués valors de fins a uns $300\si{\celsius}$ i s'han pres les mesures mentre es refredava a temperatura ambient. Les baixes temperatures s'han obtingut introduint la resistència en nitrogen líquid, i les mesures s'han pres mentre s'escalfava prop del nitrogen, per tal de reduir la velocitat a què ho feia i no perdre precisió.
 
 
 \section{Resultats}
 
-La \ref{tab: <results>} mostra la longitud $x$ a l'esquerra del fil a cada temperatura determinada, juntament amb la resistència del metall, usant \ref{eq: <pont>}. La longitud total del fil ha estat fixada en $L=(1.000\pm0.001)\si{m}$ i la resistència externa en $R_1=(100\pm1)\si{\Omega}$.
+La \ref{tab: <results>} mostra la longitud $x$ a l'esquerra del fil a cada temperatura determinada, juntament amb la resistència del metall, usant \ref{eq: <pont>}. La longitud total del fil ha estat fixada en $L=(1.000\pm0.001)\si{\meter}$ i la resistència externa en $R_1=(100\pm1)\si{\ohm}$.
 
-La regressió lineal amb les dades de la taula \ref{tab:<results>} es mostra en la Figura \ref{fig:<reg>}. El coeficient de correlació obtingut és de 0.997, el que demostra la linealitat de les dades en l'experiment considerat. S'han obtingut valors de $(0.359\pm0.003)\si{\Omega (ºC)^{-1}$ pel pendent i de $(106.9\pm0.4)\si{\Omega}$ per l'ordenada a l'origen. Relacionant aquests valors amb l'expressió \ref{eq: <regressio>} s'obté $R_0=(106.9\pm0.4)\si{\Omega}$ i $\beta=(336\pm3)\cdot10^{-5}\si{(ºC)^{-1}}$.
+La regressió lineal amb les dades de la taula \ref{tab:<results>} es mostra en la Figura \ref{fig:<reg>}. El coeficient de correlació obtingut és de 0.997, el que demostra la linealitat de les dades en l'experiment considerat. S'han obtingut valors de $(0.359\pm0.003)\si{\ohm\per\celsius}$ pel pendent i de $(106.9\pm0.4)\si{\ohm}$ per l'ordenada a l'origen. Relacionant aquests valors amb l'expressió \ref{eq: <regressio>} s'obté $R_0=(106.9\pm0.4)\si{\ohm}$ i $\beta=(336\pm3)\cdot10^{-5}\si{\ohm\per\celsius}$.
 \section{Conclusions}
-S'ha comprovat experimentalment la relació lineal entre la temperatura del metall usat i la seva resistència. El coeficient de correlació, de 0.997, demostra que existeix una relació com la descrita en l'expressió \ref{eq: <regressio>}. A més, s'han pogut determinar els paràmetres $\beta$ i $R_0$, amb valors de $(336\pm3)\cdot10^{-5}\si{(ºC)^{-1}}$ i $(106.9\pm0.4)\si{\Omega}$ respectivament.  
-\end{document}	
+S'ha comprovat experimentalment la relació lineal entre la temperatura del metall usat i la seva resistència. El coeficient de correlació, de 0.997, demostra que existeix una relació com la descrita en l'expressió \ref{eq: <regressio>}. A més, s'han pogut determinar els paràmetres $\beta$ i $R_0$, amb valors de $(336\pm3)\cdot10^{-5}\si{\per\celsius}$ i $(106.9\pm0.4)\si{\ohm}$ respectivament.
+
+
+
+
+
+
+
+
+
+\begin{table} \labelcref{tab: <results>}
+	\centering
+	\caption{Mesures experimentals de la resistència a diferents temperatures. El voltatge subministrat és aproximadament constat de $3.1\pm0.2\si{\volt}$}
+	\begin{tabular}{|c|c|c|}
+\textbf{Temperatura $(\pm1)$} \si{\celsius} & \textbf{Longitud $x$ $(\pm0.01)$(\si{\meter})} & \textbf{Resistència} \si{\ohm} \\
+265 & 0.664 & $198\pm9$\\
+260 & 0.668 & $201\pm9$\\
+255 & 0.665 & $199\pm9$\\
+250 & 0.664 & $198\pm9$\\
+245 & 0.663 & $197\pm9$\\
+240 & 0.661 & $195\pm9$\\
+235 & 0.659 & $193\pm9$\\
+230 & 0.657 & $192\pm9$\\
+225 & 0.655 & $190\pm9$\\
+220 & 0.654 & $189\pm9$\\
+210 & 0.646 & $182\pm8$\\
+200 & 0.643 & $180\pm8$\\
+190 & 0.637 & $175\pm8$\\
+180 & 0.630 & $170\pm8$\\
+170 & 0.627 & $168\pm7$\\
+160 & 0.622 & $165\pm7$\\
+155 & 0.620 & $163\pm7$\\
+150 & 0.616 & $160\pm7$\\
+145 & 0.613 & $158\pm7$\\
+140 & 0.610 & $156\pm7$\\
+135 & 0.608 & $155\pm7$\\
+130 & 0.605 & $153\pm7$\\
+125 & 0.603 & $152\pm7$\\
+120 & 0.600 & $150\pm6$\\
+115 & 0.597 & $148\pm6$\\
+110 & 0.593 & $146\pm6$\\
+105 & 0.585 & $141\pm6$\\
+23 & 0.520 & $108\pm5$\\
+-20 & 0.485 & $94\pm4$\\
+-25 & 0.484 & $94\pm4$\\
+-30 & 0.481 & $93\pm4$\\
+-35 & 0.478 & $92\pm4$\\
+-40 & 0.474 & $90\pm4$\\
+-45 & 0.470 & $88\pm4$\\
+-49 & 0.468 & $88\pm4$\\
+-55 & 0.464 & $87\pm4$\\
+-60 & 0.459 & $85\pm4$\\
+-65 & 0.457 & $84\pm4$\\
+-70 & 0.452 & $82\pm3$\\
+-75 & 0.447 & $81\pm3$\\
+-80 & 0.445 & $80\pm3$\\
+-85 & 0.441 & $79\pm3$\\
+-90 & 0.436 & $77\pm3$\\
+-95 & 0.431 & $76\pm3$\\
+-100 & 0.424 & $74\pm3$\\
+-105 & 0.417 & $72\pm3$\\
+-110 & 0.409 & $69\pm3$\\
+-115 & 0.398 & $66\pm3$\\
+-150 & 0.365 & $57\pm3$\\
+	\end{tabular}
+\end{table}  
