@@ -1,0 +1,46 @@
+
+\chapter{Informe 5}
+\begin{abstract}
+	L'objectiu d'aquesta pràctica és la mesura experimental de la resistivitat d'un metall. Més concretament, s'ha centrat en la dependència de la resistivitat amb la temperatura. La teoria indica que la resistivitat d'un material, i, en conseqüència, la seva resistència, augmenten linealment amb la temperatura. El nostre experiment, realitzat en un rang de temperatures comprès entre els $-150\si{ºC}$ i els $265\si{ºC}$ corrobora aquesta aquesta predicció, ja que la regressió lineal realitzada a partir de les dades de la resistència del metall enfront la temperatura té un coeficient de correlació de 0.998. S'ha calculat també el factor de proporcionalitat entre la resistència i la temperatura, amb un valor de $(0.359\pm0.003)\si{\Omega ºC^{-1}}$, i l'ordenada a l'orige, de valor $(106.9\pm0.4)\si{Omega}$.
+\end{abstract}
+
+\section{Introducció}
+En nombrosos conductors, existeis una relació a nivell local entre el camp elèctric $\vec{E}$ i la densitat de corrent $\vec{J}$ coneguda com la llei d'Ohm, de manera que $\vec{J}=\frac{\vec{E}}{\rho}$, on $rho$ denota la resistivitat del material.
+
+Com que la resistència d'un material de longitud $L$ i secció $A$ es pot escriure com $R=\frac{\rho L}{A}$ i la resistivitat augmenta linealment amb la temperatura, en primera aproximació, podem considerar que la resistència d'un material vindrà donada per 
+
+\begin{equation} \label{eq: <regressio>}
+R(\theta)=R_0(1+\beta\theta)
+\end{equation}
+
+El nostre objectiu és demostar experimentalment aquesta relació per un material concret i trobar els valors numèric dels paràmetres $R_0$ i $\beta$ en aquest cas.
+
+\section{Mètode experimental}
+
+L'experiment requereix de la mesura de la temperatura del metall i de la seva resistència en diferents moments.
+
+Per tal de mesurar la temperatura es disposa de dos termòmetres de mercuri graduats cada grau. Un dels dos s'usa en el rang de temperatures altes (fins a uns $300\si{ºC}$) i l'altre, en el rang de temperatures baixes (fins a uns $-200 \si{ºC}$).
+
+Per tal de mesurar la resitència del material s'ha usat una variació del pont de Wheatstone (veure \ref{fig: <Wheatstone>}), el pont de fil. Com es pot apreciar, el circuit consisteix en quatre resistències connectades en forma de paral·lelogram, tres d'elles conegudes i una desconeguda. Els vèrtex del paral·lelogram s'uneixen amb un amperímetre per tal de mesurar la intensitat que hi circula. El pont estarà balancejat quan l'amperímetre marqui zero, i llavors podrem trobar la resistència desconeguda a partir de l'expressió
+\begin{equation}
+\frac{R_1}{R_2}=\frac{R_3}{R_4}
+\end{equation} 
+
+En el pont de fil, dues de les resistències se substitueixen per un fil de longitud coneguda i un cursor que es pot moure per sobre. D'aquesta manera, existeix una relació directa entre el qupcient de les longituds i el quocient de les seves resistències. Usant una tercera resistència coneguda, $R_2$, la resistència incògnita, $R_1$ ve donada, quan el pont està balancejat, per
+
+\begin{equation}\label{eq: <pont>}
+R_1=\frac{x}{L-x}R_2
+\end{equation}
+on $x$ denota la longitud de fil a l'esquerra del cursor i $L$ la longitud total del fil. El muntatge experimental es pot veure en la \ref{fig: <muntatge>}. 
+
+Les altes temperatures s'han obtingut introduint la resistència en un forn. S'ha deixat que aquesta prengués valors de fins a uns $300\si{ºC}$ i s'han pres les mesures mentre es refredava a temperatura ambient. Les baixes temperatures s'han obtingut introduint la resistència en nitrogen líquid, i les mesures s'han pres mentre s'escalfava prop del nitrogen, per tal de reduir la velocitat a què ho feia i no perdre precisió.
+
+
+\section{Resultats}
+
+La \ref{tab: <results>} mostra la longitud $x$ a l'esquerra del fil a cada temperatura determinada, juntament amb la resistència del metall, usant \ref{eq: <pont>}. La longitud total del fil ha estat fixada en $L=(1.000\pm0.001)\si{m}$ i la resistència externa en $R_1=(100\pm1)\si{\Omega}$.
+
+La regressió lineal amb les dades de la taula \ref{tab:<results>} es mostra en la Figura \ref{fig:<reg>}. El coeficient de correlació obtingut és de 0.997, el que demostra la linealitat de les dades en l'experiment considerat. S'han obtingut valors de $(0.359\pm0.003)\si{\Omega (ºC)^{-1}$ pel pendent i de $(106.9\pm0.4)\si{\Omega}$ per l'ordenada a l'origen. Relacionant aquests valors amb l'expressió \ref{eq: <regressio>} s'obté $R_0=(106.9\pm0.4)\si{\Omega}$ i $\beta=(336\pm3)\cdot10^{-5}\si{(ºC)^{-1}}$.
+\section{Conclusions}
+S'ha comprovat experimentalment la relació lineal entre la temperatura del metall usat i la seva resistència. El coeficient de correlació, de 0.997, demostra que existeix una relació com la descrita en l'expressió \ref{eq: <regressio>}. A més, s'han pogut determinar els paràmetres $\beta$ i $R_0$, amb valors de $(336\pm3)\cdot10^{-5}\si{(ºC)^{-1}}$ i $(106.9\pm0.4)\si{\Omega}$ respectivament.  
+\end{document}	
