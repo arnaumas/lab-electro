@@ -15,7 +15,8 @@ Per posar un valor amb unitats i sense incertesa feu (no és opcional, us obligo
 La idea de les figures és que el LaTeX determina el millor lloc on posar-les així que no us agobieu si no surten exactament on les heu posat, just go with the flow. Per això existeixen les referències. Sempre que feu una taula o una figura a la primera línia poseu-hi '\centering \small \sffamily' perquè el format sigui el mateix per tots. El caption de les taules va al principi, el de les figures al final. El label sempre ha d'anar després de la caption, perquè sino esteu referenciant la secció, no la figura.
 
 Per fer taules aquí teniu l'exemple canònic
-`\begin{tabular}{SSS}
+```
+\begin{tabular}{SSS}
 			\toprule
 			{Massa (\si{mg})} & {Intensitat (\si{A})} & {Incertesa en la intensitat (\si{A})} \\
 			\midrule
@@ -25,5 +26,6 @@ Per fer taules aquí teniu l'exemple canònic
 			20 & 5.19d3 & 0.18 \\
 			25 & 5.8d2 & 0.3 \\
 			\bottomrule
-\end{tabular}`
+\end{tabular}
+```
 El tipus de columna S fa que els nombres surtin macos. Com amb els nombres amb unitats, podeu posar d o e per a la notació científica, com a la segona columna. `\toprule`, `\midrule`, i `\bottomrule` són per fer línies divisores maques. A la primera fila hi ha els títols de les columnes; estan entre claus perquè el LaTeX entengui que és text i no números.   
