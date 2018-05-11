@@ -14,7 +14,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath, amssymb, xfrac}
 \usepackage{siunitx}
-\usepackage[catalan]{cleveref}
+\usepackage[catalan,sort]{cleveref}
 
 % Marges, etc
 \geometry{
@@ -27,6 +27,7 @@
 	twoside
 }
 \setlength{\parskip}{0pt}
+
 % Referències
 \hypersetup{
 	colorlinks,
@@ -61,10 +62,12 @@
 	allow-number-unit-breaks = true,
 	detect-family = true,
 	list-final-separator = { i },
-	list-units = single
+	list-units = single,
+	separate-uncertainty = true
 }
 % Valor amb incertesa
-\newcommand{\data}[3]{\SI[separate-uncertainty = true]{#1 \pm #2}{#3}}
+\newcommand{\data}[3]{\SI{#1 \pm #2}{#3}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
 
 % Format de l'abstract
 \newlength{\currentparindent}
@@ -78,7 +81,7 @@
 \date{\sffamily 2018}
 
 % Arxius a incloure
-\includeonly{./informe-1/informe-1}
+\includeonly{./informe-7/informe-7}
 
 \begin{document}
 \maketitle
@@ -97,7 +100,7 @@
 % Informe 3
 \include{./informe-3/informe-3}
 
-%informe 5
+% Informe 5
 % \include{./informe-5/informe-5}
 
 % Informe 7
