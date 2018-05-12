@@ -4,9 +4,20 @@ Aquesta pràctica té com a objectiu principal l'estudi dels camps magnètics cr
 
 Amb les dades experimentals s'ha posat a prova la dependència del camp magnètic d'una espira del seu radi i també del nombre d'espires, tal i com prediu la llei de Biot-Savart. També s'ha pogut trobar un valor per a la permeabilitat magnètica del buit, \( \mu_0 \).
 \end{resum}
+\todo{error relatiu comès}
 
 \section{Introducció}
-L'objectiu d'aquesta pràctica és mesurar i posteriorment analitzar els camps magnètics que resulten de la circulació de corrent elèctric per fils conductors. Més precisament, es disposarà de diverses espires i bobines per a la circulació del corrent. En el cas de les espires, es mesurarà el camp al centre d'espires de diferents radis i s'analitzarà la variació del camp en funció del radi. Per les bobines el que s'estudiarà és el camp magnètic a diferents punts de l'interior de bobines de diferent nombre de voltes i de diferents radis.
+En la primera part de la pràctica s'estudiarà el camp magnètic degut a conjunts d'espires. Si considerem un conjunt de \( N \) espires de radi \( R \) per les que hi circula un corrent constant \( I \), un càlcul elemental amb la llei de Biot-Savart ens dóna que el camp magnètic \( \vec{B} \) al seu centre és
+\begin{equation}\label{eq:camp espira}
+  \vec{B}=\frac{\mu_0 I N}{2 R}\vec{e}_z,
+\end{equation}
+on \( \vec{e}_z \) és el vector unitari perpendicular al pla de les espires. Així doncs esperem poder observar les relacions \( B \propto R^{-1} \) i \( B \propto N \). 
+
+Pel que fa al camp magnètic d'una bobina, sabem que en el cas d'una bobina infinita el camp en el seu interior és constant i nul a l'exterior. En el cas d'una bobina finita de longitud \( L \), radi \( R \), \( N \) voltes i per la qual hi passa una intensitat constant \( I \), el camp a punts del seu eix es pot trobar de manera exacta mitjançant la llei de Biot-Savart i resulta
+\begin{equation}\label{eq:camp bobina}
+  \vec{B}=\frac{\mu_0 I N}{2 L}\left(\frac{z + L/2}{\sqrt{R^2+(z+L/2)^2}} - \frac{z - L/2}{\sqrt{R^2 + (z - L/2)^2}}\right) \vec{e}_z,
+\end{equation}
+on \( z \) és la posició de la sona al llarg de l'eix de la bobina ---fixant \( z = 0 \) al seu centre--- i \( \vec{e}_z \) és el vector unitari para\l.lel a l'eix. Quan \( L \gg R \) aleshores l'\cref{eq:camp bobina} dóna lloc a un camp que és gairebé constant per \( \abs{z} < L/2 \) i que decau molt depressa cap a 0 quan \( \abs{z} > L/2 \). 
 
 \section{Mètode experimental}
 \subsection{Espires}
@@ -25,11 +36,7 @@ En concloure l'estabilització del teslàmetre, amb l'amperímetre marcant \SI{4
 
 Posteriorment s'ha mesurat el camp al centre del conjunt de 1, 2 i 3 espires amb exactament el mateix procediment explicat.
 
-El valor obtingut s'ha comparat amb l'esperat teòricament segons la fórmula obtinguda a partir de la llei de Biot i Savart,
-\begin{equation}\label{eq:camp espira}
-  \vec{B}=\frac{\mu_0 I N}{2 R}\vec{e}_z,
-\end{equation}
-On \( I \) és la intensitat que circula per a cada espira, \( N \) el nombre d'espires, \( R \) el seu radi i \( \vec{e}_z \) el vector unitari al llarg de l'eix de les espires. En la \cref{sec:espires} es presenten els resultats teòrics i experimentals d'aquest apartat, així com gràfics representant la variació del camp en funció del radi de l'espira i la variació en funció del nombre d'espires.
+El valor obtingut s'ha comparat amb l'esperat teòricament segons la \cref{eq:camp espira}. En la \cref{sec:espires} es presenten els resultats teòrics i experimentals d'aquest apartat, així com gràfics representant la variació del camp en funció del radi de l'espira i la variació en funció del nombre d'espires.
 
 \subsection{Bobines}
 Per la mesura del camp a l'interior de les bobines s'ha fet servir el mateix circuit que es mostra a la \cref{fig:circuit teslametre}.
@@ -37,10 +44,7 @@ Per la mesura del camp a l'interior de les bobines s'ha fet servir el mateix cir
 Ajustant la intensitat a \data{1.00}{0.01}{A} a l'amperímetre, s'ha mesurat el camp a diversos punts a l'interior de la bobina. Per fer-ho s'ha ajustat l'alçada de la sonda de manera que aquesta quedi sobre l'eix interior de la bobina. Començant pel punt immediatament a l'exterior de la bobina s'ha fet avançar la sonda mesurant el camp cada \SI{3}{cm} (mesurats amb el regle) de manera que n'han resultat 8 mesures a diferents punts de l'eix.
 
 Aquest mateix procediment s'ha repetit per cada bobina diferent i s'han comparat els valors amb els esperats de manera teòrica segons
-\begin{equation}\label{eq:camp bobina}
-  \vec{B}=\frac{\mu_0 I N}{2 L}\left(\frac{z + L/2}{\sqrt{R^2+(z+L/2)^2}} - \frac{z - L/2}{\sqrt{R^2 + (z - L/2)^2}}\right) \vec{e}_z,
-\end{equation}
-on \( I \) és la intensitat que circula per la bobina, \( N \) és el nombre de voltes de la bobina, \( L \) és la seva longitud, \( z \) és la posició de la sona al llarg de l'eix de la bobina ---fixant \( z = 0 \) al seu centre--- i \( \vec{e}_z \) és el vector unitari al llarg de l'eix. 
+ 
 
 El valors teòrics i experimentals d'aquest apartat es presenten en la \cref{sec:bobines}.
 
