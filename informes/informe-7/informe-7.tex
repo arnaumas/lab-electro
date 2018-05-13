@@ -17,36 +17,31 @@ Pel que fa al camp magnètic d'una bobina, sabem que en el cas d'una bobina infi
 \begin{equation}\label{eq:camp bobina}
   \vec{B}=\frac{\mu_0 I N}{2 L}\left(\frac{z + L/2}{\sqrt{R^2+(z+L/2)^2}} - \frac{z - L/2}{\sqrt{R^2 + (z - L/2)^2}}\right) \vec{e}_z,
 \end{equation}
-on \( z \) és la posició de la sona al llarg de l'eix de la bobina ---fixant \( z = 0 \) al seu centre--- i \( \vec{e}_z \) és el vector unitari para\l.lel a l'eix. Quan \( L \gg R \) aleshores l'\cref{eq:camp bobina} dóna lloc a un camp que és gairebé constant per \( \abs{z} < L/2 \) i que decau molt depressa cap a 0 quan \( \abs{z} > L/2 \). 
+on \( z \) és la posició de la sonda al llarg de l'eix de la bobina ---fixant \( z = 0 \) al seu centre--- i \( \vec{e}_z \) és el vector unitari para\l.lel a l'eix. Quan \( L \gg R \) aleshores l'\cref{eq:camp bobina} dóna lloc a un camp que és gairebé constant per \( \abs{z} < L/2 \) i que decau molt depressa cap a 0 quan \( \abs{z} > L/2 \). 
 
 \section{Mètode experimental}
 \subsection{Espires}
-Pel que fa a les espires, primerament s'ha muntat el circuit que inclou el teslàmetre amb la sonda, l'amperímetre, el regle i l'espira indicada en cada cas. La \cref{fig:circuit teslametre} mostra un esquema d'aquest circuit.
+Per a realitzar les mesures s'ha fet servir la disposició que es mostra a la \cref{fig:circuit teslametre}. Les espires i la sonda estaven cada una sobre un suport de manera que la sonda estigués a la mateixa alçada que el centre de l'espira. La sonda també estava muntada sobre una rail de manera que es mantingués sempre sobre l'eix perpendicular de les espires.
 
 \begin{figure}[htb]
   \centering \small \sffamily
   \includegraphics{circuit-teslametre.png}
-  \caption{Esquema del circuit emprat per a mesurar el camp a l'eix d'una espira}
+  \caption{Esquema del circuit emprat per a mesurar el camp magnètic}
   \label{fig:circuit teslametre}
 \end{figure}
 
-El propòsit del circuit de la \cref{fig:circuit teslametre} és evidentment mesurar el camp al centre de l'espira. L'amperímetre ens resulta útil per obtenir una mesura més precisa que la donada pel generador de la intensitat que circula pel circuit. El teslàmetre indica el camp magnètic mesurat aproximadament a la punta de la sonda. Tanmateix, l'efectivitat del teslàmetre no és immediata i ha estat necessari esperar uns minuts perquè s'estabilitzi.
+El corrent subministrat per la font es va fixar a \SI{4.00}{A} i tot seguit la sonda es va desplaçar fins al centre de l'espira ---de la qual ja s'havia mesurat el radi---. Cal mencionar que el sensor de camp magnètic no es troba exactament a la punta de la sonda, de manera que és complicat determinar exactament quan és que efectivament s'estava mesurant el camp al centre. Com que, d'acord amb el resultat teòric, el camp magnètic s'una espira és màxim al seu centre, es va considerar el màxim valor registrat pel teslàmetre. Degut a la seva alta sensibilitat, el teslàmetre trigava un temps considerable a estabilitzar la seva lectura després de canvis bruscos en el camp magnètic. 
 
-En concloure l'estabilització del teslàmetre, amb l'amperímetre marcant \SI{4.00}{A}, s'han pres mesures del camp col·locant la sonda al centre de l'espira. Concretament s'han pres 3 mesures en un sentit del corrent, tres mesures en l'altre i s'ha fet el promig per tal de compensar les fluctuacions del teslàmetre. Aquest procediment ha estat repetit per les tres espires a mesurar.
+S'han pres sis mesures del camp per a cada espira---tres en total, cada una amb un radi diferent. Tres amb un sentit del corrent i tres amb el corrent en sentit oposat. Aleshores s'ha fet el promig de les sis lectures per a minimitzar errors aleatoris deguts a fluctuacions en la mesura del teslàmetre.   
 
-Posteriorment s'ha mesurat el camp al centre del conjunt de 1, 2 i 3 espires amb exactament el mateix procediment explicat.
-
-El valor obtingut s'ha comparat amb l'esperat teòricament segons la \cref{eq:camp espira}. En la \cref{sec:espires} es presenten els resultats teòrics i experimentals d'aquest apartat, així com gràfics representant la variació del camp en funció del radi de l'espira i la variació en funció del nombre d'espires.
+Posteriorment s'ha mesurat el camp al centre del conjunt de 1, 2 i 3 espires seguint el mateix procediment.
 
 \subsection{Bobines}
 Per la mesura del camp a l'interior de les bobines s'ha fet servir el mateix circuit que es mostra a la \cref{fig:circuit teslametre}.
 
-Ajustant la intensitat a \data{1.00}{0.01}{A} a l'amperímetre, s'ha mesurat el camp a diversos punts a l'interior de la bobina. Per fer-ho s'ha ajustat l'alçada de la sonda de manera que aquesta quedi sobre l'eix interior de la bobina. Començant pel punt immediatament a l'exterior de la bobina s'ha fet avançar la sonda mesurant el camp cada \SI{3}{cm} (mesurats amb el regle) de manera que n'han resultat 8 mesures a diferents punts de l'eix.
+Ajustant la intensitat a \data{1.00}{0.01}{A} a l'amperímetre, s'ha mesurat el camp a diversos punts a l'interior de la bobina. Per fer-ho s'ha ajustat l'alçada de la sonda de manera que aquesta quedi sobre l'eix de la bobina. Començant pel punt immediatament a l'exterior de la bobina s'ha fet avançar la sonda sobre el regle mesurant el camp cada \SI{3}{cm} de manera que n'han resultat 8 mesures a diferents punts de l'eix.
 
-Aquest mateix procediment s'ha repetit per cada bobina diferent i s'han comparat els valors amb els esperats de manera teòrica segons
- 
-
-El valors teòrics i experimentals d'aquest apartat es presenten en la \cref{sec:bobines}.
+Aquest mateix procediment s'ha repetit per cada una de les bobines diferents.  
 
 \section{Resultats}
 \subsection{Espires}\label{sec:espires}
