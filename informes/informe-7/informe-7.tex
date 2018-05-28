@@ -1,68 +1,70 @@
 \chapter{Camps magnètics d'espires i bobines}
 \begin{resum}
-	Aquesta pràctica té com a objectiu principal la mesura dels camps magnètics creats per diferents configuracions d'espires. Utilitzant un teslàmetre, s'han determinat experimentalment els camps creats, en el seu centre, per espires de radis diferents, així com per una, dues i tres espires concèntriques i amb el mateix radi i per diferents bobines en diversos punts del seu eix.
+Aquesta pràctica té com a objectiu principal l'estudi dels camps magnètics creats per diferents configuracions d'espires i bobines. Mitjançant una sonda Hall s'han mesurat els camps creats, al seu centre, per espires de radis diferents, així com per conjunts de una, dues i tres espires. De la mateixa manera s'han realitzat mesures del camp magnètic al llarg de l'eix de bobinas de diversos radis.
 
-	Els resultats experimentals són consistents amb les prediccions teòriques, deduïdes a partir de la llei de Biot-Savart. En particular, s'ha observat la dependència del camp creat per una espira amb l'invers del seu radi o el fet que el camp creat per una bobina al seu eix és pràcticament constant a l'interior.
+Amb les dades experimentals s'ha posat a prova la dependència del camp magnètic d'una espira del seu radi i també del nombre d'espires, tal i com prediu la llei de Biot-Savart. També s'ha pogut trobar un valor per a la permeabilitat magnètica del buit, \( \mu_0 \).
 \end{resum}
+\todo{error relatiu comès}
 
 \section{Introducció}
-L'objectiu d'aquesta pràctica és mesurar i posteriorment analitzar els camps magnètics que resulten de la circulació de corrent elèctric per fils conductors. Més precisament, es disposarà de diverses espires i bobines per a la circulació del corrent. En el cas de les espires, es mesurarà el camp al centre d'espires de diferents radis i s'analitzarà la variació del camp en funció del radi. Per les bobines el que s'estudiarà és el camp magnètic a diferents punts de l'interior de bobines de diferent nombre de voltes i de diferents radis.
+En la primera part de la pràctica s'estudiarà el camp magnètic degut a conjunts d'espires. Si considerem un conjunt de \( N \) espires de radi \( R \) per les que hi circula un corrent constant \( I \), un càlcul elemental amb la llei de Biot-Savart ens dóna que el camp magnètic \( \vec{B} \) al seu centre és
+\begin{equation}\label{eq:camp espira}
+  \vec{B}=\frac{\mu_0 I N}{2 R}\vec{e}_z,
+\end{equation}
+on \( \vec{e}_z \) és el vector unitari perpendicular al pla de les espires. Així doncs esperem poder observar les relacions \( B \propto R^{-1} \) i \( B \propto N \). 
 
-En relació al mencionat anteriorment, en aquest informe es presentaran gràfiques del camp magnètic al centre de l'espira en funció del radi d'aquesta i també del camp al centre en funció del nombre d'espires. Evidentment, també es proporcionarà el valor numèric dels diferents camps experimentals i teòrics, comparant els dos resultats i analitzant-ne la compatibilitat.
+Pel que fa al camp magnètic d'una bobina, sabem que en el cas d'una bobina infinita el camp en el seu interior és constant i nul a l'exterior. En el cas d'una bobina finita de longitud \( L \), radi \( R \), \( N \) voltes i per la qual hi passa una intensitat constant \( I \), el camp a punts del seu eix es pot trobar de manera exacta mitjançant la llei de Biot-Savart i resulta
+\begin{equation}\label{eq:camp bobina}
+  \vec{B}=\frac{\mu_0 I N}{2 L}\left(\frac{z + L/2}{\sqrt{R^2+(z+L/2)^2}} - \frac{z - L/2}{\sqrt{R^2 + (z - L/2)^2}}\right) \vec{e}_z,
+\end{equation}
+on \( z \) és la posició de la sonda al llarg de l'eix de la bobina ---fixant \( z = 0 \) al seu centre--- i \( \vec{e}_z \) és el vector unitari para\l.lel a l'eix. Quan \( L \gg R \) aleshores l'\cref{eq:camp bobina} dóna lloc a un camp que és gairebé constant per \( \abs{z} < L/2 \) i que decau molt depressa cap a 0 quan \( \abs{z} > L/2 \). 
 
 \section{Mètode experimental}
-A continuació exposem els mètodes seguits per a l'obtenció de les dades experimentals en cada part de la pràctica.
-
 \subsection{Espires}
-Pel que fa a les espires, primerament s'ha muntat el circuit que inclou el teslàmetre amb la sonda, l'amperímetre, el regle i l'espira indicada en cada cas. La figura \cref{fig:esquema circuit} mostra un esquema d'aquest circuit.
+Per a realitzar les mesures s'ha fet servir la disposició que es mostra a la \cref{fig:circuit teslametre}. Les espires i la sonda estaven cada una sobre un suport de manera que la sonda estigués a la mateixa alçada que el centre de l'espira. La sonda també estava muntada sobre una rail de manera que es mantingués sempre sobre l'eix perpendicular de les espires.
 
 \begin{figure}[htb]
-  \centering
-  % \includegraphics{Foto1.png}
-  \caption{Esquema del circuit}
-  \label{fig:esquema circuit}
+  \centering \small \sffamily
+  \includegraphics{circuit-teslametre.png}
+  \caption{Esquema del circuit emprat per a mesurar el camp magnètic}
+  \label{fig:circuit teslametre}
 \end{figure}
 
-El propòsit del circuit de la figura \cref{fig:esquema circuit} és evidentment mesurar el camp al centre de l'espira. L'amperímetre ens resulta útil per obtenir una mesura més precisa que la donada pel generador de la intensitat que circula pel circuit. El teslàmetre indica el camp magnètic mesurat aproximadament a la punta de la sonda. Tanmateix, l'efectivitat del teslàmetre no és immediata i ha estat necessari esperar uns minuts perquè s'estabilitzi.
+El corrent subministrat per la font es va fixar a \SI{4.00}{A} i tot seguit la sonda es va desplaçar fins al centre de l'espira ---de la qual ja s'havia mesurat el radi---. Cal mencionar que el sensor de camp magnètic no es troba exactament a la punta de la sonda, de manera que és complicat determinar exactament quan és que efectivament s'estava mesurant el camp al centre. Com que, d'acord amb el resultat teòric, el camp magnètic s'una espira és màxim al seu centre, es va considerar el màxim valor registrat pel teslàmetre. Degut a la seva alta sensibilitat, el teslàmetre trigava un temps considerable a estabilitzar la seva lectura després de canvis bruscos en el camp magnètic. 
 
-En concloure l'estabilització del teslàmetre, amb l'amperímetre marcant \SI{4.00}{A} , s'han pres mesures del camp col·locant la sonda al centre de l'espira. Concretament s'han pres 3 mesures en un sentit del corrent, tres mesures en l'altre i s'ha fet el promig per tal de compensar les fluctuacions del teslàmetre. Aquest procediment ha estat repetit per les tres espires a mesurar.
+S'han pres sis mesures del camp per a cada espira---tres en total, cada una amb un radi diferent. Tres amb un sentit del corrent i tres amb el corrent en sentit oposat. Aleshores s'ha fet el promig de les sis lectures per a minimitzar errors aleatoris deguts a fluctuacions en la mesura del teslàmetre.   
 
-Posteriorment s'ha mesurat el camp al centre del conjunt de 1, 2 i 3 espires amb exactament el mateix procediment explicat.
-
-El valor obtingut s'ha comparat amb l'esperat teòricament segons la fórmula obtinguda a partir de la llei de Biot i Savart:
-\begin{equation}\label{eq:camp espira}
-  \vec{B}=\frac{\mu_0 I N}{2 R}\hat{z}
-\end{equation}
-En la secció \cref{sec:espires} es presenten els resultats teòrics i experimentals d'aquest apartat, així com gràfics representant la variació del camp en funció del radi de l'espira i la variació en funció del nombre d'espires.
+Posteriorment s'ha mesurat el camp al centre del conjunt de 1, 2 i 3 espires seguint el mateix procediment.
 
 \subsection{Bobines}
-Per la mesura del camp a l'interior de les bobines s'ha muntat el mateix circuit que s'ha il·lustrat a l'apartat anterior. 
+Per la mesura del camp a l'interior de les bobines s'ha fet servir el mateix circuit que es mostra a la \cref{fig:circuit teslametre}.
 
-Ajustant la intensitat a \SI{1.00}{A} a l'amperímetre, s'ha mesurat el camp a diversos punts a l'interior de la bobina. Per fer-ho s'ha ajustat l'alçada de la sonda de manera que aquesta quedi sobre l'eix interior de la bobina. Començant pel punt immediatament a l'exterior de la bobina s'ha fet avançar la sonda mesurant el camp cada \SI{3}{cm} (mesurats amb el regle) de manera que n'han resultat 8 mesures a diferents punts de l'eix.
+Ajustant la intensitat a \data{1.00}{0.01}{A} a l'amperímetre, s'ha mesurat el camp a diversos punts a l'interior de la bobina. Per fer-ho s'ha ajustat l'alçada de la sonda de manera que aquesta quedi sobre l'eix de la bobina. Començant pel punt immediatament a l'exterior de la bobina s'ha fet avançar la sonda sobre el regle mesurant el camp cada \SI{3}{cm} de manera que n'han resultat 8 mesures a diferents punts de l'eix.
 
-Aquest mateix procediment s'ha repetit per cada bobina diferent i s'han comparat els valors amb els esperats de manera teòrica segons:
-\begin{equation}
-  \vec{B}=\frac{\mu_0 I N}{2 L}\left(\frac{z + L/2}{\sqrt{R^2+(z+L/2)^2}} - \frac{z - L/2}{\sqrt{R^2 + (z - L/2)^2}}\right)\hat{z}
-\end{equation}
+Aquest mateix procediment s'ha repetit per cada una de les bobines diferents.  
 
-El valors teòrics i experimentals d'aquest apartat es presenten en la secció \cref{sec:bobines}.
-
-\section{Presentació dels resultats}
-En aquesta secció es presentaran i s'interpretaran els valors numèrics dels resultats obtinguts juntament amb algunes gràfiques representatives d'aquests resultats.
-
+\section{Resultats}
 \subsection{Espires}\label{sec:espires}
-Com s'ha mencionat anteriorment, en aquesta secció es presenten els resultats relatius a la part de la pràctica referent a les espires. Primerament es presenta la taula de la figura \cref{tab:espires} on apareixen els valors teòrics i experimentals del camp magnètic mesurat al centre de les tres espires de diferents radis.
+Com s'ha mencionat anteriorment, en aquesta secció es presenten els resultats relatius a la part de la pràctica referent a les espires. A la \cref{tab:camp espires en funcio de r} es presenten les mesures del camp magnètic al centre d'una espira en funció del seu radi. 
 
-\begin{figure}[htb]
-  \centering
-  % \includegraphics[width=100mm]{taul1.png}
+\begin{table}[htb]
+  \centering \small \sffamily
   \caption{Taula de valors teòrics i experimentals}
-  \label{tab:espires}
-\end{figure}
+  \label{tab:camp espires en funcio de r}
+	\begin{tabular}{SSS}
+		\toprule
+		{Radi (\data{}{0.2}{cm})} & { \( B_{\textsf{exp}}\ (\SI{d-5}{T}) \) } & { \( B_{\textsf{teò}}\ (\SI{d-5}{T}) \) } \\
+		\midrule
+		3.0 & 7.3\pm1.4 & 8.4\pm0.4 \\
+		4.3 & 6.0\pm1.6 & 5.9\pm0.2 \\
+		6.0 & 5.0\pm1.6 & 4.2\pm0.1 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
-Com podem veure en els tres casos, els valors experimentals amb els seus respectius intervals d'incertesa coincideixen en alguns punts amb els valors teòrics i els seus intervals, per tant els resultats són compatibles. Es pot observar que l'incertesa dels resultats experimentals és considerablement major. Això és degut a les imprecisions dels aparells emprats per a la mesura dels camps, especialment a les contínues fluctuacions del teslàmetre. 
+Les incerteses dels camps experimentals de la \cref{tab:camp espires en funcio de r} han estat calculades segons la desviació estàndard de les diferents mesures realitzades. Pel que fa a les incerteses teòriques, aquestes han estat calculades per propagació d'incerteses de la fórmula \cref{eq:camp espira}. Com podem veure en els tres casos, els valors experimentals amb els seus respectius intervals d'incertesa coincideixen en alguns punts amb els valors teòrics i els seus intervals, per tant els resultats són compatibles. Es pot observar que l'incertesa dels resultats experimentals és considerablement major. Això és degut a les imprecisions dels aparells emprats per a la mesura dels camps, especialment a les contínues fluctuacions del teslàmetre. 
 
-Tanmateix, el fet més rellevant que podem observar és la disminució del camp a l'interior de l'espira a mesura que augmenta el seu radi. Aquest resultat ja era el que esperavem teòricament. Per fer més èmfasi en aquest fet es presenta la gràfica de la figura \cref{fig:camp espira}, on es representa el camp magnètic al centre en funció del radi de l'espira.
+Tanmateix, el fet més rellevant que podem observar és la disminució del camp a l'interior de l'espira a mesura que augmenta el seu radi. Aquest resultat ja era el que esperavem teòricament. Per fer més èmfasi en aquest fet es presenta la gràfica de lacref{fig:camp espira}, on es representa el camp magnètic al centre en funció del radi de l'espira.
 \begin{figure}[htb]
   \centering
   % \includegraphics[width=100mm]{graf1.png}
@@ -70,17 +72,26 @@ Tanmateix, el fet més rellevant que podem observar és la disminució del camp 
   \label{fig:camp espira}
 \end{figure}
 
-Com es comentava, s'observa que el camp a l'interior es va  atenuant a mesura que s'augmenta el radi de l'espira. Tot i que és difícil d'apreciar ja que només s'ha fet la mesura amb tres radis diferents, es pot comprovar numèricament que el camp magnètic decau com \(\frac{1}{R}\). Aquesta és per tant la forma de funció que observaríem si es tinguessin valors infinits de radis d'espires i els seus camps respectius.
+Com es comentava, s'observa que el camp a l'interior es va  atenuant a mesura que s'augmenta el radi de l'espira. Tot i que és difícil d'apreciar ja que només s'ha fet la mesura amb tres radis diferents, es pot comprovar numèricament que el camp magnètic decau com \( \frac{1}{R} \). Aquesta és per tant la forma de funció que observaríem si es tinguessin valors infinits de radis d'espires i els seus camps respectius.
 
-La taula de la figura \cref{fig:camp centre espires} presenta els camp magnètics teòrics i experimentals al centre dels conjunts de 1, 2 i 3 espires:
+La taula \cref{tab:camp espires en funcio de n} presenta els camp magnètics teòrics i experimentals al centre dels conjunts de 1, 2 i 3 espires. 
 
-\begin{figure}[htb]
-  \centering
-  % \includegraphics[width=100mm]{tau2a.png}
-  \caption{Camps magnètics al centre dels conjunts d'espires}
-  \label{fig:camp centre espires}
-\end{figure}
-Podem observar que en aquest cas els intervals dels camps teòrics i experimentals també se solapen i per tant les observacions satisfan l'esperat. Altra vegada tornem a tenir incerteses majors pels valors experimentals pel mateix fet anteriorment mencionat. Els resultats ens permeten observar que com més espires introduïm al conjunt més intens es torna el camp al centre d'aquest. Aquesta dependència es pot observar clarament al gràfic experimental del camp al centre en funció del nombre d'espires que s'exposa a la figura \cref{fig:camp vs n} :
+\begin{table}[htb]
+	\centering \small \sffamily
+	\caption{Valors teòrics i experimentals del camp magnètic al centre d'un conjunt de \( N \) espires}
+	\label{tab:camp espires en funcio de n}
+	\begin{tabular}{SSS}
+		\toprule
+		{Nombre d'espires \( N \)} & { \( B_{\textsf{exp}}\ (\SI{d-5}{T}) \) } & { \( B_{\textsf{teò}}\ (\SI{d-5}{T}) \) } \\
+		\midrule
+		1 & 5.0\pm1.6 & 4.2\pm0.1 \\
+		2 & 8.8\pm1.5 & 8.4\pm0.2 \\
+		3 & 12.3\pm1.5 & 12.6\pm0.3 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Podem observar que en aquest cas els intervals dels camps teòrics i experimentals també se solapen i per tant les observacions satisfan l'esperat. Altra vegada tornem a tenir incerteses majors pels valors experimentals pel mateix fet anteriorment mencionat. Els resultats ens permeten observar que com més espires introduïm al conjunt més intens es torna el camp al centre d'aquest. Aquesta dependència es pot observar clarament al gràfic experimental del camp al centre en funció del nombre d'espires que s'exposa a la \cref{fig:camp vs n}.
 
 \begin{figure}[htb]
   \centering
@@ -89,77 +100,48 @@ Podem observar que en aquest cas els intervals dels camps teòrics i experimenta
   \label{fig:camp vs n}
 \end{figure}
 
-Podem veure al gràfic \cref{fig:camp vs n} que aquesta dependència és lineal com s'esperava dels valors teòrics obtinguts a partir de la fórmula \cref{eq:camp espira}. Així doncs, vist que el camp augmenta de manera directament proporcional al nombre d'espires, els resultats d'aquest apartat queden interpretats.
+Podem veure a la regressió de la \cref{fig:camp vs n} que aquesta dependència és lineal com s'esperava dels valors teòrics obtinguts a partir de la \cref{eq:camp espira}. El valor de $\mu_{0}$ obtingut a partir de la regressió tenint en compte que el pendent segons \cref{eq:camp espira} és $\frac{\mu_{0}I}{2R}$  s'obté un valor de $\mu_{0} = \data{1.10}{0.37d-6}{N.A^{-2}} $ que és compatible amb el valor teòric de $\mu_{0}\approx \SI{1.26d-6}{N.A^{-2}} $. Així doncs, vist que el camp augmenta de manera directament proporcional al nombre d'espires, els resultats d'aquest apartat queden interpretats.
 
 \subsection{Bobines}\label{sec:bobines}
-Passant als resultats obtinguts per les bobines, comencem amb la bobina de 300 voltes i \SI{33}{mm} de diàmetre. A la taula de la figura \cref{fig:bobina 33 mm} es mostren els valors teòrics i els experimentals obtinguts juntament amb les seves incerteses del camp a diferents punts de l'interior a l'eix de la bobina:
-
-\begin{figure}[htb]
-  \centering
-  % \includegraphics[width=100mm]{taubob1.png}
-  \caption{Camp a punts de l'eix de la bobina de \SI{33}{mm}}
-  \label{fig:bobina 33 mm}
-\end{figure}
-
-Podem observar que els diferents valors de camp coincideixen en la seva majoria. Tanmateix, en els punts més exteriors hi ha algunes incompatibilitats pel que fa als valors teòrics i experimentals. Aquestes diferències es deuen a la dificultat experimental per detectar l'acabament real de la bobina juntament amb el fet que teòricament el camp a l'exterior de la bobina decau molt ràpidament. No obstant, s'observa també el fet més rellevant: l'augment gradual del camp fins el punt més central on aquest és màxim i la posterior disminució del camp a mesura que els punts s'allunyen del centre. Aquest fet era el que s'esperava i el que indicaven els valors teòrics i s'ha pogut comprovar empíricament amb una precisió considerable.
-
-Pel que fa a les bobines de \SI{26}{mm} de diàmetre, s'exposa a la figura \cref{tab:camp experimentals} una taula amb els valors empírics i a la figura \cref{tab:camps teorics} una altra amb els valors teòrics del camp a punts interiors de cadascuna.
-
-\begin{figure}[htb]
-  \centering
-  % \includegraphics[width=100mm]{tau3exp.png}
-  \caption{Valors experimentals del camp a les bobines}
-  \label{tab:camp experimentals}
-\end{figure}
-
-\begin{figure}[htb]
-  \centering
-  % \includegraphics[width=100mm]{tau4teo.png}
-  \caption{Valors teòrics del camp a les bobines}
-  \label{tab:camps teorics}
-\end{figure}
-
-Els valors teòrics i els experimentals es comporten com en la bobina anterior. Tots els valors coincideixen en els seus intervals, exceptuant alguns valors a punts molt exteriors a la bobina que, pels efectes comentats anteriorment, presenten diferències. A part d'això, en aquest cas, a més d'observar correctament el mateix fet que en la bobina anterior, que el camp augmenta a l'entrar a la bobina i és màxim al centre, també observem l'efecte d'augmentar el nombre d'espires. Com esperàvem, el camp magnètic a l'interior de la bobina augmenta amb el nombre de voltes de la bobina. L'efecte teòric que s'esperava ha estat doncs confirmat per les observacions experimentals que indiquen aquest mateix fet.
-
-\section{Conclusions}
-
-En general els resultats obtinguts han estat satisfactoris. S'ha observat empíricament al llarg de tota la pràctica els fets que s'havien demostrat de manera teòrica. Els resultats més rellevants de la pràctica han estat els següents:
-\begin{enumerate}
-  \item El camp magnètic al centre d'una espira disminueix proporcionalment a \(\frac{1}{R}\) amb el radi.
-  \item L'augment del nombre d'espires fa augmentar de manera lineal el camp al seu centre.
-  \item El camp magnètic a l'eix d'una bobina és màxim en el seu centre.
-  \item El camp magnètic d'una bobina augmenta amb el nombre de voltes d'aquesta.
-\end{enumerate}
-Es pot concloure per tant que la pràctica s'ha realitzat satisfactòriament.
-
-\begin{figure}
+\begin{figure}[tp]
 	\sffamily \small
 	\centering
 	\input{./informe-7/figs/camp-300-33.tex}
-	\caption{Camp magnètic al llarg de l'eix d'una espira de 300 voltes, longitud \SI{16}{cm} i diàmetre \SI{3.3}{cm} per la que hi passa un corrent constant de \SI{1}{A}.}
+	\caption{Camp magnètic al llarg de l'eix d'una bobina de 300 voltes, longitud \SI{16}{cm} i diàmetre \SI{3.3}{cm} per la que hi passa un corrent constant de \SI{1}{A}.}
 	\label{fig:camp 300/33}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[tp]
 	\sffamily \small
 	\centering
 	\input{./informe-7/figs/camp-75-26.tex}
-	\caption{Camp magnètic al llarg de l'eix d'una espira de 75 voltes, longitud \SI{16}{cm} i diàmetre \SI{2.6}{cm} per la que hi passa un corrent constant de \SI{1}{A}.}
+	\caption{Camp magnètic al llarg de l'eix d'una bobina de 75 voltes, longitud \SI{16}{cm} i diàmetre \SI{2.6}{cm} per la que hi passa un corrent constant de \SI{1}{A}.}
 	\label{fig:camp 75/26}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[tp]
 	\sffamily \small
 	\centering
 	\input{./informe-7/figs/camp-150-26.tex}
-	\caption{Camp magnètic al llarg de l'eix d'una espira de 150 voltes, longitud \SI{16}{cm} i diàmetre \SI{2.6}{cm} per la que hi passa un corrent constant de \SI{1}{A}.}
+	\caption{Camp magnètic al llarg de l'eix d'una bobina de 150 voltes, longitud \SI{16}{cm} i diàmetre \SI{2.6}{cm} per la que hi passa un corrent constant de \SI{1}{A}.}
 	\label{fig:camp 150/26}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[tp]
 	\sffamily \small
 	\centering
 	\input{./informe-7/figs/camp-300-26.tex}
-	\caption{Camp magnètic al llarg de l'eix d'una espira de 300 voltes, longitud \SI{16}{cm} i diàmetre \SI{2.6}{cm} per la que hi passa un corrent constant de \SI{1}{A}.}
+	\caption{Camp magnètic al llarg de l'eix d'una bobina de 300 voltes, longitud \SI{16}{cm} i diàmetre \SI{2.6}{cm} per la que hi passa un corrent constant de \SI{1}{A}.}
 	\label{fig:camp 300/26}
 \end{figure}
+
+A les \cref{fig:camp 300/33,fig:camp 75/26,fig:camp 150/26,fig:camp 300/26} hi ha representat el mòdul del camp magnètic al llarg de l'eix de les bobines mesurades durant l'experiment---calculat a partir de l'\cref{eq:camp bobina} i amb el corresponent marge d'incertesa--- aixì com els punts corresponents a les mesures realitzades
+
+Tal i com es pot apreciar, al llarg de l'eix les mesures obtingudes s'ajusten molt bé a la prediccío teòrica. Això és d'esperar ja que a l'interior d'una bobina el camp és pràcticament constant. Als extrems, però, les dades experimentals no s'hi ajusten tant. Una explicació és que en  
+
+\section{Conclusions}
+En general els resultats obtinguts han estat satisfactoris. S'ha observat empíricament al llarg de tota la pràctica els fets que s'havien demostrat de manera teòrica. El camp magnètic al centre d'una espira disminueix a mesura que augmenta el radi d'aquesta i ho fa com $\frac{1}{R}$ amb $R$ el radi de l'espira. S'ha comprovat també empíricament l'augment lineal del camp al centre d'un conjunt d'espires amb la quantitat d'espires. Aquest últim fet ha estat provat per conjunts de $1$, $2$ i $3$ espires. Les observacions han portat també a concloure que el camp magnètic al centre d'una bobina augmenta en apropar-se al centre i és màxim en aquest. El fet que el camp magnètic creat per una bobina on hi circula una certa intensitat augmenta amb el nombre de voltes, ha estat provat també de manera satisfactòria. Finalment s'ha calculat empíricament la permeabilitat magnètica $\mu_{0}$ i s'ha obtingut una bona aproximació d'aquesta.
+
+
+
+
