@@ -50,11 +50,25 @@ A la segona part de la pràctica analitzarem aquest fenomen en el cas particular
 
 \section{Mètode experimental}
 \subsection{Règim transitori}
-En aquesta part de la pràctica s'analitzarà el comportament d'un circuit RLC en el règim transitori. Sobre un circuit amb una bobina d'inductància \( L = \SI{33}{mH} \), una resistència de \( R = \SI{180}{\ohm} \) i un condensador de capacitat \( C  = \SI{330}{pF} \) s'aplicarà una senyal rectangular periòdica. Amb aquests paràmetres podem determinar la resistència crítica \( R_C \) del circuit amb l'\cref{eq:resistencia critica}. El valor de \( R_C \) és \SI{2d4}{\ohm}, de manera que estem en condicions d'infraamortiment. Per a mesurar el període de les osci\l.lacions ajustarem la freqüència de la senyal rectangular de manera que un període d'aquesta coincideixi amb 10 osci\l.lacions de la tensió al condensador, que s'està mesurant amb un osci\l.loscopi. D'aquesta manera, el període de la senyal és 10 vegades el període de les osci\l.lacions
+\begin{figure}[htb]
+	\centering \small \sffamily
+	\input{./informe-3/figs/esquema-transitori.tex}
+	\caption{Esquema del circuit utilitzat per a la primera part}
+	\label{fig:esquema transitori}
+\end{figure}
+
+En aquesta part de la pràctica s'analitzarà el comportament d'un circuit RLC en el règim transitori. Sobre un circuit amb una bobina d'inductància \( L = \SI{33}{mH} \), una resistència de \( R = \SI{180}{\ohm} \) i un condensador de capacitat \( C  = \SI{330}{pF} \) s'aplicarà una senyal rectangular periòdica. Amb aquests paràmetres podem determinar la resistència crítica \( R_C \) del circuit amb l'\cref{eq:resistencia critica}. El valor de \( R_C \) és \SI{2d4}{\ohm}, de manera que estem en condicions d'infraamortiment. Per a mesurar el període de les osci\l.lacions del voltatge al condensador, \( V_C \), ajustarem la freqüència de la senyal rectangular de manera que un període d'aquesta coincideixi amb 10 osci\l.lacions de la tensió al condensador, que s'està mesurant amb un osci\l.loscopi. D'aquesta manera, el període de la senyal és 10 vegades el període de les osci\l.lacions.
 
 Per a mesurar la resistència crítica del sistema substituïm la resistència fixa per una de variable. Per a diferents valors de resistència observem comportament infraamortit i sobreamortit. La resistència que es troba a la frontera entre els dos comportaments és \( R_C \).  
 
 \subsection{Règim estacionari}
+\begin{figure}[htb]
+	\centering \small \sffamily
+	\input{./informe-3/figs/esquema-estacionari.tex}
+	\caption{Esquema del circuit utilitzat per a la primera part}
+	\label{fig:esquema estacionari}
+\end{figure}
+
 Per aquesta segona part realitzem mesures sobre un circuit RLC amb capacitat \( C = \SI{15}{mF} \), inductància \( L = \SI{22}{mH} \) i resistència \( R = \SI{2700}{\ohm} \). Després repetirem el procediment amb una resistència de \SI{270}{\ohm}. El circuit estarà sotmès a un voltatge d'entrada \( V \) de freqüència \( \omega \), que es pot controlar a través d'una font. Es mesuraran \( V \) i \( V_r \) amb un osci\l.loscopi.  
 
 En primer lloc es determinarà per a quina freqüència d'entrada el circuit es troba en ressonància ---és a dir, per a quina freqüència el desfasament entre \( V_R \) i \( V \) és nul--- i el valor obtingut es compararà amb el valor calculat per a \( \omega_0 \) segons l'\cref{eq:freq ressonancia}. 
@@ -74,5 +88,13 @@ El valor obtingut per a la freqüència del circuit a partir dels valors conegut
 
 Per la resistència crítica, el valor obtingut experimentalment és \data{1.28}{0.01d4}{\ohm}, i el valor obtingut amb l'\cref{eq:resistencia critica} és \SI{2e4}{\ohm}. 
 
+La mesura del període d'oscil·lació del sistema no és compatible amb el valor teòric. Tampoc ho és el de la resistència crítica. El motiu principal d'aquesta gran discrepància és que en els càlculs no s'han considerat resistències adicionals, a més de la resistència del potenciòmetre. Efectivament, si hom calcula, a partir del valor mesurat del període de l'\cref{eq:freq amortida}, la resistència total a la que està sotmès el circuit, suposant que la capacitat i inductància total es corresponen amb els valors nominals, es troba que la resistència total és d'uns \SI{8.6}{k\ohm}. Com que la mesura es va realitzar amb una resistència nominal de \SI{180}{\ohm}, això vol dir que les resistències desconegudes contribueixen al voltant de \SI{8.4}{k\ohm} a la resistència total. Això vol dir que la resistència crítica del circuit és en realitat de \( \SI{12.8}{k\ohm} + \SI{8.4}{k\ohm} = \SI{21.2}{k\ohm} \), que s'ajusten molt millor als \SI{20}{k\ohm} predits teòricament.  
+
 \subsection{Règim estacionari}
-Per al circuit amb \( R = \SI{2700}{\ohm} \) la freqüència de ressonància obtinguda experimentalment és \data{8.8}{1}{kHz}. El valor obtingut amb l'\cref{eq:freq ressonancia} és \SI{8.76}{kHz}. 
+Per al circuit amb \( R = \SI{2700}{\ohm} \) la freqüència de ressonància obtinguda experimentalment és \data{8.8}{1}{kHz}. El valor obtingut amb l'\cref{eq:freq ressonancia} és \SI{8.76}{kHz}. El guany en ressonància és de \SI{98}{\percent}. Les freqüències de tall mesurades són \data{3.3}{0.1}{kHz} i \data{24}{1}{kHz} mentre que els valors obtinguts teòricament amb \cref{eq:freqs de tall} són \SI{3.35}{kHz} i \SI{22.9}{kHz}.
+
+Per a \( R = \SI{270}{\ohm} \) la freqüència de ressonància és de \data{8.5}{0.2}{kHz}, mentre que el valor teòric és el mateix que per \( R = \SI{2700}{\ohm} \) ja que la freqüència de ressonància només depèn de \( L \) i \( C \). El guany en ressonància és de \SI{80}{\percent}. Les freqüències de tall mesurades són \data{9.1}{5}{kHz} i \data{7.8}{0.2}{kHz}, mentre que les calculades amb l'\cref{eq:freqs de tall} són \SI{9.79}{kHz} i \SI{7.84}{kHz}.   
+
+\section{Conclusions}
+\subsection{Règim transitori}
+
