@@ -26,7 +26,7 @@ Per aquesta primera part es tindrà el transformador sense resistències en el s
 
 \begin{figure}[htbp!]
     \centering \small \sffamily
-    \includegraphics{Esqtransf.png}
+    % \includegraphics{Esqtransf.png}
     \caption{Esquema del circuit per l'estudi simplificat}
     \label{fig:esq1}
 \end{figure}
@@ -46,7 +46,7 @@ off s'obtenen certes solucions per les relacions dels voltatges i intensitats d'
 
 \begin{figure}[htbp!]
     \centering \small \sffamily
-    \includegraphics{esqtransf2.png}
+    % \includegraphics{esqtransf2.png}
     \caption{Esquema del circuit per l'estudi com a circuit amb impedància}
     \label{fig:esq2}
 \end{figure}
@@ -72,7 +72,7 @@ A més, també s'ha estudiat el cas en què no hi havia nucli de ferro a l'inter
 
 \begin{figure}
     \centering \small \sffamily
-    \includegraphics{Transfs.png}
+    % \includegraphics{Transfs.png}
     \caption{Diferents configuracions del transformador}
     \label{fig:transfs}
 \end{figure}
@@ -98,10 +98,10 @@ Així pels cinc casos s'ha obtingut un voltatge de sortida $V_2$ i una $k$. A m�
 
 Els resultats comproven que la configuració més eficaç és la número $4$. Els diferents valors de $k$ semblen indicar que hi ha dos fets determinants a l'hora d'augmentar el rendiment del transformador. Primerament el fet que les dues bobines es trobin molt properes l'una a l'altra sembla augmentar considerablement el rendiment, cosa que és lògica d'esperar ja que el flux passarà en més quantitat per la bobina del secundari. A més d'això, el fet que el nucli de ferro segueixi la trajectòria de les línies de camp, també augmenta el rendiment; aquest fet també és d'esperar ja que al ser el ferro un material ferromagnètic condueix bé el flux magnètic a través de l'espai optimitzant-ne l'arribada a l'altra bobina. Evidentment al ser la configuració $4$ la de major potencial de sortida, l'estudi de les diferents bobines ha estat fet amb aquesta.
 
- \begin{table}[!htbp]\textwidth
+ \begin{table}[!htbp]
      \centering
      \setlength\tabcolsep{2pt}
-     \caption{Valors de $k \cdot \SI{d2}{}$ per diferents combinacions de bobines a la configuració $4$}
+     \caption{Valors de $k \cdot \num{d2}$ per diferents combinacions de bobines a la configuració $4$}
      \label{tab:k4}
 \begin{tabular}{p{2cm}p{2,5cm}p{2,5cm}p{2,5cm}p{2,5cm}p{2,5cm}}
 			\toprule
@@ -128,7 +128,7 @@ Com s'ha comentat, primerament s'han mesurat les intensitats del primari per dif
      \label{tab:I1}
 \begin{tabular}{SSS}
 			\toprule
-			{Configuració} & { \approx $k$ \SI{d2}{}} & {$I_1$ (\si{A})}  \\
+			{Configuració} & {$\approx k$ \num{d2}} & {$I_1$ (\si{A})}  \\
 			\midrule
 			0 &  4.17 $\pm$ 0.17 & 0.56 $\pm$ 0.04 \\
 			1 & 45.13 $\pm$ 0.67 & 0.29 $\pm$ 0.03 \\

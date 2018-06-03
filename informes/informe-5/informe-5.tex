@@ -25,14 +25,14 @@ Per tal de mesurar la resitència del material s'ha usat una variació del pont 
 \begin{figure}[h]
 	\label{fig: <Wheatstone>}
 	\centering
-	\includegraphics{pont}
+	% \includegraphics{pont}
 	\caption{Esquema del pont de Wheatstone}
 \end{figure}
 
 \begin{figure}[h]
 	\label{fig: <muntatge>}
 	\centering
-	\includegraphics{muntatge}
+	% \includegraphics{muntatge}
 	\caption{Esquema del muntatge experimental}
 \end{figure}
 
@@ -47,18 +47,18 @@ R_1=\frac{x}{L-x}R_2
 \end{equation}
 on $x$ denota la longitud de fil a l'esquerra del cursor i $L$ la longitud total del fil. El muntatge experimental es pot veure en la \ref{fig: <muntatge>}. 
 
-Les altes temperatures s'han obtingut introduint la resistència en un forn. S'ha deixat que aquesta prengués valors de fins a uns $\si{300}{\celsius}$ i s'han pres les mesures mentre es refredava a temperatura ambient. Les baixes temperatures s'han obtingut introduint la resistència en nitrogen líquid, i les mesures s'han pres mentre s'escalfava prop del nitrogen, per tal de reduir la velocitat a què ho feia i no perdre precisió.
+Les altes temperatures s'han obtingut introduint la resistència en un forn. S'ha deixat que aquesta prengués valors de fins a uns $\SI{300}{\celsius}$ i s'han pres les mesures mentre es refredava a temperatura ambient. Les baixes temperatures s'han obtingut introduint la resistència en nitrogen líquid, i les mesures s'han pres mentre s'escalfava prop del nitrogen, per tal de reduir la velocitat a què ho feia i no perdre precisió.
 
 
 \section{Resultats}
 
 La \ref{tab: <results>} mostra la longitud $x$ a l'esquerra del fil a cada temperatura determinada, juntament amb la resistència del metall, usant \ref{eq: <pont>}. La longitud total del fil ha estat fixada en $L=\data{1.000}{0.001}{\meter}$ i la resistència externa en $R_1=\data{100}{1}{\ohm}$.
 
-La regressió lineal amb les dades de la taula \cref{tab:<results>} es mostra en la Figura \ref{fig:<reg>}. El coeficient de correlació obtingut és de 0.997, el que demostra la linealitat de les dades en l'experiment considerat. S'han obtingut valors de $\data{0.359}{0.003}{\ohm\per\celsius}$ pel pendent i de $\data{106.9}{0.4}{\ohm}$ per l'ordenada a l'origen. Relacionant aquests valors amb l'expressió \cref{eq: <regressio>} s'obté $R_0=\data{106.9}{0.4}{\ohm}$ i $\beta=\data{336}{3}e{-5}{\ohm\per\celsius}$.
+La regressió lineal amb les dades de la taula \cref{tab:<results>} es mostra en la Figura \ref{fig:<reg>}. El coeficient de correlació obtingut és de 0.997, el que demostra la linealitat de les dades en l'experiment considerat. S'han obtingut valors de $\data{0.359}{0.003}{\ohm\per\celsius}$ pel pendent i de $\data{106.9}{0.4}{\ohm}$ per l'ordenada a l'origen. Relacionant aquests valors amb l'expressió \cref{eq: <regressio>} s'obté $R_0=\data{106.9}{0.4}{\ohm}$ i $\beta=\data{336}{3e-5}{\ohm\per\celsius}$.
 %No se com posar exponencial amb incertesa al data. Ha de ser (336\pm3)\cdot10^{-5}
 
 \section{Conclusions}
-S'ha comprovat experimentalment la relació lineal entre la temperatura del metall usat i la seva resistència. El coeficient de correlació, de 0.997, demostra que existeix una relació com la descrita en l'expressió \ref{eq: <regressio>}. A més, s'han pogut determinar els paràmetres $\beta$ i $R_0$, amb valors de $\data{336}{3}e{-5}{\per\celsius}$ i $\data{106.9}{0.4}{\ohm}$ respectivament.
+S'ha comprovat experimentalment la relació lineal entre la temperatura del metall usat i la seva resistència. El coeficient de correlació, de 0.997, demostra que existeix una relació com la descrita en l'expressió \ref{eq: <regressio>}. A més, s'han pogut determinar els paràmetres $\beta$ i $R_0$, amb valors de $\data{336}{3e-5}{\per\celsius}$ i $\data{106.9}{0.4}{\ohm}$ respectivament.
 %Same here
 
 
@@ -68,61 +68,61 @@ S'ha comprovat experimentalment la relació lineal entre la temperatura del meta
 
 
 
-\begin{table} \labelcref{tab: <results>}
-	\centering
-	\caption{Mesures experimentals de la resistència a diferents temperatures. El voltatge subministrat és aproximadament constat de $3.1\pm0.2\si{\volt}$}
-	\begin{tabular}{|c|c|c|}
-		\hline
-\textbf{Temperatura} $\data{}{1}{\celsius}$ & \textbf{Longitud $x$ } \data{}{0.001}{\meter} & \textbf{Resistència} \SI{\ohm} \\ \hline 
-265 & 0.664 & $\data{198}{9}{}$\\
-260 & 0.668 & $\data{201}{9}{}$\\
-255 & 0.665 & $\data{199}{9}{}$\\
-250 & 0.664 & $\data{198}{9}{}$\\
-245 & 0.663 & $\data{197}{9}{}$\\
-240 & 0.661 & $\data{195}{9}{}$\\
-235 & 0.659 & $\data{193}{9}{}$\\
-230 & 0.657 & $\data{192}{9}{}$\\
-225 & 0.655 & $\data{190}{9}{}$\\
-220 & 0.654 & $\data{189}{9}{}$\\
-210 & 0.646 & $\data{182}{8}{}$\\
-200 & 0.643 & $\data{180}{8}{}$\\
-190 & 0.637 & $\data{175}{8}{}$\\
-180 & 0.630 & $\data{170}{8}{}$\\
-170 & 0.627 & $\data{168}{7}{}$\\
-160 & 0.622 & $\data{165}{7}{}$\\
-155 & 0.620 & $\data{163}{7}{}$\\
-150 & 0.616 & $\data{160}{7}{}$\\
-145 & 0.613 & $\data{158}{7}{}$\\
-140 & 0.610 & $\data{156}{7}{}$\\
-135 & 0.608 & $\data{155}{7}{}$\\
-130 & 0.605 & $\data{153}{7}{}$\\
-125 & 0.603 & $\data{152}{7}{}$\\
-120 & 0.600 & $\data{150}{6}{}$\\
-115 & 0.597 & $\data{148}{6}{}$\\
-110 & 0.593 & $\data{146}{6}{}$\\
-105 & 0.585 & $\data{141}{6}{}$\\
-23 & 0.520 & $\data{108}{5}{}$\\
--20 & 0.485 & $\data{94}{4}{}$\\
--25 & 0.484 & $\data{94}{4}{}$\\
--30 & 0.481 & $\data{93}{4}{}$\\
--35 & 0.478 & $\data{92}{4}{}$\\
--40 & 0.474 & $\data{90}{4}{}$\\
--45 & 0.470 & $\data{88}{4}{}$\\
--49 & 0.468 & $\data{88}{4}{}$\\
--55 & 0.464 & $\data{87}{4}{}$\\
--60 & 0.459 & $\data{85}{4}{}$\\
--65 & 0.457 & $\data{84}{4}{}$\\
--70 & 0.452 & $\data{82}{3}{}$\\
--75 & 0.447 & $\data{81}{3}{}$\\
--80 & 0.445 & $\data{80}{3}{}$\\
--85 & 0.441 & $\data{79}{3}{}$\\
--90 & 0.436 & $\data{77}{3}{}$\\
--95 & 0.431 & $\data{76}{3}{}$\\
--100 & 0.424 & $\data{74}{3}{}$\\
--105 & 0.417 & $\data{72}{3}{}$\\
--110 & 0.409 & $\data{69}{3}{}$\\
--115 & 0.398 & $\data{66}{3}{}$\\
--150 & 0.365 & $\data{57}{3}{}$\\
-\hline
-	\end{tabular}
-\end{table}  
+% \begin{table} \label{tab: <results>}
+% 	\centering
+% 	\caption{Mesures experimentals de la resistència a diferents temperatures. El voltatge subministrat és aproximadament constat de $3.1\pm0.2\si{\volt}$}
+% 	\begin{tabular}{|c|c|c|}
+% 		\hline
+% \textbf{Temperatura} $\data{}{1}{\celsius}$ & \textbf{Longitud $x$ } \data{}{0.001}{\meter} & \textbf{Resistència} \SI{\ohm} \\ \hline 
+% 265 & 0.664 & $\data{198}{9}{}$\\
+% 260 & 0.668 & $\data{201}{9}{}$\\
+% 255 & 0.665 & $\data{199}{9}{}$\\
+% 250 & 0.664 & $\data{198}{9}{}$\\
+% 245 & 0.663 & $\data{197}{9}{}$\\
+% 240 & 0.661 & $\data{195}{9}{}$\\
+% 235 & 0.659 & $\data{193}{9}{}$\\
+% 230 & 0.657 & $\data{192}{9}{}$\\
+% 225 & 0.655 & $\data{190}{9}{}$\\
+% 220 & 0.654 & $\data{189}{9}{}$\\
+% 210 & 0.646 & $\data{182}{8}{}$\\
+% 200 & 0.643 & $\data{180}{8}{}$\\
+% 190 & 0.637 & $\data{175}{8}{}$\\
+% 180 & 0.630 & $\data{170}{8}{}$\\
+% 170 & 0.627 & $\data{168}{7}{}$\\
+% 160 & 0.622 & $\data{165}{7}{}$\\
+% 155 & 0.620 & $\data{163}{7}{}$\\
+% 150 & 0.616 & $\data{160}{7}{}$\\
+% 145 & 0.613 & $\data{158}{7}{}$\\
+% 140 & 0.610 & $\data{156}{7}{}$\\
+% 135 & 0.608 & $\data{155}{7}{}$\\
+% 130 & 0.605 & $\data{153}{7}{}$\\
+% 125 & 0.603 & $\data{152}{7}{}$\\
+% 120 & 0.600 & $\data{150}{6}{}$\\
+% 115 & 0.597 & $\data{148}{6}{}$\\
+% 110 & 0.593 & $\data{146}{6}{}$\\
+% 105 & 0.585 & $\data{141}{6}{}$\\
+% 23 & 0.520 & $\data{108}{5}{}$\\
+% -20 & 0.485 & $\data{94}{4}{}$\\
+% -25 & 0.484 & $\data{94}{4}{}$\\
+% -30 & 0.481 & $\data{93}{4}{}$\\
+% -35 & 0.478 & $\data{92}{4}{}$\\
+% -40 & 0.474 & $\data{90}{4}{}$\\
+% -45 & 0.470 & $\data{88}{4}{}$\\
+% -49 & 0.468 & $\data{88}{4}{}$\\
+% -55 & 0.464 & $\data{87}{4}{}$\\
+% -60 & 0.459 & $\data{85}{4}{}$\\
+% -65 & 0.457 & $\data{84}{4}{}$\\
+% -70 & 0.452 & $\data{82}{3}{}$\\
+% -75 & 0.447 & $\data{81}{3}{}$\\
+% -80 & 0.445 & $\data{80}{3}{}$\\
+% -85 & 0.441 & $\data{79}{3}{}$\\
+% -90 & 0.436 & $\data{77}{3}{}$\\
+% -95 & 0.431 & $\data{76}{3}{}$\\
+% -100 & 0.424 & $\data{74}{3}{}$\\
+% -105 & 0.417 & $\data{72}{3}{}$\\
+% -110 & 0.409 & $\data{69}{3}{}$\\
+% -115 & 0.398 & $\data{66}{3}{}$\\
+% -150 & 0.365 & $\data{57}{3}{}$\\
+% \hline
+% 	\end{tabular}
+% \end{table}  
