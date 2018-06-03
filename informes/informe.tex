@@ -58,7 +58,7 @@
 
 % Unitats
 \sisetup{
-	inter-unit-product = \ensuremath{ \cdot },
+	inter-unit-product = \ensuremath{ \, },
 	allow-number-unit-breaks = true,
 	detect-family = true,
 	list-final-separator = { i },
@@ -69,6 +69,12 @@
 \newcommand{\data}[3]{\SI{#1 \pm #2}{#3}}
 \renewcommand{\vec}[1]{\mathbf{#1}}
 \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\makeatletter
+\newcommand*{\defeq}{\mathrel{\rlap{%
+    \raisebox{0.3ex}{$\m@th\cdot$}}%
+  \raisebox{-0.3ex}{$\m@th\cdot$}}%
+=}
+\makeatother
 
 % Format de l'abstract
 \newlength{\currentparindent}

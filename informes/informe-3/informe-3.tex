@@ -21,33 +21,58 @@ Observem que totes aquestes equacions són les d'un osci\l.lador forçat. la sol
 \begin{equation*}
 	\Delta = \frac{R^2}{L^2} - \frac{4}{LC}.
 \end{equation*}
-Si \( \Delta < 0 \) el circuit està infraamortit i tenim osci\l.lacions a freqüència \( \omega = \frac{1}{2}\sqrt{-\Delta} \). Si \( \Delta > 0 \) aleshores diem que el circuit es troba sobreamortit i no tenim osci\l.lacions, només una caiguda exponencial. En el cas que \( \Delta = 0 \) parlem d'amortiment crític. La resistència que dóna lloca a amortiment crític rep el nom de resistència crítica i es pot calcular imposant \( \Delta = 0 \) i resulta
+Si \( \Delta < 0 \) el circuit està infraamortit i tenim osci\l.lacions a freqüència 
+\begin{equation} \label{eq:freq amortida}
+ 	\omega = \frac{1}{2}\sqrt{-\Delta} = \frac{1}{2}\sqrt{\frac{4}{LC} - \frac{R^2}{L^2}}. 
+\end{equation}
+Si \( \Delta > 0 \) aleshores diem que el circuit es troba sobreamortit i no tenim osci\l.lacions, només una caiguda exponencial. En el cas que \( \Delta = 0 \) parlem d'amortiment crític. La resistència que dóna lloca a amortiment crític rep el nom de resistència crítica i es pot calcular imposant \( \Delta = 0 \) i resulta
 \begin{equation} \label{eq:resistencia critica}
 	R_C = 2\sqrt{\frac{L}{C}}. 
 \end{equation}
 
-
 En tots tres casos, el terme transitori va multiplicat per un factor \( e^{-\lambda t} \) on \( \lambda = \frac{R}{2L} \) rep el nom de constant d'amortiment. Per tant decaurà de forma exponencial, raó per la qual rep el nom de transitori. A la primera part de la pràctica analitzem un circuit en el règim transitori ---i.e. abans de que el terme transitori pugui decaure significativament--- i comprovarem com varia l'amortiment del circuit en funció de \( R \).  
 
 Un cas particularment rellevant és el d'un circuit forçat amb una tensió s'entrada sinusoidal. En aquestes condicions podem observar el fenòment de ressonància, que té lloc quan la tensió d'entrada osci\l.la a la freqüència característica del circuit, 
-\begin{equation*}
+\begin{equation}\label{eq:freq ressonancia}
 	\omega_0 = \frac{1}{\sqrt{LC}}.
-\end{equation*}
-En aquestes condicions ---i en general quan la tensió subministrada osci\l.la sinusoidalment en el temps---, en el règim estacionari totes les magnituds del circuit osci\l.len a la freqüència subministrada \( \omega \). L'amplitud i la diferència de fase d'aquestes osci\l.lacions, però, depèn de \( \omega \). A la segona part de la pràctica analitzarem aquest fenomen en el cas particular de la tensió de la resistència, \( V_R \).   
+\end{equation}
+En aquestes condicions ---i en general quan la tensió subministrada osci\l.la sinusoidalment en el temps---, en el règim estacionari totes les magnituds del circuit osci\l.len a la freqüència subministrada \( \omega \). L'amplitud i la diferència de fase d'aquestes osci\l.lacions, però, depenen de \( \omega \). Concretament, per al cas de \( V_R \) es té que el desfasament \( \phi \) amb \( V \) compleix
+\begin{equation} \label{eq:desfasament}
+	\tan{\phi} = \frac{\frac{1}{C\omega} - L\omega}{R}
+\end{equation}
+i 
+\begin{equation} \label{eq:guany}
+	\abs{T_R(\omega)} = \frac{R}{\sqrt{R^2 + \left(L\omega - \frac{1}{C\omega}\right)^2}},
+\end{equation}
+on \( \abs{T_R(\omega)} \) s'anomena el guany ---\( T_R(\omega) \) és una quantitat complexa que també conté informació sobre el desfasament, però el seu mòdul és precisament el quocient de les amplituds---.
+
+A la segona part de la pràctica analitzarem aquest fenomen en el cas particular de la tensió de la resistència, \( V_R \).   
 
 \section{Mètode experimental}
 \subsection{Règim transitori}
 En aquesta part de la pràctica s'analitzarà el comportament d'un circuit RLC en el règim transitori. Sobre un circuit amb una bobina d'inductància \( L = \SI{33}{mH} \), una resistència de \( R = \SI{180}{\ohm} \) i un condensador de capacitat \( C  = \SI{330}{pF} \) s'aplicarà una senyal rectangular periòdica. Amb aquests paràmetres podem determinar la resistència crítica \( R_C \) del circuit amb l'\cref{eq:resistencia critica}. El valor de \( R_C \) és \SI{2d4}{\ohm}, de manera que estem en condicions d'infraamortiment. Per a mesurar el període de les osci\l.lacions ajustarem la freqüència de la senyal rectangular de manera que un període d'aquesta coincideixi amb 10 osci\l.lacions de la tensió al condensador, que s'està mesurant amb un osci\l.loscopi. D'aquesta manera, el període de la senyal és 10 vegades el període de les osci\l.lacions
 
-Per a mesurar la resistència crítica del sistema substituïm la resistència fixa per una de variable. Per a diferents valors de resistència observem moviment infraamortit i sobreamortit. La resistència que es troba a la frontera entre els dos moviments és \( R_C \).  
+Per a mesurar la resistència crítica del sistema substituïm la resistència fixa per una de variable. Per a diferents valors de resistència observem comportament infraamortit i sobreamortit. La resistència que es troba a la frontera entre els dos comportaments és \( R_C \).  
 
 \subsection{Règim estacionari}
-Per aquesta segona part realitzem mesures sobre un circuit RLC amb capacitat \( C = \SI{15}{mF} \), inductància \( L = \SI{22}{mH} \) i resistència \( R = \SI{2700}{\ohm} \). Després repetirem el procediment amb una resistència de \SI{270}{\ohm}.  
+Per aquesta segona part realitzem mesures sobre un circuit RLC amb capacitat \( C = \SI{15}{mF} \), inductància \( L = \SI{22}{mH} \) i resistència \( R = \SI{2700}{\ohm} \). Després repetirem el procediment amb una resistència de \SI{270}{\ohm}. El circuit estarà sotmès a un voltatge d'entrada \( V \) de freqüència \( \omega \), que es pot controlar a través d'una font. Es mesuraran \( V \) i \( V_r \) amb un osci\l.loscopi.  
 
-El circuit el sotmetrem a una tensió sinusoidal \( V(t) = V_0 \sin{\omega t} \) on \( \omega \) es pot controlar a través de la font. Si substituïm a les \cref{eq:llei VR,eq:llei VC} trobem 
-\begin{align*}
-	\frac{d^2V_R}{dt^2} + \frac{R}{L}\frac{dV_R}{dt} + \frac{1}{LC}V_R &= \frac{RV_0\omega}{L}\cos{\omega t} \\
-	\frac{d^2V_C}{dt^2} + \frac{R}{L}\frac{dV_C}{dt} + \frac{1}{LC}V_C &= \frac{V_0}{LC}\sin{\omega t}.
-\end{align*}
-Això ens diu que el voltatge al condensador va en fase amb el voltatge d'entrada i que el voltatge de la resistència va 
+En primer lloc es determinarà per a quina freqüència d'entrada el circuit es troba en ressonància ---és a dir, per a quina freqüència el desfasament entre \( V_R \) i \( V \) és nul--- i el valor obtingut es compararà amb el valor calculat per a \( \omega_0 \) segons l'\cref{eq:freq ressonancia}. 
 
+També es determinaran les freqüències de tall, que són les que compleixen \( \abs{T_R(\omega)} = \frac{1}{\sqrt{2}} \). Les freqüències de tall, \( \omega_1 \) i \( \omega_2 \) es poden calcular a priori segons les equacions
+\begin{equation} \label{eq:freqs de tall}
+	\begin{aligned}
+		\omega_1\omega_2 &= \omega_0^2 \\
+		\omega_2 - \omega_1 &= \frac{R}{L},
+	\end{aligned}
+\end{equation}
+i els resultats es compararan amb les mesures preses. 
+
+\section{Resultats}
+\subsection{Règim transitori}
+El valor obtingut per a la freqüència del circuit a partir dels valors coneguts de \( L \), \( C \) i \( R \) i de l'\cref{eq:freq amortida} és \SI{3.03d5}{rad.s^{-1}}. Això dóna un valor per al període de \SI{2.07d-5}{s}. El valor mesurat del període és \data{2.3}{0.1d-5}{s}.   
+
+Per la resistència crítica, el valor obtingut experimentalment és \data{1.28}{0.01d4}{\ohm}, i el valor obtingut amb l'\cref{eq:resistencia critica} és \SI{2e4}{\ohm}. 
+
+\subsection{Règim estacionari}
+Per al circuit amb \( R = \SI{2700}{\ohm} \) la freqüència de ressonància obtinguda experimentalment és \data{8.8}{1}{kHz}. El valor obtingut amb l'\cref{eq:freq ressonancia} és \SI{8.76}{kHz}. 
