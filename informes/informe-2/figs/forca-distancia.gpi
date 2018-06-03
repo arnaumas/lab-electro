@@ -19,6 +19,7 @@ set style line 2 linecolor rgb "blue" dashtype 2 linewidth 1
 # Regressió lineal
 f(x) = a*x + b
 fit f(x) 'forca-distancia.dat' using 3:($1*1000) via a,b
+set label '$r^2 = $ \num{0.932}' at 110,0.5 center 
 
 # Punts
 plot 'forca-distancia.dat' using 3:($1*1000):4:($2*1000) notitle with xyerrorbars linestyle 1 , f(x) notitle with lines linestyle 2

@@ -14,6 +14,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath, amssymb, xfrac}
 \usepackage{siunitx}
+\usepackage[siunitx]{circuitikz}
 \usepackage[catalan,sort]{cleveref}
 
 % Marges, etc
@@ -37,7 +38,7 @@
 \crefname{figure}{figura}{figures}
 
 % Figures
-\graphicspath{{./informe-2/figs/} {./informe-7/figs/} {./annexos/figs/}}
+\graphicspath{{./informe-2/figs/} {./informe-3/figs/} {./informe-7/figs/} {./annexos/figs/}}
 
 % Peus de pàgina
 \newpagestyle{pagina}{
@@ -73,7 +74,8 @@
 \newcommand*{\defeq}{\mathrel{\rlap{%
     \raisebox{0.3ex}{$\m@th\cdot$}}%
   \raisebox{-0.3ex}{$\m@th\cdot$}}%
-=}
+=
+}
 \makeatother
 
 % Format de l'abstract
@@ -88,7 +90,7 @@
 \date{\sffamily 2018}
 
 % Arxius a incloure
-\includeonly{./informe-3/informe-3}
+% \includeonly{./informe-2/informe-2}
 
 \begin{document}
 \maketitle
@@ -102,7 +104,7 @@
 % \include{./informe-1/informe-1}
 
 % Informe 2
-% \include{./informe-2/informe-2-prova}
+\include{./informe-2/informe-2}
 
 % Informe 3
 \include{./informe-3/informe-3}
