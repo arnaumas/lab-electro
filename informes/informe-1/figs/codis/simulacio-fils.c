@@ -1,11 +1,3 @@
-//
-//  simuhilos2.c
-//
-//
-//  Created by Sandro Barissi Marín on 29/5/18.
-//
-
-#include "simuhilos2.h"
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>

@@ -1,0 +1,21 @@
+set terminal epslatex size 10cm,10cm color colortext
+set output 'lliure.tex'
+set size ratio -1
+
+set view map
+set xrange [50:250]
+set yrange [5:195]
+set xlabel '$x$ (\si{mm})'
+set ylabel '$y$ (\si{mm})'
+set format '\num{%g}'
+unset key
+
+set pm3d explicit
+# unset hidden3d
+set contour base
+set cntrparam level incremental -1, 0.2, 1 
+set palette defined (0 "blue", 1 "white", 2 "red")
+set cntrlabel onecolor
+
+splot "lliure-teo.dat" using 1:2:3 with pm3d, "lliure-exp.dat" using 1:2:3 with linespoints nocontour 
+				
