@@ -1,0 +1,27 @@
+set terminal epslatex size 10cm,8cm color colortext header '' 
+set output 'temp-resistencia.tex'
+
+# Format dels eixos
+set xlabel '$\mathsf{\theta \ (\si{\celsius})}$'
+set ylabel '$\mathsf{R \ (\si{\ohm})}$'
+set format '\num{%g}'
+set border linewidth 1.5
+
+# Escales
+set xrange [-200:300]
+set xtics -200,100,300 scale 0.75 
+set yrange [50:225]
+set ytics 50,25 scale 0.75 
+
+# Format dels punts
+set style line 1 linecolor rgb "blue" pointtype 2 linewidth 0.5
+set style line 2 linecolor rgb "blue" dashtype 2 linewidth 1
+
+# Regressió lineal
+f(x) = a*x + b
+fit f(x) 'temp-resistencia.dat' using 1:3 via a,b
+stats "temp-resistencia.dat" using 1:3 name "A"
+set label sprintf('$r^2 =$ \num{%.3f}', A_correlation) at 230,60 center
+
+# Punts
+plot 'temp-resistencia.dat' using 1:3:2:4 notitle with xyerrorbars linestyle 1 , f(x) notitle with lines linestyle 2
