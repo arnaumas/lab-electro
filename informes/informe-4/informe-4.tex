@@ -2,6 +2,8 @@
 
 \begin{resum}
 	L'objectiu d'aquesta pràctica és l'estudi del transformador des d'un punt de vista simplificat i també com a circuit de corrent altern amb una certa impedància. Més concretament, s'estudien els voltatges i les intensitats d'entrada i de sortida del transformador variant la configuració d'aquest, tant amb el circuit secundari en obert com amb una resistència concreta per aquest.
+	
+	Hem obtingut que la disposició de bobines i ferro que dóna el millor coeficient d'acoblament és aquella que s'assembla més a la forma que segueix el camp d'inducció magnètica d'una bobina. El coeficient, ficant bobines de 400 voltes al primari i al secundari, és del $97\%$. A més hem pogut observar que, a menor nombre de voltes del circuit primari, més gran es torna el flux induït en el secundari. Passa igual amb una intensitat del primari menor.
 \end{resum}
 
 \section{Introducció}\label{sec:introducció}
@@ -30,7 +32,7 @@ Com s'explica a la \cref{sec:introducció}, per un transformador real l'\cref{eq
 \begin{equation}\label{eq:transformador real}
   k\frac{V_1}{V_2}=\frac{n_1}{n_2}
 \end{equation}
-on $k$ és una constant adimensional que es troba entre $0$ i $1$, que és una espècie de mesura del flux que indueix el corrent respecte el total. En el cas del transformador ideal $k=1$. Per tant, per diferents configuracions del transformador i diferents bobines, s'estudiaran els diferents valors de la constant $k$, fent ús de l'\cref{eq:transformador real}.
+on $k$ és el coeficient d'acoblament, un factor que ens parla del grau d'idealitat del transformador, és a dir, és una mesura del flux que indueix el corrent respecte del total. El seu valor es troba entre $0$ i $1$, éssent $k=1$ per al transformador ideal. Per tant, per diferents configuracions del transformador i diferents bobines, s'estudiaran els diferents valors de la constant $k$, fent ús de l'\cref{eq:transformador real}.
 
 \subsection{Estudi com a circuit}\label{sec:metcirc}
 En la segona part s'estudia com ja hem dit el transformador com a circuit. Totes les mesures d'aquest apartat són fetes amb el circuit com mostra la figura \cref{fig:esq2}, i com la mateixa figura mostra, en aquest cas, es connecta una resistència al circuit secundari. Per a aquest circuit, emprant les lleis de Kirchh
@@ -92,7 +94,7 @@ Els resultats comproven que la configuració més eficaç és la número $4$. El
   \label{tab:acoblament 4}
 	\begin{tabular}{lS[table-parse-only]S[table-parse-only]S[table-parse-only]S[table-parse-only]S[table-parse-only]}
 		\toprule
-		& \multicolumn{5}{c}{$N_2$} \\ \cmidrule{2-6}
+		& \multicolumn{5}{c}{$N_1$} \\ \cmidrule{2-6}
 		{ \( N_2 \) } &200&400&800&1600&3200 \\
 		\midrule
 		200 &  & \data{96.62}{0.34}{\percent} & \data{95.33}{0.67}{\percent} & \data{94.00}{0.27}{\percent} &  \data{93.93}{0.27}{\percent} \\
@@ -104,8 +106,8 @@ Els resultats comproven que la configuració més eficaç és la número $4$. El
 	\end{tabular}
 \end{table}
 
-La \cref{tab:acoblament 4} sembla indicar que per a més voltes a la bobina principal $k$ disminueix. Aquest fet podria ser explicat pensant que el flux total generat per les bobines de més voltes és major i, per tant,  possiblement és més complicat que aquest travessi comoletament la segona bobina. A més la bobina que sembla funcionar millor en el secundari és la de $400$, exceptuant el cas en què la del primari també és $400$. Tanmateix, les diferències són molt petites i l'estudi no ha estat suficientment exhaustiu com per concloure que la bobina de $400$ sempre serà la més eficaç en el secundari.
-
+La \cref{tab:acoblament 4} sembla indicar que, quan més petit sigui el nombre de voltes del circuit primari, millor serà el coeficient d'acoblament. Això té sentit, ja que si veiem que, quan més gran sigui el nombre d'espires, més gran serà el camp creat. Per tant pot ésser més difícil que el camp travessi una superfície donada (la del circuit secundari). És a dir, menor flux del circuit primari implica coeficient d'acoblament major. Això es posa de manifest si ens fixem en la relació entre, per exemple, 800-200 i 200-800.
+Tanmateix, les diferències són molt petites i l'estudi no ha estat suficientment exhaustiu com per concloure que la bobina de menor nombre de voltes sempre serà la més eficaç. En efecte, veiem que hi ha anomalíes si posem 200 o 400 voltes al primari. Cal notar que tots els valors són a més molt propers, éssent la diferència més gran de només d'un $5\%$.
 \subsection{Estudi com a circuit}
 Com s'ha comentat, primerament s'han mesurat les intensitats del primari per diferents configuracions i s'ha analitzat les variacions. Aquestes mesures han estat realitzades amb la bobina de $800$ al primari i la de $400$ al secundari, amb un voltatge primari de \SI{6}{V} i amb una impedància \SI{1000}{\ohm}. 
 
@@ -155,9 +157,9 @@ Finalment s'han calculat $I_1$, $I_2$ i $V_2$ per la configuració amb $400$ vol
 
 Per la \cref{tab:400IV} podem veure que, com era d'esperar, a majors impedàncies les intensitats que circulen per ambdós circuits disminueixen. Pel que fa als valors dels guanys aquests són prou propers als valors teòrics, calculant els percentatges d'error surten d'aproximadament el $1\%$, el $4\%$ i el $18\%$ respectivament per les impedàncies de \SIlist{1000;100;10}{\ohm}. Tanmateix hi ha una variació entre els guanys de $Z= \SI{1000}{\ohm}$ i $Z=\SI{100}{\ohm}$ que no hauria d'aparèixer teòricament. Aquest fet probablement és degut a les aproximacions a l'hora de trobar les solucions de les equacions de Kirchhoff pel circuit. El fet que  per $Z= \SI{100}{\ohm}$ $V_2$ disminueixi considerablement, és degut a que el terme de la força contraelectromotriu apareix en l'aproximació de $Z\ll X$ i fa disminuir $V_2$. El fet principal que s'observa relatiu a $Z$, és l'augment del guany per a impedàncies $Z$ més elevades.
 
-A la \cref{tab:400IV} es poden observar els mateixos efectes mencionats per la \cref{tab:400IV}. En aquest cas, els percentatges de error aproximats són de $2\%$, $18\%$ i $38\%$ respectivament per les impedàncies de \SIlist{1000;100;10}{\ohm}, el valor del guany per la resistència de $ \SI{10}{\ohm}$ és la que difereix més notablement del valor teòric esperat. Els valors de la \cref{tab:400IV}, a més a més, han accentuat en alguns casos els efectes mencionats per la bobina de $400$. Ja que, per exemple, la disminució de $V_2$  per la de $800$ voltes ha estat molt considerable. El valor esperat teòricament era de $V_2=\SI{12}{V}$, en canvi el valor mesurat ha estat de $V_2 = \data{2.68}{0.01}{V}$. També podem observar de la relació entre les dues taules que els valors teòrics han canviat considerablement degut al canvi de $k$. 
+En el cas de 800 voltes, els percentatges de error aproximats són de $2\%$, $18\%$ i $38\%$ respectivament per les impedàncies de \SIlist{1000;100;10}{\ohm}, el valor del guany per la resistència de $ \SI{10}{\ohm}$ és la que difereix més notablement del valor teòric esperat. Aquests valors, a més a més, han accentuat en alguns casos els efectes mencionats per la bobina de $400$. Ja que, per exemple, la disminució de $V_2$  per la de $800$ voltes ha estat molt considerable. El valor esperat teòricament era de $V_2=\SI{12}{V}$, en canvi el valor mesurat ha estat de $V_2 = \data{2.68}{0.01}{V}$. També podem observar de la relació entre les dues taules que els valors teòrics han canviat considerablement degut al canvi de $k$. 
 
 \section{Conclusions}
-Pel que fa al primer estudi del transformador, les conclusions més interessants han estat veure que sembla que $k$, i per tant l'eficiència del circuit, és major per configuracions amb bobines de menys voltes al primari. El nucli de ferro també augmenta en gran mesura $k$, i el fet que aquest segueixi la forma de les línies de camp magnètic també sembla ajudar a augmentar $k$. A més de tots aquests factors, la proximitat de la bobina també sembla ser un factor rellevant, essent més eficients els transformadors amb les bobines més properes.
+Pel que fa al primer estudi del transformador, les conclusions més interessants han estat veure que sembla que el coeficient d'acoblament, i per tant l'eficiència del circuit, és major per configuracions amb bobines de menys voltes al primari. El nucli de ferro també augmenta en gran mesura $k$, i el fet que aquest segueixi la forma de les línies de camp magnètic també sembla ajudar a augmentar $k$. A més de tots aquests factors, la proximitat de la bobina també sembla ser un factor rellevant, essent més eficients els transformadors amb les bobines més properes.
 
 Per la segona part de l'estudi, s'ha observat que només variant la configuració del transformador ja varia en gran mesura la intensitat de sortida $I_1$. Les configuracions de major $k$ han resultat ser les de menor $I_1$. A més el guany de voltatge $\frac{V_2}{V_1}$ resulta ser major per circuits amb impedàncies $Z$ més elevades. Finalment, també s'ha observat que el voltatge en el circuit secundari disminueix considerablement si la impedància $Z$ del circuit també ho fa.
