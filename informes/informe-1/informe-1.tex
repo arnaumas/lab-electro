@@ -13,29 +13,22 @@ Considerem doncs una d'aquestes situacions amb simetria, la de dues plaques plan
 	C/Z=\frac{Q/Z}{V_a-V_b}
 \end{equation}
 
-D'altra banda, els objectius d'aquesta pràctica són els següents:
-\begin{itemize}
-	\item Estudiar les línies equipotencials i de camp per a diferents distribucions de càrrega: dues plaques plano-para\l.leles d'un condensador i dos fils infinits para\l.lels.
-	\item Calcular la capacitat per unitat de longitud d'un condensador de plaques plano-para\l.leles.
-	\item Estudiar l'efecte punxa comparant dues superfícies de curvatures diferenciades.
+D'altra banda, els objectius d'aquesta pràctica seran estudiar les línies equipotencials i de camp per a diferents distribucions de càrrega: dues plaques plano-para\l.leles d'un condensador i dos fils infinits para\l.lels. Així mateix, haurem de calcular la capacitat per unitat de longitud d'un condensador de plaques plano-para\l.leles.I per últim estudiarem l'efecte punxa comparant dues superfícies de curvatures diferenciades.
 \end{itemize}
 \section{Mètode experimental}
-Com comentàvem, suposem que les distribucions de càrrega del condensador i els dos fils tenen longitud a la component $z$ infinita, de manera que qualsevol pla para\l.lel al nostre pla, diguem-li $xy$, seria igual al que tenim. Per al cas adicional de l'efecte punxa, suposem simetria al voltant de l'eix $x$ del paper: qualsevol pla que el contingui com a eix d'abcises hauria de ser igual al nostre. Utilitzarem un paper impregnat de carbó i amb conductivitat uniforme per a dibuixar les distribucions de càrrega mitjançant un retolador de tinta de plata amb una conductivitat més gran que la del paper. A l'hora de la realització experimental es poden seguir els passos següents:
-\begin{itemize}
-	\item Primer cal dibuixar la distribució que convingui i deixar que la tinta s'assequi.
-	\item Un cop fixat el muntatge de la \cref{fig:muntatge}, connectem cada placa (element del dibuix) a una entrada de la font.
-	\item Connectem un dels electrodes a un dels cables del multímetre, que servirà de referència de potencial. Mitjançant l'altre extrem del multímetre, mesurem el potencial en qualsevol punt del paper simplement tocant amb la punxa el punt que sigui.
-	\item Dibuixem línies equipotencials buscant punts amb el mateix potencial. Les línies de camp es troben posteriorment, aprofitant que són perpendiculars a les línies equipotencials.
-	\item Per al cas particular del condensador, la determinació de la càrrega per unitat de longitud vindrà donada per l'\cref{eq:carrega}, on apareixen la diferència de potencial entre dos punts de les superfícies equipotencials ($\Delta V_i$), la distància radial que les separa mesurada sobre la línia de camp elèctric
+Com comentàvem, suposem que les distribucions de càrrega del condensador i els dos fils tenen longitud a la component $z$ infinita, de manera que qualsevol pla para\l.lel al nostre pla, diguem-li $xy$, seria igual al que tenim. Per al cas adicional de l'efecte punxa, suposem simetria al voltant de l'eix $x$ del paper: qualsevol pla que el contingui com a eix d'abcises hauria de ser igual al nostre. Utilitzarem un paper impregnat de carbó i amb conductivitat uniforme per a dibuixar les distribucions de càrrega mitjançant un retolador de tinta de plata amb una conductivitat més gran que la del paper. 
+
+A l'hora de la realització experimental, primer cal dibuixar la distribució que convingui i deixar que la tinta s'assequi. Un cop fixat el muntatge de la \cref{fig:muntatge}, connectem cada placa (element del dibuix) a una entrada de la font.Connectem també un dels electrodes a un dels cables del multímetre, que servirà de referència de potencial. Mitjançant l'altre extrem del multímetre, mesurem el potencial en qualsevol punt del paper simplement tocant amb la punxa el punt que sigui. 
+
+Després hem de dibuixar línies equipotencials buscant punts amb el mateix potencial. Les línies de camp es troben posteriorment, aprofitant que són perpendiculars a les línies equipotencials. Per al cas particular del condensador, la determinació de la càrrega per unitat de longitud vindrà donada per l'\cref{eq:carrega}, on apareixen la diferència de potencial entre dos punts de les superfícies equipotencials ($\Delta V_i$), la distància radial que les separa mesurada sobre la línia de camp elèctric
 		($\Delta r_i$) i la separació longitudinal entre dos punts consecutius a la mateixa superfície equipotencial ($\Delta l_i$), així com la permitivitat elèctrica del medi.
 		\begin{equation}\label{eq:carrega}
 			Q/Z=\epsilon \sum_i \frac{\Delta V_i \Delta l_i}{\Delta r_i}
 		\end{equation}
-	\item I per a comparar amb el valor teòric de la capacitat, s'ha de fer servir l'expressió \cref{eq:capacitat 2}, que relaciona longitud de la component $y$ de les plaques ($h$), separació ($d$) i la permitivitat  $\epsilon$ del medi.
+I per a comparar amb el valor teòric de la capacitat, s'ha de fer servir l'expressió \cref{eq:capacitat 2}, que relaciona longitud de la component $y$ de les plaques ($h$), separació ($d$) i la permitivitat  $\epsilon$ del medi.
 		\begin{equation}\label{eq:capacitat 2} 
 			C/Z=\frac{h}{d}\epsilon
 		\end{equation}
-\end{itemize}
 
 Addicionalment es va simular el potencial de cada una de les tres distribucions considerades mitjançant l'algoritme de Jacobi ---els codis són als \cref{lst:condensador,lst:fils,lst:lliure}---.
 
@@ -46,7 +39,7 @@ Addicionalment es va simular el potencial de cada una de les tres distribucions 
 	\label{fig:muntatge}
 \end{figure}
 
-\section{Resultats i discussió}
+\section{Resultats}
 El nostre objectiu és representar qualitativament les línies equipotencials produïdes per diferents distribucions de càrrega. Principalment ens centrarem en la forma, però també ens interessa el valor del potencial associat a cada línia, o el valor de la diferència de potencial entre la distribució i la línia, més precisament. En tots els casos, hi fixarem una diferència de potencial de \SI{9}{V}. Els punts mesurats tenen una incertesa associada de \data{}{0.02}{V}, degut a la suma de voltatges. I a més hem realitzat algunes simulacions per a comprovar resultats en tant que forma, però no pas en valors degut a les condicions de contorn. A les \cref{fig:carbo condensador,fig:carbo fils} i a la \cref{fig:carbo lliure} es poden apreciar els papers de carbó ja mencionats i les distribucions de càrrega, acolorides de plata.
 
 \begin{figure}[htb]
@@ -74,11 +67,13 @@ El nostre objectiu és representar qualitativament les línies equipotencials pr
 \begin{figure}[htb]
   \centering \small \sffamily
   \input{./informe-1/figs/condensador.tex}
-  \caption{Punts experimentals trobats per al condensador, amb les línies equipotencials experimentals i teòriques}
+  \includegraphics[scale=0.5]{condensador-campexp.jpg}
+  \caption{a)Punts experimentals trobats per al condensador, amb les línies equipotencials experimentals i teòriques
+  b) Línies de camp experimentals}
   \label{fig:camp condensador}
 \end{figure}
 
-La nostra primera mesura és la dels dos condensadors plano-para\l.lels de longitud suposadament infinita i densitat superficial de càrrega uniforme. Fixant una diferència de potencial entre les plaques, vam ser capaços de mesurar diferents línies equipotencials, representades a la \cref{fig:camp condensador}, tant les experimentals com les teòriques.
+La nostra primera mesura és la dels dos condensadors plano-para\l.lels de longitud suposadament infinita i densitat superficial de càrrega uniforme. Fixant una diferència de potencial entre les plaques, vam ser capaços de mesurar diferents línies equipotencials, representades a la \cref{fig:camp condensador}, tant les experimentals com les teòriques. Així mateix, vam esbossar com serien les línies de camp.
 
 Es pot veure que en forma són força semblants, la qual cosa garanteix el bon resultat obtingut. A més, cal afegir que aquest condensador només és infinit a la coordenada $z$, mentre que és finit a la $y$. Per a punts allunyats de la vora, les línies de camp són pràcticament perpendiculars, igual que les aproximacions fetes normalment. Però a la vora hi ha un ràpid creixement i les línies perden el seu caràcter recte.
 
@@ -91,7 +86,9 @@ Així s'obté un valor teòric de $C_T/\epsilon = \data{2.0}{0.1}{F.m^{-1}} $. C
 \begin{figure}[htb]
   \centering \small \sffamily
 	\input{informe-1/figs/fils.tex}
-  \caption{Punts experimentals trobats per als fils para\l.lels, amb les línies equipotencials experimentals i teòriques}
+	\includegraphics[scale=0.5]{hilos-campexp.jpg}
+  \caption{a) Punts experimentals trobats per als fils para\l.lels, amb les línies equipotencials experimentals i teòriques
+  b) Línies de camp experimentals}
   \label{fig:camp fils}
 \end{figure}
 
@@ -101,7 +98,9 @@ La segona distribució de càrrega que vam analitzar va ser la de dos fils o cab
 \begin{figure}[htb]
   \centering \small \sffamily
 	\input{informe-1/figs/lliure.tex}
-  \caption{Punts experimentals trobats per a la distribució lliure, amb les línies equipotencials experimentals i teòriques}
+	\includegraphics[scale=0.5]{libre-campexp.jpg}
+  \caption{a) Punts experimentals trobats per a la distribució lliure, amb les línies equipotencials experimentals i teòriques
+  b)Línies de camp experimentals}
   \label{fig:camp lliure}
 \end{figure}
 
@@ -111,13 +110,12 @@ Per a aquesta última distribució tractarem d'avaluar el pes de l'efecte punxa 
 \end{equation}
 de manera que a mesura que el radi decreix, el camp en aquesta part augmenta, esdevenint molt intens en cas que hi hagi punxes.
 
-Per a comprovar aquest efecte, vam provar de dibuixar una figura amb dos radis de curvatura ben diferenciats. Si no existeix l'escorça circular, aquest resultat hauria d'haver-se donat fàcilment, però vam tenir el problema de no ser capaços de preveure l'influència que l'escorça té sobre el camp. Com es pot veure a \cref{fig:carbo lliure}, resulta que el camp és més intens a la zona amb radi de curvatura més gran, i això és justament el contrari del que volíem veure. Notem que superfícies equipotencials més properes implica un canvi més ràpid del mòdul del camp, i per tant, un camp més intens en poca distància. Tot i això, la distribució s'assembla molt a la teòrica, \cref{fig:camp lliure}.
+Per a comprovar aquest efecte, vam provar de dibuixar una figura amb dos radis de curvatura ben diferenciats. Si no existeix l'escorça circular, aquest resultat hauria d'haver-se donat fàcilment, però vam tenir el problema de no ser capaços de preveure l'influència que l'escorça té sobre el camp. Com es pot veure a \cref{fig:camp lliure}, resulta que el camp és més intens a la zona amb radi de curvatura més gran, i això és justament el contrari del que volíem veure. Notem que superfícies equipotencials més properes implica un canvi més ràpid del mòdul del camp, i per tant, un camp més intens en poca distància. Tot i això, la distribució s'assembla molt a la teòrica.
 
 Així doncs no podem estudiar l'efecte punxa. Però sí que podem comentar coses per a investigacions posteriors. Una possible millora seria la reducció de les dimensions del cos interior amb respecte de l'escorça esfèrica que l'envolta, o bé aconseguir una millor proporció de les distàncies als extrems del cos interior. Si ens hi fixem, al nostre cas l'extrem de radi menor és a només un centímetre del centre de l'escorça, mentre que l'altre és a quatre centímetres. La solució potser consisteix en col·locar els dos extrems a la mateixa distància, i reduir les dimensions en general.
 
 \section{Conclusions}
-\begin{itemize}
-	\item Hem obtingut les línies equipotencials generades per un condensador de plaques plano-para\l.leles i dos fils infinits també para\l.lels. La seva forma és similar a l'obtinguda amb una simulació la qual els calcula a partir de l'expressió analítica.
-	\item La capacitat per unitat de longitud del nostre condensador és de $C=(1.6\pm0.4)\epsilon F/m$. Té el mateix ordre de magnitud i un valor molt proper al teòric, entrant aquest dins del marge donat per les incerteses.
-	\item No vam poder treure conclusions satisfactòries sobre l'efecte punxa a la distribució lliure. Tot i això, vam trobar una sèrie de canvis que poden ser de gran ajuda en investigacions posteriors, com són la reducció de les dimensions del cos respecte de l'escorça o la millor disposició espaial del cos dins d'aquesta.
-\end{itemize}
+Hem obtingut les línies equipotencials generades per un condensador de plaques plano-para\l.leles i dos fils infinits també para\l.lels. La seva forma és similar a l'obtinguda amb una simulació la qual els calcula a partir de l'expressió analítica. A més, la capacitat per unitat de longitud del nostre condensador és de $C=(1.6\pm0.4)\epsilon F/m$. Té el mateix ordre de magnitud i un valor molt proper al teòric, entrant aquest dins del marge donat per les incerteses.
+
+No vam poder treure però, conclusions satisfactòries sobre l'efecte punxa a la distribució lliure. Tot i això, vam trobar una sèrie de canvis que poden ser de gran ajuda en investigacions posteriors, com són la reducció de les dimensions del cos respecte de l'escorça o la millor disposició espaial del cos dins d'aquesta.
+
