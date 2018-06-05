@@ -114,7 +114,7 @@ A la \cref{tab:temp i resistencia} hi ha la resistència mesurada per a cada tem
 
 \newpage
 \section{Codis per a les simulacions}\label{sec:codis}
-A continuació es presenten els codis emprats per a les simulacions de la pràctica \ref{ch:informe 1}
+A continuació es presenten els codis emprats per a les simulacions de la pràctica \ref{ch:informe 1}. El mètode emprat és el mètode de Jacobi, que resol numèricament l'equació de Poisson. A cada iteració, el potencial a cada punt es calcula fent la mitjana aritmètica dels potencials dels punts veïns, tot mantentint fix el potencial als elements de la distribució corresponent: condensador, fils para\l.lels, etc.  
 \lstinputlisting[language=C, caption=Codi per a calcular el potencial degut a un condensador fent servir l'algoritme de Jacobi, label={lst:condensador}]{informe-1/figs/codis/simulacio-condensador.c}
 
 \lstinputlisting[language=C, caption=Codi per a calcular el potencial degut a dos fils fent servir l'algoritme de Jacobi, label={lst:fils}]{informe-1/figs/codis/simulacio-fils.c}
