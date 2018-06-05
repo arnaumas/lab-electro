@@ -1,0 +1,10 @@
+set terminal pdf size 10cm,10cm
+set output 'fils.pdf'
+set size ratio -1
+
+set xrange [0:280]
+set yrange [0:200]
+set grid
+unset key
+
+plot "fils-exp.dat" using 1:2 with linespoints

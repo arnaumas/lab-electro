@@ -1,0 +1,20 @@
+set terminal epslatex size 10cm,10cm color colortext
+set output 'fils.tex'
+
+set view map
+set xrange [280:560]
+set yrange [205:395]
+set format '\num{%g}'
+unset tics
+unset key
+set grid
+
+set pm3d explicit
+unset hidden3d
+set contour base
+set cntrparam level incremental -0.7, 0.05, 0.7 
+set palette defined (0 "blue", 1 "white", 2 "red")
+set cntrlabel onecolor
+
+splot "fils-exp.dat" using ($1+280):($2+200):3 with linespoints nocontour 
+				
