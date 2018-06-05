@@ -7,9 +7,9 @@
 void puntos(double **phi) {
   int i,j,k,a,b;
 
-	double fix = 9;
+  double fix = 9;
 
-  // Iterarem amb el mètode de Jacobi
+  // Iterarem amb el metode de Jacobi
   for(k = 0; k < 3000; k++) {
     for(i = 1; i < 279; i++) {
       for(j = 1; j < 199; j++) {
@@ -18,26 +18,26 @@ void puntos(double **phi) {
         if((i > 115) && (i < 160)) {
           if(j < 100) {
             if(fabs(j-0.57*i-14.3) < 5) {
-            	phi[i][j] = -fix/2.;
-            	continue;
+              phi[i][j] = -fix/2.;
+              continue;
             }
           }
           if(j > 100) {
             if(fabs(j+0.57*i-185.7) < 5) {
-            	phi[i][j] = -fix/2.;
-            	continue;
+              phi[i][j] = -fix/2.;
+              continue;
             }
           }
         }
         if(i < 115) {
           if(abs(b - 400) < 100){ 
-          	phi[i][j]= -fix/2.; 
-          	continue;
+            phi[i][j]= -fix/2.; 
+            continue;
           }
         }
         if(abs(a-3600)<100) {
-        	phi[i][j] = fix/2.;
-        	continue;
+          phi[i][j] = fix/2.;
+          continue;
         }
         phi[i][j] = 0.25*(phi[i-1][j] + phi[i+1][j] + phi[i][j-1] + phi[i][j+1]);
       }
@@ -50,7 +50,7 @@ int main() {
   int Nx = 280;
   int Ny = 200;
 
-	double fix = 9;
+  double fix = 9;
 
   double **phi;
 
@@ -66,39 +66,39 @@ int main() {
     }
   }
 
-  // Valors del potencial a les plaques. Es mantindran fixos durant la iteració
+  // Valors del potencial a les plaques. Es mantindran fixos durant la iteracio
   for(i = 1; i < 279; i++) {
     for(j = 1; j < 199; j++) {
       a = (i-140)*(i-140) + (j-100)*(j-100);
       if((i > 115) && (i < 160)) {
         if(j < 100) {
           if(fabs(j-0.57*i-14.3) < 5) {
-          	phi[i][j] = -fix/2.;
-          	continue;
+            phi[i][j] = -fix/2.;
+            continue;
           }
         }
         if(j > 100) {
           if(fabs(j+0.57*i-185.7) < 5) { 
-          	phi[i][j] = -fix/2.;
-          	continue;
+            phi[i][j] = -fix/2.;
+            continue;
           }
         }
       }
       if(i == 115) {
         if((j > 80) && (j < 120)) {
-        	phi[i][j] = -fix/2.;
-        	continue;
+          phi[i][j] = -fix/2.;
+          continue;
         }
       }
     }
   }
 
   puntos(phi);
-  printf("S'han realitzat amb èxit 3000 iteracions del mètode");
+  printf("S'han realitzat amb exit 3000 iteracions del metode");
 
   FILE *potencial;
 
-	// Escrivim el potencial
+  // Escrivim el potencial
   potencial = fopen("lliure-potencial.dat","w");
   if (potencial == NULL) {
     fprintf (stderr, "ERROR: L'arxiu no s'ha pogut obrir");

@@ -1,4 +1,4 @@
-\chapter{Representació de camps}
+\chapter{Representació de camps} \label{ch:informe 1}
 \begin{resum}
 	L'objectiu principal d'aquesta pràctica consisteix en representar les línies de camp elèctric i línies equipotencials degudes a tres distribucions de càrrega: un condensador de plaques plano-para\l.leles, dos fils infinits i para\l.lels i una altra distribució lliure, amb la qual vam estudiar l'efecte punxa. A més, vam analitzar la capacitat del condensador trobant la càrrega per unitat de longitud.
 
@@ -20,7 +20,6 @@ D'altra banda, els objectius d'aquesta pràctica són els següents:
 	\item Estudiar l'efecte punxa comparant dues superfícies de curvatures diferenciades.
 \end{itemize}
 \section{Mètode experimental}
-
 Com comentàvem, suposem que les distribucions de càrrega del condensador i els dos fils tenen longitud a la component $z$ infinita, de manera que qualsevol pla para\l.lel al nostre pla, diguem-li $xy$, seria igual al que tenim. Per al cas adicional de l'efecte punxa, suposem simetria al voltant de l'eix $x$ del paper: qualsevol pla que el contingui com a eix d'abcises hauria de ser igual al nostre. Utilitzarem un paper impregnat de carbó i amb conductivitat uniforme per a dibuixar les distribucions de càrrega mitjançant un retolador de tinta de plata amb una conductivitat més gran que la del paper. A l'hora de la realització experimental es poden seguir els passos següents:
 \begin{itemize}
 	\item Primer cal dibuixar la distribució que convingui i deixar que la tinta s'assequi.
@@ -37,6 +36,8 @@ Com comentàvem, suposem que les distribucions de càrrega del condensador i els
 			C/Z=\frac{h}{d}\epsilon
 		\end{equation}
 \end{itemize}
+
+Adicionalment es va simular el potencial de cada una de les tres distribucions considerades mitjançant l'algoritme de Jacobi ---els codis són als \cref{lst:condensador,lst:fils,lst:lliure}---.
 
 \begin{figure}[htb]
 	\centering

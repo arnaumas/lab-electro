@@ -30,26 +30,6 @@ La \cref{tab:regressio forca-angle} i la \cref{fig:forca v rotacio} mostren la r
 
 \newpage
 \section{Taules amb dades adicional}
-A la \cref{tab:forca v intensitat (detall)} hi ha les intensitats mesurades per a cada massa, referent a la pràctica \ref{ch:informe 2}.
-\begin{table}[htb]
-	\centering
-	\sffamily \small
-	\caption{Mesures de la intensitat necessària per contrarrestar la força gravitatòria de cada massa}
-	\label{tab:forca v intensitat (detall)}
-	\begin{tabular}{SSSSSSS}
-		\toprule	
-		{Massa (\si{mg})} & \multicolumn{6}{c}{Intensitat (\data{}{0.01}{A})} \\
-		\midrule 
-		5 & 2.62 & 2.55 & 2.65 & 2.62 & 2.60 & 2.57 \\
-		10 & 3.70 & 3.40 & 3.58 & 3.64 & 3.71 & 3.68 \\
-		15 & 4.47 & 4.46 & 4.63 & 4.42 & 4.50 & 4.48 \\
-		20 & 5.10 & 5.29 & 5.33 & 5.07 & 5.10 & 5.11 \\
-		25 & 6.05 & 5.99 & 5.94 & 5.40 & 5.21 & 5.63 \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-A la \cref{tab:temp i resistencia} hi ha la resistència mesurada per a cada temperatura, referent a la pràctica \ref{ch:informe 5}.
 \begin{table}[p] 
 	\centering \footnotesize \sffamily
 	\caption{Mesures experimentals de la resistència a diferents temperatures. El voltatge subministrat és de \data{3.1}{0.2}{V}}
@@ -110,3 +90,32 @@ A la \cref{tab:temp i resistencia} hi ha la resistència mesurada per a cada tem
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+A la \cref{tab:forca v intensitat (detall)} hi ha les intensitats mesurades per a cada massa, referent a la pràctica \ref{ch:informe 2}.
+\begin{table}[htb]
+	\centering
+	\sffamily \small
+	\caption{Mesures de la intensitat necessària per contrarrestar la força gravitatòria de cada massa}
+	\label{tab:forca v intensitat (detall)}
+	\begin{tabular}{SSSSSSS}
+		\toprule	
+		{Massa (\si{mg})} & \multicolumn{6}{c}{Intensitat (\data{}{0.01}{A})} \\
+		\midrule 
+		5 & 2.62 & 2.55 & 2.65 & 2.62 & 2.60 & 2.57 \\
+		10 & 3.70 & 3.40 & 3.58 & 3.64 & 3.71 & 3.68 \\
+		15 & 4.47 & 4.46 & 4.63 & 4.42 & 4.50 & 4.48 \\
+		20 & 5.10 & 5.29 & 5.33 & 5.07 & 5.10 & 5.11 \\
+		25 & 6.05 & 5.99 & 5.94 & 5.40 & 5.21 & 5.63 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+A la \cref{tab:temp i resistencia} hi ha la resistència mesurada per a cada temperatura, referent a la pràctica \ref{ch:informe 5}.
+
+\newpage
+\section{Codis per a les simulacions}\label{sec:codis}
+\lstinputlisting[language=C, caption=Codi per a calcular el potencial degut a un condensador fent servir l'algoritme de Jacobi, label={lst:condensador}]{informe-1/figs/codis/simulacio-condensador.c}
+
+\lstinputlisting[language=C, caption=Codi per a calcular el potencial degut a dos fils fent servir l'algoritme de Jacobi, label={lst:fils}]{informe-1/figs/codis/simulacio-fils.c}
+
+\lstinputlisting[language=C, caption=Codi per a calcular el potencial degut a la configuraci\'o lliure fent servir l'algoritme de Jacobi, label={lst:lliure}]{informe-1/figs/codis/simulacio-lliure.c}
