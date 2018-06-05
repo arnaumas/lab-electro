@@ -1,0 +1,43 @@
+set terminal epslatex size 10cm,10cm color colortext
+set output 'oscilacions.tex'
+
+# Format dels eixos
+set xlabel '$t$ (\si{\micro s})'
+set ylabel '$V_C$ (\si{V})'
+set format '\num{%g}'
+set border linewidth 1.5
+
+# Escales
+set xrange [0:100]
+set xtics scale 0.75
+set yrange [-5:5]
+set ytics -5,5 scale 0.75
+
+set samples 1000
+
+C = 330e-12
+L = 33e-3
+R1 = 2e4
+R2 = 2700 
+R3 = 50000 
+w(R) = sqrt(4/(L*C) - (R/L)**2)/2
+c(R) = sqrt((R/L)**2 - 4/(L*C))/2
+b(R) = R/(2*L)
+r1 = -b(R3) + c(R3)
+r2 = -b(R3) - c(R3)
+B = (r2/(r2 - r1))*5
+A = 5 - B
+
+i(x) = 5*exp(-b(R2)*x) * cos(w(R2)*x)
+c(x) = 5*exp(-b(R1)*x) 
+s(x) = B*(exp(r1*x)) + A*exp(r2*x)
+
+set style line 1 linecolor rgb "light-salmon" linewidth 1
+set style line 2 linecolor rgb "light-blue" linewidth 1
+set style line 3 linecolor rgb "light-green" linewidth 1
+
+set key above center
+plot  i(x*0.000001) title '\footnotesize infraamortiment' with lines linestyle 1, \
+				c(x*0.000001) title '\footnotesize amortiment crític' with lines linestyle 2, \
+				s(x*0.000001) title '\footnotesize sobreamortiment' with lines linestyle 3
+
