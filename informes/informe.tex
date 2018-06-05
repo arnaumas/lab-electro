@@ -13,6 +13,7 @@
 \usepackage[bf,sf,small, pagestyles]{titlesec} % Format dels títols de secció
 \usepackage[font={footnotesize, sf}, labelfont=bf]{caption} % Format dels peus de figura
 \usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage{amsmath, amssymb, xfrac}
 \usepackage{siunitx}
 \usepackage[siunitx]{circuitikz}
@@ -49,6 +50,7 @@
 	\setfoot*{}{}{\sffamily \thepage}
 }
 \renewpagestyle{plain}{
+	\sethead*{}{}{}
 	\footrule
 	\setfoot*{}{}{\sffamily \thepage}
 }
@@ -91,15 +93,16 @@
 \date{\sffamily 2018}
 
 % Arxius a incloure
-\includeonly{./informe-1/informe-1}
+\includeonly{./annexos/annex-A}
 
 \begin{document}
 \maketitle
 
 \newpage
 {\sffamily \tableofcontents}
-\addcontentsline{toc}{part}{Informes}
+\thispagestyle{plain}
 
+\pagestyle{pagina}
 % Informes
 % Informe 1
 \include{./informe-1/informe-1}
@@ -120,7 +123,6 @@
 \include{./informe-7/informe-7}
 
 % Annexos
-\addcontentsline{toc}{part}{Annexos}
 \appendix
 \titleformat{\chapter}[display]{\centering \bfseries \sffamily \LARGE}{\large \sf Annex \thechapter}{4pt}{}{}
 \titlespacing{\chapter}{0pt}{*2}{*4}

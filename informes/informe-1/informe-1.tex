@@ -40,13 +40,13 @@ Com comentàvem, suposem que les distribucions de càrrega del condensador i els
 
 \begin{figure}[htb]
 	\centering
-	%\includegraphics[scale=0.5]{Fig1.png}
+	\includegraphics[scale=0.05]{muntatge-camps.JPG}
 	\caption{Muntatge experimental}
 	\label{fig:muntatge}
 \end{figure}
 
 \section{Resultats i discussió}
-El nostre objectiu és representar qualitativament les línies equipotencials produïdes per diferents distribucions de càrrega. Principalment ens centrarem en la forma, però també ens interessa el valor del potencial associat a cada línia, o el valor de la diferència de potencial entre la distribució i la línia, més precisament. En tots els casos, hi fixarem una diferència de potencial de $9V$. Els punts mesurats tenen alguna incertesa associada de $\pm0.02V$, degut a la suma de voltatges. I a més hem realitzat algunes simulacions per a comprovar resultats en tant que forma, però no pas en valors degut a les condicions de contorn. A la \cref{fig:carbo condensador} es poden apreciar els papers de carbó ja mencionats i les distribucions de càrrega, acolorides de plata.
+El nostre objectiu és representar qualitativament les línies equipotencials produïdes per diferents distribucions de càrrega. Principalment ens centrarem en la forma, però també ens interessa el valor del potencial associat a cada línia, o el valor de la diferència de potencial entre la distribució i la línia, més precisament. En tots els casos, hi fixarem una diferència de potencial de \SI{9}{V}. Els punts mesurats tenen alguna incertesa associada de \data{}{0.02}{V}, degut a la suma de voltatges. I a més hem realitzat algunes simulacions per a comprovar resultats en tant que forma, però no pas en valors degut a les condicions de contorn. A la \cref{fig:carbo condensador} es poden apreciar els papers de carbó ja mencionats i les distribucions de càrrega, acolorides de plata.
 
 \begin{figure}[htb]
   \centering
@@ -70,14 +70,14 @@ El nostre objectiu és representar qualitativament les línies equipotencials pr
 \end{figure}
 
 \subsection{Condensador}
-La nostra primera mesura és la dels dos condensadors plano-para\l.lels de longitud suposadament infinita i densitat superficial de càrrega uniforme. Fixant una diferència de potencial entre les plaques, vam ser capaços de mesurar diferents línies equipotencials, representades a la \cref{fig:camp condensador}, tant les experimentals com les teòriques.
-
 \begin{figure}[htb]
   \centering \small \sffamily
   \input{./informe-1/figs/condensador.tex}
   \caption{Punts experimentals trobats per al condensador, amb les línies equipotencials experimentals i teòriques}
   \label{fig:camp condensador}
 \end{figure}
+
+La nostra primera mesura és la dels dos condensadors plano-para\l.lels de longitud suposadament infinita i densitat superficial de càrrega uniforme. Fixant una diferència de potencial entre les plaques, vam ser capaços de mesurar diferents línies equipotencials, representades a la \cref{fig:camp condensador}, tant les experimentals com les teòriques.
 
 Es pot veure que en forma són força semblants, la qual cosa garanteix el bon resultat obtingut. A més, cal afegir que aquest condensador només és infinit a la coordenada $z$, mentre que és finit a la $y$. Per a punts allunyats de la vora, les línies de camp són pràcticament perpendiculars, igual que les aproximacions fetes normalment. Però a la vora hi ha un ràpid creixement i les línies perden el seu caràcter recte.
 
@@ -87,8 +87,6 @@ La capacitat promig és llavors $C/\epsilon = \data{1.6}{0.4}{F.m^{-1}}$. Podem 
 Així s'obté un valor teòric de $C_T/\epsilon = \data{2.0}{0.1}{F.m^{-1}} $. Com podem veure, totes dues mesures són compatibles degut a l'incertesa de l'experimental. També presenten un error relatiu petit, del $20\%$. Sembla llavors una bona estimació.
 
 \subsection{Fils para\l.lels}
-La segona distribució de càrrega que vam analitzar va ser la de dos fils o cables infinits. De nou, tenim la secció corresponent a una intersecció amb un pla perpendicular als dos. Idealment només es veurien dos punts de plata, però els fem una mica gruixuts (tots dos amb el mateix radi) per a poder realitzar millor les mesures. Un altre cop vam fixar la diferència de potencial entre els fils i vam procedir a mesurar. Les línies equipotencials i de camp es poden veure a la \cref{fig:camp fils}. Tenim que en forma són molt semblants la teórica i l'experimental.
-
 \begin{figure}[htb]
   \centering \small \sffamily
 	\input{informe-1/figs/fils.tex}
@@ -96,21 +94,23 @@ La segona distribució de càrrega que vam analitzar va ser la de dos fils o cab
   \label{fig:camp fils}
 \end{figure}
 
+La segona distribució de càrrega que vam analitzar va ser la de dos fils o cables infinits. De nou, tenim la secció corresponent a una intersecció amb un pla perpendicular als dos. Idealment només es veurien dos punts de plata, però els fem una mica gruixuts (tots dos amb el mateix radi) per a poder realitzar millor les mesures. Un altre cop vam fixar la diferència de potencial entre els fils i vam procedir a mesurar. Les línies equipotencials i de camp es poden veure a la \cref{fig:camp fils}. Tenim que en forma són molt semblants la teórica i l'experimental.
+
 \subsection{Distribució lliure}
-Per a aquesta última distribució tractarem d'avaluar el pes de l'efecte punxa en una distribució tancada per una escorça esfèrica. Observant la \cref{fig:carbo condensador}, veiem que la distribució lliure presenta simetria respecte de l'eix $x$. Recordem a més que el mencionat efecte relaciona el camp a la superfície d'un conductor amb el seu radi de curvatura, d'acord amb l'\cref{eq:efecte punxa}, on $E_i$ representa el camp elèctric a la superfície i $r_i$ el radi de curvatura d'aquesta superfície
-\begin{equation} \label{eq:efecte punxa}
-	E_1r_1=E_2r_2
-\end{equation}
-de manera que a mesura que el radi decreix, el camp en aquesta part augmenta, esdevenint molt intens en cas que hi hagi punxes.
-
-Per a comprovar aquest efecte, vam provar de dibuixar una figura amb dos radis de curvatura ben diferenciats. Si no existeix l'escorça circular, aquest resultat hauria d'haver-se donat fàcilment, però vam tenir el problema de no ser capaços de preveure l'influència que l'escorça té sobre el camp. Com es pot veure a \todo{Afegir figura del camp lliure}, resulta que el camp és més intens a la zona amb radi de curvatura més gran, i això és justament el contrari del que volíem veure. Notem que superfícies equipotencials més properes implica un canvi més ràpid del mòdul del camp, i per tant, un camp més intens en poca distància. Tot i això, la distribució s'assembla molt a la teòrica (FIGURA?).
-
 \begin{figure}[htb]
   \centering \small \sffamily
 	\input{informe-1/figs/lliure.tex}
   \caption{Punts experimentals trobats per a la distribució lliure, amb les línies equipotencials experimentals i teòriques}
   \label{fig:camp lliure}
 \end{figure}
+
+Per a aquesta última distribució tractarem d'avaluar el pes de l'efecte punxa en una distribució tancada per una escorça esfèrica. Observant la \cref{fig:carbo condensador}, veiem que la distribució lliure presenta simetria respecte de l'eix $x$. Recordem a més que el mencionat efecte relaciona el camp a la superfície d'un conductor amb el seu radi de curvatura, d'acord amb l'\cref{eq:efecte punxa}, on $E_i$ representa el camp elèctric a la superfície i $r_i$ el radi de curvatura d'aquesta superfície
+\begin{equation} \label{eq:efecte punxa}
+	E_1r_1=E_2r_2
+\end{equation}
+de manera que a mesura que el radi decreix, el camp en aquesta part augmenta, esdevenint molt intens en cas que hi hagi punxes.
+
+Per a comprovar aquest efecte, vam provar de dibuixar una figura amb dos radis de curvatura ben diferenciats. Si no existeix l'escorça circular, aquest resultat hauria d'haver-se donat fàcilment, però vam tenir el problema de no ser capaços de preveure l'influència que l'escorça té sobre el camp. Com es pot veure a \cref{fig:carbo lliure}, resulta que el camp és més intens a la zona amb radi de curvatura més gran, i això és justament el contrari del que volíem veure. Notem que superfícies equipotencials més properes implica un canvi més ràpid del mòdul del camp, i per tant, un camp més intens en poca distància. Tot i això, la distribució s'assembla molt a la teòrica, \cref{fig:camp lliure}.
 
 Així doncs no podem estudiar l'efecte punxa. Però sí que podem comentar coses per a investigacions posteriors. Una possible millora seria la reducció de les dimensions del cos interior amb respecte de l'escorça esfèrica que l'envolta, o bé aconseguir una millor proporció de les distàncies als extrems del cos interior. Si ens hi fixem, al nostre cas l'extrem de radi menor és a només un centímetre del centre de l'escorça, mentre que l'altre és a quatre centímetres. La solució potser consisteix en col·locar els dos extrems a la mateixa distància, i reduir les dimensions en general.
 

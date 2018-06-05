@@ -1,7 +1,8 @@
 \chapter{Circuits RLC en sèrie}
-
 \begin{resum}
-abstract
+En aquesta pràctica s'estudiarà el comportament d'un circuit RLC, és a dir un circuit amb resistència, bobina i condensador. En primer lloc s'estudiarà el comportament del circuit en règim transitori amb l'objectiu d'observar les tres possibles respostes ---infraamortit, sobreamortit i críticament amortit--- i de determinar els paràmetres del circuit: la resistència crítica i freqüència de ressonància. 
+
+En segon lloc s'estudiarà el comportament del circuit en règim estacionari amb l'objectiu d'observar com el fenomen de la ressonància canvia amb la resistència.  
 \end{resum}
 
 \section{Introducció}
@@ -44,7 +45,7 @@ i
 \begin{equation} \label{eq:guany}
 	\abs{T_R(\omega)} = \frac{R}{\sqrt{R^2 + \left(L\omega - \frac{1}{C\omega}\right)^2}},
 \end{equation}
-on \( \abs{T_R(\omega)} \) s'anomena el guany ---\( T_R(\omega) \) és una quantitat complexa que també conté informació sobre el desfasament, però el seu mòdul és precisament el quocient de les amplituds---.
+on \( \abs{T_R(\omega)} \) s'anomena el guany ---\( T_R(\omega) \) és una quantitat complexa que també conté informació sobre el desfasament, però el seu mòdul és precisament el quocient de les amplituds---. Observem que quan la freqüència subministrada és la pròpia del sistema, \( \omega_0 \), la diferència de fase entre \( V \) i \( V_R \) és nul. Farem servir aquest fet durant l'experiment per determinar quan el sistema entra en ressonància. 
 
 A la segona part de la pràctica analitzarem aquest fenomen en el cas particular de la tensió de la resistència, \( V_R \).   
 
@@ -58,6 +59,26 @@ A la segona part de la pràctica analitzarem aquest fenomen en el cas particular
 \end{figure}
 
 En aquesta part de la pràctica s'analitzarà el comportament d'un circuit RLC en el règim transitori. Sobre un circuit amb una bobina d'inductància \( L = \SI{33}{mH} \), una resistència de \( R = \SI{180}{\ohm} \) i un condensador de capacitat \( C  = \SI{330}{pF} \) s'aplicarà un senyal rectangular periòdic d'amplitud \SI{5}{V}. Amb aquests paràmetres podem determinar la resistència crítica \( R_C \) del circuit amb l'\cref{eq:resistencia critica}. El valor de \( R_C \) és \SI{2d4}{\ohm}, de manera que estem en condicions d'infraamortiment. Per a mesurar el període de les osci\l.lacions del voltatge al condensador, \( V_C \), ajustarem la freqüència del senyal rectangular de manera que un període d'aquesta coincideixi amb 10 osci\l.lacions de la tensió al condensador, que s'està mesurant amb un osci\l.loscopi. D'aquesta manera, el període del senyal és 10 vegades el període de les osci\l.lacions.
+
+\begin{figure}[htb]
+	\centering \small \sffamily
+
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{infra.jpg}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{critic.jpg}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{sobre.jpg}
+		\caption{}
+	\end{subfigure}
+
+	\caption{Pantalla de l'osci\l.loscopi amb les tres respostes: (a) infraamortida, (b) críticament amortida i (c) sobreamortida}
+	\label{fig:respostes}
+\end{figure}
 
 Per a mesurar la resistència crítica del sistema substituïm la resistència fixa per una de variable. Per a diferents valors de resistència observem comportament infraamortit i sobreamortit. La resistència que es troba a la frontera entre els dos comportaments és \( R_C \).  
 
@@ -73,11 +94,11 @@ Per aquesta segona part realitzem mesures sobre un circuit RLC amb capacitat \( 
 
 En primer lloc es determinarà per a quina freqüència d'entrada el circuit es troba en ressonància ---és a dir, per a quina freqüència el desfasament entre \( V_R \) i \( V \) és nul--- i el valor obtingut es compararà amb el valor calculat per a \( \omega_0 \) segons l'\cref{eq:freq ressonancia}. 
 
-També es determinaran les freqüències de tall, que són les que compleixen \( \abs{T_R(\omega)} = \frac{1}{\sqrt{2}} \). Les freqüències de tall, \( \omega_1 \) i \( \omega_2 \) es poden calcular a priori segons les equacions
+També es determinaran les freqüències de tall, que són les que compleixen \( \abs{T_R(2\pi f)} = \frac{1}{\sqrt{2}} \). Les freqüències de tall, \( f_1 \) i \( f_2 \) es poden calcular a priori segons les equacions
 \begin{equation} \label{eq:freqs de tall}
 	\begin{aligned}
-		\omega_1\omega_2 &= \omega_0^2 \\
-		\omega_2 - \omega_1 &= \frac{R}{L},
+		f_1f_2 &=  \frac{\omega_0^2}{4\pi^2} \\
+		f_2 - f_1 &= \frac{R}{2\pi L},
 	\end{aligned}
 \end{equation}
 i els resultats es compararan amb les mesures preses. 
@@ -88,22 +109,23 @@ El valor obtingut per a la freqüència del circuit a partir dels valors conegut
 
 Per la resistència crítica, el valor obtingut experimentalment és \data{1.28}{0.01d4}{\ohm}, i el valor obtingut amb l'\cref{eq:resistencia critica} és \SI{2e4}{\ohm}. De nou, el percentatge d'error val $36\%$, resultat no tan satisfactori. 
 
-La mesura del període d'oscil·lació del sistema no és llavors del tot compatible amb el valor teòric. Tampoc ho és el de la resistència crítica. El motiu principal d'aquesta gran discrepància és que en els càlculs no s'han considerat resistències adicionals, a més de la resistència del potenciòmetre. Efectivament, si hom calcula, a partir del valor mesurat del període de l'\cref{eq:freq amortida}, la resistència total a la que està sotmès el circuit, suposant que la capacitat i inductància total es corresponen amb els valors nominals, es troba que la resistència total és d'uns \SI{8.6}{k\ohm}. Com que la mesura es va realitzar amb una resistència nominal de \SI{180}{\ohm}, això vol dir que les resistències desconegudes contribueixen al voltant de \SI{8.4}{k\ohm} a la resistència total. Això vol dir que la resistència crítica del circuit és en realitat de \( \SI{12.8}{k\ohm} + \SI{8.4}{k\ohm} = \SI{21.2}{k\ohm} \), que s'ajusten molt millor als \SI{20}{k\ohm} predits teòricament.  
+La mesura del període d'osci\l.lació del sistema no és llavors del tot compatible amb el valor teòric. Tampoc ho és el de la resistència crítica. El motiu principal d'aquesta gran discrepància és que en els càlculs no s'han considerat resistències adicionals, a més de la resistència del potenciòmetre. Efectivament, si hom calcula, a partir del valor mesurat del període i de l'\cref{eq:freq amortida}, la resistència total a la que està sotmès el circuit, suposant que la capacitat i inductància total es corresponen amb els valors nominals, es troba que la resistència total és d'uns \SI{8.6}{k\ohm}. Com que la mesura es va realitzar amb una resistència nominal de \SI{180}{\ohm}, això vol dir que les resistències desconegudes contribueixen al voltant de \SI{8.4}{k\ohm} a la resistència total. Això vol dir que la resistència crítica del circuit és en realitat de \( \SI{12.8}{k\ohm} + \SI{8.4}{k\ohm} = \SI{21.2}{k\ohm} \), que s'ajusten molt millor als \SI{20}{k\ohm} predits teòricament.  
 
-A la \cref{fig:oscilacions} hi ha representats les tres respostes del circuit: infraamortida, sobreamortida i críticament amortida.
+A la \cref{fig:respostes} hi ha fotografies de les observacions de les tres respostes, i a la \cref{fig:oscilacions} hi ha representades les respostes fent servir els paràmetres de l'experiment. 
 
-\subsection{Règim estacionari}
-Per al circuit amb \( R = \SI{2700}{\ohm} \) la freqüència de ressonància obtinguda experimentalment és \data{8.8}{1}{kHz}. El valor obtingut amb l'\cref{eq:freq ressonancia} és \SI{8.76}{kHz}. La mesura es desvia del valor teòric només en un \SI{0.46}{\percent}. El guany en ressonància és de \SI{98}{\percent}, que es desvia en \SI{2}{\percent} del valor predit. Les freqüències de tall mesurades són \data{3.3}{0.1}{kHz} i \data{24}{1}{kHz} mentre que els valors obtinguts teòricament amb \cref{eq:freqs de tall} són \SI{3.35}{kHz} i \SI{22.9}{kHz}. Les discrepàncies són de \SI{1.5}{\percent} i \SI{4.8}{\percent}.
-
-Per a \( R = \SI{270}{\ohm} \) la freqüència de ressonància és de \data{8.5}{0.2}{kHz}, mentre que el valor teòric és el mateix que per \( R = \SI{2700}{\ohm} \) ja que la freqüència de ressonància només depèn de \( L \) i \( C \). L'error en la mesura és, en aquest cas, del \SI{3}{\percent}.  El guany en ressonància és de \SI{80}{\percent}. Les freqüències de tall mesurades són \data{9.1}{5}{kHz} i \data{7.8}{0.2}{kHz}, mentre que les calculades amb l'\cref{eq:freqs de tall} són \SI{9.79}{kHz} i \SI{7.84}{kHz}. Per tant les desviacions són del \SI{7}{\percent} i del \SI{0.5}{\percent}. 
-
-\begin{figure}[htb]
+\begin{figure}[hbt]
 	\centering \small \sffamily
 	\input{informe-3/figs/oscilacions.tex}
 	\caption{Representació del voltatge al condensador en tres règims d'amortiment diferents}
 	\label{fig:oscilacions}
 \end{figure}
 
-\section{Conclusions}
-\subsection{Règim transitori}
+\subsection{Règim estacionari}
+Per al circuit amb \( R = \SI{2700}{\ohm} \) la freqüència de ressonància obtinguda experimentalment és \data{8.8}{1}{kHz}. El valor obtingut amb l'\cref{eq:freq ressonancia} és \SI{8.76}{kHz}. La mesura es desvia del valor teòric només en un \SI{0.46}{\percent}. El guany en ressonància és de \SI{98}{\percent}, que es desvia en \SI{2}{\percent} del valor predit. Les freqüències de tall mesurades són \data{3.3}{0.1}{kHz} i \data{24}{1}{kHz} mentre que els valors obtinguts teòricament amb \cref{eq:freqs de tall} són \SI{3.35}{kHz} i \SI{22.9}{kHz}. Les discrepàncies són de \SI{1.5}{\percent} i \SI{4.8}{\percent}.
 
+Per a \( R = \SI{270}{\ohm} \) la freqüència de ressonància és de \data{8.5}{0.2}{kHz}, mentre que el valor teòric és el mateix que per \( R = \SI{2700}{\ohm} \) ja que la freqüència de ressonància només depèn de \( L \) i \( C \). L'error en la mesura és, en aquest cas, del \SI{3}{\percent}.  El guany en ressonància és de \SI{80}{\percent}. Les freqüències de tall mesurades són \data{9.1}{5}{kHz} i \data{7.8}{0.2}{kHz}, mentre que les calculades amb l'\cref{eq:freqs de tall} són \SI{9.79}{kHz} i \SI{7.84}{kHz}. Per tant les desviacions són del \SI{7}{\percent} i del \SI{0.5}{\percent}. 
+
+\section{Conclusions}
+Pel que fa a l'estudi del circuir en el règim transitori hem pogut observar molt clarament les tres respostes diferents: infraamortida, sobreaamortida i críticament amortida. Durant la mesura de la resistència crítica s'ha pogut apreciar l'efecte substancial de les resistències internes del circuit. 
+
+Observant el circuit en règim estacionari hem pogut comprovar que la freqüència de ressonància del sistema és efectivament independent de la resistència. El que si que canvia amb la resistència és la banda de ressonància, és a dir \( \Delta f = f_2 - f_1 \), que passa d'uns \SI{20.7}{kHz} quan la resistència és de \SI{2700}{\ohm} a \SI{1.3}{kHz} quan la resistència és de \SI{270}{\ohm}. Això vol dir que l'efecte de la ressonància, és a dir l'increment d'amplitud, és molt més pronunciat per a circuits amb resistència baixa. 

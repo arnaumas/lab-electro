@@ -1,37 +1,12 @@
 \chapter{Annexos}
-\section{Annex}
-\todo{S'ha de decidir l'estructura dels annexos}
-\begin{table}
-	\centering
-	\sffamily \small
-	\caption{Mesures de la intensitat necessària per contrarrestar la força gravitatòria de cada massa}
-	\label{tab:forca v intensitat (detall)}
-
-	\todo[inline]{No sé com fer aquesta taula}
-
-	\begin{tabular}{SSSSS}
-		\toprule	
-		\multicolumn{5}{c}{Massa (\si{mg})} \\
-		{5} & {10} & {15} & {20} & {25} \\
-		\midrule 
-		2.62 & 3.70 & 4.47 & 5.10 & 6.05 \\
-		2.55 & 3.40 & 4.46 & 5.29 & 5.99 \\
-		2.65 & 3.58 & 4.63 & 5.33 & 5.94 \\
-		2.62 & 3.64 & 4.42 & 5.07 & 5.40 \\
-		2.60 & 3.71 & 4.50 & 5.10 & 5.21 \\
-		2.57 & 3.68 & 4.48 & 5.11 & 5.63 \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-
-\begin{table}
+\section{Regressions adicionals}
+La \cref{tab:regressio forca-angle} i la \cref{fig:forca v rotacio} mostren la regressió lineal realitzada per obtenir la relació entre l'angle de rotació del fil de torsió i la força que exerceix, necessària per a la pràctica \ref{ch:informe 2}.
+\begin{table}[htb]
 	\centering
 	\sffamily
 	\small
-	\caption{Dades de la regressió lineal entre la força del fil de torsió i la rotació del dial}
+	\caption{Força del fil de torsió en funció de l'angle}
 	\label{tab:regressio forca-angle}
-
 	\begin{tabular}{SS}
 		\toprule
 		{Mass (\si{mg})} & {Rotació (\si{\degree}) (\( {} \pm \SI{1}{\degree} \))} \\
@@ -45,10 +20,93 @@
 	\end{tabular}
 \end{table}
 
-\begin{figure}
+\begin{figure}[htb]
 	\centering
 	\input{annexos/figs/forca-rotacio.tex}
 	\caption{Força en funció de la rotació del dial}
 	\label{fig:forca v rotacio}
 \end{figure}
 
+
+\newpage
+\section{Taules amb dades adicional}
+A la \cref{tab:forca v intensitat (detall)} hi ha les intensitats mesurades per a cada massa, referent a la pràctica \ref{ch:informe 2}.
+\begin{table}[htb]
+	\centering
+	\sffamily \small
+	\caption{Mesures de la intensitat necessària per contrarrestar la força gravitatòria de cada massa}
+	\label{tab:forca v intensitat (detall)}
+	\begin{tabular}{SSSSSSS}
+		\toprule	
+		{Massa (\si{mg})} & \multicolumn{6}{c}{Intensitat (\data{}{0.01}{A})} \\
+		\midrule 
+		5 & 2.62 & 2.55 & 2.65 & 2.62 & 2.60 & 2.57 \\
+		10 & 3.70 & 3.40 & 3.58 & 3.64 & 3.71 & 3.68 \\
+		15 & 4.47 & 4.46 & 4.63 & 4.42 & 4.50 & 4.48 \\
+		20 & 5.10 & 5.29 & 5.33 & 5.07 & 5.10 & 5.11 \\
+		25 & 6.05 & 5.99 & 5.94 & 5.40 & 5.21 & 5.63 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+A la \cref{tab:temp i resistencia} hi ha la resistència mesurada per a cada temperatura, referent a la pràctica \ref{ch:informe 5}.
+\begin{table}[p] 
+	\centering \footnotesize \sffamily
+	\caption{Mesures experimentals de la resistència a diferents temperatures. El voltatge subministrat és de \data{3.1}{0.2}{V}}
+	\label{tab:temp i resistencia}
+	\begin{tabular}{SSS}
+		\toprule
+		{Temperatura (\data{}{1}{\celsius}) } & {Longitud \( x \) (\data{}{0.001}{m})} & {Resistència (\si{\ohm})} \\
+		\midrule
+		265 & 0.664 & 198 \pm 9 \\
+		260 & 0.668 & 201 \pm 9 \\
+		255 & 0.665 & 199 \pm 9 \\
+		250 & 0.664 & 198 \pm 9 \\
+		245 & 0.663 & 197 \pm 9 \\
+		240 & 0.661 & 195 \pm 9 \\
+		235 & 0.659 & 193 \pm 9 \\
+		230 & 0.657 & 192 \pm 9 \\
+		225 & 0.655 & 190 \pm 9 \\
+		220 & 0.654 & 189 \pm 9 \\
+		210 & 0.646 & 182 \pm 8 \\
+		200 & 0.643 & 180 \pm 8 \\
+		190 & 0.637 & 175 \pm 8 \\
+		180 & 0.630 & 170 \pm 8 \\
+		170 & 0.627 & 168 \pm 7 \\
+		160 & 0.622 & 165 \pm 7 \\
+		155 & 0.620 & 163 \pm 7 \\
+		150 & 0.616 & 160 \pm 7 \\
+		145 & 0.613 & 158 \pm 7 \\
+		140 & 0.610 & 156 \pm 7 \\
+		135 & 0.608 & 155 \pm 7 \\
+		130 & 0.605 & 153 \pm 7 \\
+		125 & 0.603 & 152 \pm 7 \\
+		120 & 0.600 & 150 \pm 6 \\
+		115 & 0.597 & 148 \pm 6 \\
+		110 & 0.593 & 146 \pm 6 \\
+		105 & 0.585 & 141 \pm 6 \\
+		23 & 0.520 & 108 \pm 5 \\
+		-20 & 0.485 & 94 \pm 4{}\\
+		-25 & 0.484 & 94 \pm 4 \\
+		-30 & 0.481 & 93 \pm 4 \\
+		-35 & 0.478 & 92 \pm 4 \\
+		-40 & 0.474 & 90 \pm 4 \\
+		-45 & 0.470 & 88 \pm 4 \\
+		-49 & 0.468 & 88 \pm 4 \\
+		-55 & 0.464 & 87 \pm 4 \\
+		-60 & 0.459 & 85 \pm 4 \\
+		-65 & 0.457 & 84 \pm 4 \\
+		-70 & 0.452 & 82 \pm 3 \\
+		-75 & 0.447 & 81 \pm 3 \\
+		-80 & 0.445 & 80 \pm 3 \\
+		-85 & 0.441 & 79 \pm 3 \\
+		-90 & 0.436 & 77 \pm 3 \\
+		-95 & 0.431 & 76 \pm 3 \\
+		-100 & 0.424 & 74 \pm 3 \\
+		-105 & 0.417 & 72 \pm 3 \\
+		-110 & 0.409 & 69 \pm 3 \\
+		-115 & 0.398 & 66 \pm 3 \\
+		-150 & 0.365 & 57 \pm 3 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
