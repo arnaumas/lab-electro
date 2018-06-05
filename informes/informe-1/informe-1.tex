@@ -6,9 +6,9 @@
 \end{resum}
 
 \section{Introducció}
-Sabem que existeixen materials als que el camp elèctric\footnote{A partir d'ara, si diem \textit{camp}, ens estarem referint a aquest camp} $\vec{E}$ està relacionat amb la densitat de corrent $\vec{J}$ i amb el vector desplaçament $\vec{D}$ mitjançant únicament una constant numèrica. D'aquesta manera, en medis lineals, isòtrops i homogenis, es compleix que si el rotacional del camp elèctric es nul, com és l'aproximació electrostàtica, aleshores també ho són els rotacionals de $\vec{J}$ i $\vec{D}$. Així, tots tres poden ser deduïts a partir d'un potencial, tals que compleixen l'equació de Laplace. Això és prou útil en tant que ens permet conèixer automàticament la solució d'un problema en un medi conductor si coneixem la resolució en un dielèctric i viceversa. Aquest fenomen ens permetrà representar línies equipotencials produïdes per distribucions de càrrega a les que hi ha alguna mena de simetria.
+Sabem que existeixen materials als que el camp elèctric\footnote{A partir d'ara, si diem \textit{camp}, ens estarem referint a aquest camp} $\vec{E}$ està relacionat amb la densitat de corrent $\vec{J}$ i amb el vector desplaçament $\vec{D}$ mitjançant únicament una constant numèrica. D'aquesta manera, en medis lineals, isòtrops i homogenis, es compleix que si el rotacional del camp elèctric és nul, com és en l'aproximació electrostàtica, aleshores també ho són els rotacionals de $\vec{J}$ i $\vec{D}$. Així, tots tres poden ser deduïts a partir d'un potencial tal que compleixi l'equació de Laplace. Això és prou útil en tant que ens permet conèixer automàticament la solució d'un problema en un medi conductor si coneixem la resolució en un dielèctric i viceversa. Aquest fenomen ens permetrà representar línies equipotencials produïdes per distribucions de càrrega en les que hi ha alguna mena de simetria.
 
-Considerem doncs una d'aquestes situacions amb simetria, la de dues plaques plano-para\l.leles d'un condensador. Si, enlloc de plantejar el problema en tres dimensions, escollim una superfície plana tal que talli perpendicularment a les plaques, podem estudiar la relació entre càrrega, diferència de potencial i capacitat d'un condensador de manera anàloga. Si definim ara $Q/Z$ com la càrrega d'una de les plaques per unitat de longitud y $V_a-V_b$ com la diferència de potencial entre les plaques, tenim que la capacitat per unitat de longitud $C/Z$ ve donada per
+Considerem doncs una d'aquestes situacions amb simetria, la de dues plaques plano-para\l.leles d'un condensador. Si, enlloc de plantejar el problema en tres dimensions, escollim una superfície plana tal que talli perpendicularment les plaques, podem estudiar la relació entre càrrega, diferència de potencial i capacitat d'un condensador de manera anàloga. Si definim ara $Q/Z$ com la càrrega d'una de les plaques per unitat de longitud i $V_a-V_b$ com la diferència de potencial entre les plaques, tenim que la capacitat per unitat de longitud $C/Z$ ve donada per
 \begin{equation} \label{eq:capacitat}
 	C/Z=\frac{Q/Z}{V_a-V_b}
 \end{equation}
@@ -37,7 +37,7 @@ Com comentàvem, suposem que les distribucions de càrrega del condensador i els
 		\end{equation}
 \end{itemize}
 
-Adicionalment es va simular el potencial de cada una de les tres distribucions considerades mitjançant l'algoritme de Jacobi ---els codis són als \cref{lst:condensador,lst:fils,lst:lliure}---.
+Addicionalment es va simular el potencial de cada una de les tres distribucions considerades mitjançant l'algoritme de Jacobi ---els codis són als \cref{lst:condensador,lst:fils,lst:lliure}---.
 
 \begin{figure}[htb]
 	\centering
@@ -47,7 +47,7 @@ Adicionalment es va simular el potencial de cada una de les tres distribucions c
 \end{figure}
 
 \section{Resultats i discussió}
-El nostre objectiu és representar qualitativament les línies equipotencials produïdes per diferents distribucions de càrrega. Principalment ens centrarem en la forma, però també ens interessa el valor del potencial associat a cada línia, o el valor de la diferència de potencial entre la distribució i la línia, més precisament. En tots els casos, hi fixarem una diferència de potencial de \SI{9}{V}. Els punts mesurats tenen alguna incertesa associada de \data{}{0.02}{V}, degut a la suma de voltatges. I a més hem realitzat algunes simulacions per a comprovar resultats en tant que forma, però no pas en valors degut a les condicions de contorn. A la \cref{fig:carbo condensador} es poden apreciar els papers de carbó ja mencionats i les distribucions de càrrega, acolorides de plata.
+El nostre objectiu és representar qualitativament les línies equipotencials produïdes per diferents distribucions de càrrega. Principalment ens centrarem en la forma, però també ens interessa el valor del potencial associat a cada línia, o el valor de la diferència de potencial entre la distribució i la línia, més precisament. En tots els casos, hi fixarem una diferència de potencial de \SI{9}{V}. Els punts mesurats tenen una incertesa associada de \data{}{0.02}{V}, degut a la suma de voltatges. I a més hem realitzat algunes simulacions per a comprovar resultats en tant que forma, però no pas en valors degut a les condicions de contorn. A les \cref{fig:carbo condensador,fig:carbo fils} i a la \cref{fig:carbo lliure} es poden apreciar els papers de carbó ja mencionats i les distribucions de càrrega, acolorides de plata.
 
 \begin{figure}[htb]
   \centering
