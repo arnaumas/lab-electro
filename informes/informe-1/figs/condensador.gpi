@@ -2,11 +2,10 @@ set terminal epslatex size 10cm,10cm color colortext
 set output 'condensador.tex'
 
 set view map
-set xrange [0:280]
-set yrange [5:195]
-set xlabel '$x$ (\si{mm})'
-set ylabel '$y$ (\si{mm})'
+set xrange [280:560]
+set yrange [205:395]
 set format '\num{%g}'
+unset tics
 unset key
 
 set pm3d explicit
@@ -16,5 +15,5 @@ set cntrparam level incremental -1, 0.2, 1
 set palette defined (0 "blue", 1 "white", 2 "red")
 set cntrlabel onecolor
 
-splot "condensador-teo.dat" using 1:2:3 with pm3d, "condensador-exp.dat" using 1:2:3 with linespoints nocontour 
+splot "condensador-teo.dat" using 1:2:3 with pm3d, "condensador-exp.dat" using ($1+280):($2+200):3 with linespoints nocontour 
 				

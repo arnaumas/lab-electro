@@ -5,9 +5,8 @@ set size ratio -1
 set view map
 set xrange [50:250]
 set yrange [5:195]
-set xlabel '$x$ (\si{mm})'
-set ylabel '$y$ (\si{mm})'
 set format '\num{%g}'
+unset tics
 unset key
 
 set pm3d explicit
