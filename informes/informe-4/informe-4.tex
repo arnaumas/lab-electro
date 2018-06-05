@@ -3,7 +3,7 @@
 \begin{resum}
 	L'objectiu d'aquesta pràctica és l'estudi del transformador des d'un punt de vista simplificat i també com a circuit de corrent altern amb una certa impedància. Més concretament, s'estudien els voltatges i les intensitats d'entrada i de sortida del transformador variant la configuració d'aquest, tant amb el circuit secundari en obert com amb una resistència concreta per aquest.
 	
-	Hem obtingut que la disposició de bobines i ferro que dóna el millor coeficient d'acoblament és aquella que s'assembla més a la forma que segueix el camp d'inducció magnètica d'una bobina. El coeficient, ficant bobines de 400 voltes al primari i al secundari, és del $97\%$. A més hem pogut observar que, a menor nombre de voltes del circuit primari, més gran es torna el flux induït en el secundari. Passa igual amb una intensitat del primari menor.
+	Hem obtingut que la disposició de bobines i ferro que dóna el millor coeficient d'acoblament és aquella que s'assembla més a la forma que segueix el camp d'inducció magnètica d'una bobina. El coeficient, usant bobines de 400 voltes al primari i al secundari, és del $97\%$. A més hem pogut observar que, a menor nombre de voltes del circuit primari, més gran es torna el flux induït en el secundari. Passa igual amb una intensitat del primari menor.
 \end{resum}
 
 \section{Introducció}\label{sec:introducció}
@@ -13,9 +13,9 @@ Primerament s'estudiarà el transformador de manera simplificada, tenint en comp
 \begin{equation}\label{eq:voltatge transformadors}
   \frac{V_1}{V_2}=\frac{n_1}{n_2}
 \end{equation}
-On $n_1$ és el nombre de voltes a la bobina del primari i $n_2$ a la del secundari. Per circuits no ideals la suposició anterior obviament no és certa. Això provocarà una certa discrepància entre la situació real i la que descriu l'\cref{eq:voltatge transformadors}. La primera part consistirà bàsicament en l'estudi d'aquesta discrepància per diferents configuracions i bobines.
+On $n_1$ és el nombre de voltes a la bobina del primari i $n_2$ a la del secundari. Per circuits no ideals la suposició anterior òbviament no és certa. Això provocarà una certa discrepància entre la situació real i la que descriu l'\cref{eq:voltatge transformadors}. La primera part consistirà bàsicament en l'estudi d'aquesta discrepància per diferents configuracions i bobines.
 
-Seguidament es passara a estudiar el circuit com un circuit amb impedància i, utilitzant les lleis de Kirchhoff, s'obtindran equacions teòriques per descriure la nova situació. L'objectiu d'aquesta segona part serà comprovar de manera experimental la validesa de les equacions teòriques pel transformador connectat a una certa resistència.
+Seguidament es passarà a estudiar el circuit com un circuit amb impedància i, utilitzant les lleis de Kirchhoff, s'obtindran equacions teòriques per descriure la nova situació. L'objectiu d'aquesta segona part serà comprovar de manera experimental la validesa de les equacions teòriques pel transformador connectat a una certa resistència.
 
 \section{Mètode experimental}\label{sec:met}
 \subsection{Estudi simplificat}
@@ -35,8 +35,7 @@ Com s'explica a la \cref{sec:introducció}, per un transformador real l'\cref{eq
 on $k$ és el coeficient d'acoblament, un factor que ens parla del grau d'idealitat del transformador, és a dir, és una mesura del flux que indueix el corrent respecte del total. El seu valor es troba entre $0$ i $1$, éssent $k=1$ per al transformador ideal. Per tant, per diferents configuracions del transformador i diferents bobines, s'estudiaran els diferents valors de la constant $k$, fent ús de l'\cref{eq:transformador real}.
 
 \subsection{Estudi com a circuit}\label{sec:metcirc}
-En la segona part s'estudia com ja hem dit el transformador com a circuit. Totes les mesures d'aquest apartat són fetes amb el circuit com mostra la figura \cref{fig:esq2}, i com la mateixa figura mostra, en aquest cas, es connecta una resistència al circuit secundari. Per a aquest circuit, emprant les lleis de Kirchh
-off s'obtenen certes solucions per les relacions dels voltatges i intensitats d'entrada i sortida. 
+En la segona part s'estudia com ja hem dit el transformador com a circuit. Totes les mesures d'aquest apartat són fetes amb el circuit com mostra la figura \cref{fig:esq2}, i com la mateixa figura mostra, en aquest cas, es connecta una resistència al circuit secundari. Per a aquest circuit, emprant les lleis de Kirchhoff s'obtenen certes solucions per les relacions dels voltatges i intensitats d'entrada i sortida. 
 
 \begin{figure}[htbp!]
   \centering \small \sffamily
@@ -67,7 +66,7 @@ A més, també s'ha estudiat el cas en què no hi havia nucli de ferro a l'inter
   \label{fig:configuracions}
 \end{figure}
 
-Així pels cinc casos s'ha obtingut un voltatge de sortida $V_2$ i una $k$. A més, pel cas amb millor voltatge de sortida, s'ha estudiat també la variació de $k$ per les diferents combinacions de bobines.
+Així, pels cinc casos s'ha obtingut un voltatge de sortida $V_2$ i una $k$. A més, pel cas amb millor voltatge de sortida, s'ha estudiat també la variació de $k$ per les diferents combinacions de bobines.
 
 \begin{table}[htb]
   \centering \small \sffamily
@@ -86,7 +85,7 @@ Així pels cinc casos s'ha obtingut un voltatge de sortida $V_2$ i una $k$. A m�
 	\end{tabular}
 \end{table}
 
-Els resultats comproven que la configuració més eficaç és la número $4$. Els diferents valors de $k$ semblen indicar que hi ha dos fets determinants a l'hora d'augmentar el rendiment del transformador. Primerament el fet que les dues bobines es trobin molt properes l'una a l'altra sembla augmentar considerablement el rendiment, cosa que és lògica d'esperar ja que el flux passarà en més quantitat per la bobina del secundari. A més d'això, el fet que el nucli de ferro segueixi la trajectòria de les línies de camp, també augmenta el rendiment; aquest fet també és d'esperar ja que al ser el ferro un material ferromagnètic condueix bé el flux magnètic a través de l'espai optimitzant-ne l'arribada a l'altra bobina. Evidentment al ser la configuració $4$ la de major potencial de sortida, l'estudi de les diferents bobines ha estat fet amb aquesta.
+Els resultats comproven que la configuració més eficaç és la número $4$. Els diferents valors de $k$ semblen indicar que hi ha dos fets determinants a l'hora d'augmentar el rendiment del transformador. Primerament, el fet que les dues bobines es trobin molt properes l'una a l'altra sembla augmentar considerablement el rendiment, cosa que és lògica d'esperar ja que el flux passarà en més quantitat per la bobina del secundari. A més d'això, el fet que el nucli de ferro segueixi la trajectòria de les línies de camp, també augmenta el rendiment; aquest fet també és d'esperar ja que al ser el ferro un material ferromagnètic condueix bé el flux magnètic a través de l'espai optimitzant-ne l'arribada a l'altra bobina. Evidentment, al ser la configuració $4$ la de major potencial de sortida, l'estudi de les diferents bobines ha estat fet amb aquesta.
 
 \begin{table}[htb]
   \centering \footnotesize \sffamily
@@ -132,7 +131,7 @@ Amb la informació de la \cref{tab:I1} es veu que $I_1$ varia considerablement a
 
 Pel que fa a la reactància del circuit, com s'ha comentat a la \cref{sec:metcirc}, es pot calcular la reactància segons l'\cref{eq:reactancia}. Per la bobina de 400 voltes els valors obtinguts han estat $I_{400}= \data{54.33}{0.10}{mA}$ i $X_{400}= \data{110.45}{1.8}{\ohm}$. Per la bobina de 800 voltes els valors han estat $I_{800}= \data{18.55}{0.10}{mA}$ i $X_{800}= \data{323.45}{5.4}{\ohm}$.
 
-Òbviament al tenir menor intensitat la bobina de $800$ voltes, amb el mateix voltatge que la de $400$, això implicarà una major impedància per la de $800$ que és el resultat calculat.
+Òbviament, al tenir menor intensitat la bobina de $800$ voltes, amb el mateix voltatge que la de $400$, això implicarà una major impedància per la de $800$ que és el resultat calculat.
 
 Finalment s'han calculat $I_1$, $I_2$ i $V_2$ per la configuració amb $400$ voltes tant al primari com al secundari, amb les resistències de \SIlist{1000;100;10}{\ohm}.
 
@@ -155,7 +154,7 @@ Finalment s'han calculat $I_1$, $I_2$ i $V_2$ per la configuració amb $400$ vol
 	\end{tabular}
 \end{table}
 
-Per la \cref{tab:400IV} podem veure que, com era d'esperar, a majors impedàncies les intensitats que circulen per ambdós circuits disminueixen. Pel que fa als valors dels guanys aquests són prou propers als valors teòrics, calculant els percentatges d'error surten d'aproximadament el $1\%$, el $4\%$ i el $18\%$ respectivament per les impedàncies de \SIlist{1000;100;10}{\ohm}. Tanmateix hi ha una variació entre els guanys de $Z= \SI{1000}{\ohm}$ i $Z=\SI{100}{\ohm}$ que no hauria d'aparèixer teòricament. Aquest fet probablement és degut a les aproximacions a l'hora de trobar les solucions de les equacions de Kirchhoff pel circuit. El fet que  per $Z= \SI{100}{\ohm}$ $V_2$ disminueixi considerablement, és degut a que el terme de la força contraelectromotriu apareix en l'aproximació de $Z\ll X$ i fa disminuir $V_2$. El fet principal que s'observa relatiu a $Z$, és l'augment del guany per a impedàncies $Z$ més elevades.
+Per la \cref{tab:400IV} podem veure que, com era d'esperar, a majors impedàncies les intensitats que circulen per ambdós circuits disminueixen. Pel que fa als valors dels guanys aquests són prou propers als valors teòrics, calculant els percentatges d'error surten d'aproximadament el $1\%$, el $4\%$ i el $18\%$ respectivament per les impedàncies de \SIlist{1000;100;10}{\ohm}. Tanmateix hi ha una variació entre els guanys de $Z= \SI{1000}{\ohm}$ i $Z=\SI{100}{\ohm}$ que no hauria d'aparèixer teòricament. Aquest fet probablement és degut a les aproximacions a l'hora de trobar les solucions de les equacions de Kirchhoff pel circuit. El fet que  per $Z= \SI{100}{\ohm}$ $V_2$ disminueixi considerablement és degut a que el terme de la força contraelectromotriu apareix en l'aproximació de $Z\ll X$ i fa disminuir $V_2$. El fet principal que s'observa relatiu a $Z$, és l'augment del guany per a impedàncies $Z$ més elevades.
 
 En el cas de 800 voltes, els percentatges de error aproximats són de $2\%$, $18\%$ i $38\%$ respectivament per les impedàncies de \SIlist{1000;100;10}{\ohm}, el valor del guany per la resistència de $ \SI{10}{\ohm}$ és la que difereix més notablement del valor teòric esperat. Aquests valors, a més a més, han accentuat en alguns casos els efectes mencionats per la bobina de $400$. Ja que, per exemple, la disminució de $V_2$  per la de $800$ voltes ha estat molt considerable. El valor esperat teòricament era de $V_2=\SI{12}{V}$, en canvi el valor mesurat ha estat de $V_2 = \data{2.68}{0.01}{V}$. També podem observar de la relació entre les dues taules que els valors teòrics han canviat considerablement degut al canvi de $k$. 
 
