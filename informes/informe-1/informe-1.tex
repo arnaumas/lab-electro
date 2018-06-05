@@ -14,7 +14,6 @@ Considerem doncs una d'aquestes situacions amb simetria, la de dues plaques plan
 \end{equation}
 
 D'altra banda, els objectius d'aquesta pràctica seran estudiar les línies equipotencials i de camp per a diferents distribucions de càrrega: dues plaques plano-para\l.leles d'un condensador i dos fils infinits para\l.lels. Així mateix, haurem de calcular la capacitat per unitat de longitud d'un condensador de plaques plano-para\l.leles.I per últim estudiarem l'efecte punxa comparant dues superfícies de curvatures diferenciades.
-\end{itemize}
 \section{Mètode experimental}
 Com comentàvem, suposem que les distribucions de càrrega del condensador i els dos fils tenen longitud a la component $z$ infinita, de manera que qualsevol pla para\l.lel al nostre pla, diguem-li $xy$, seria igual al que tenim. Per al cas adicional de l'efecte punxa, suposem simetria al voltant de l'eix $x$ del paper: qualsevol pla que el contingui com a eix d'abcises hauria de ser igual al nostre. Utilitzarem un paper impregnat de carbó i amb conductivitat uniforme per a dibuixar les distribucions de càrrega mitjançant un retolador de tinta de plata amb una conductivitat més gran que la del paper. 
 
@@ -66,10 +65,19 @@ El nostre objectiu és representar qualitativament les línies equipotencials pr
 \subsection{Condensador}
 \begin{figure}[htb]
   \centering \small \sffamily
-  \input{./informe-1/figs/condensador.tex}
-  \includegraphics[scale=0.5]{condensador-campexp.jpg}
-  \caption{a)Punts experimentals trobats per al condensador, amb les línies equipotencials experimentals i teòriques
-  b) Línies de camp experimentals}
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+  	\input{./informe-1/figs/condensador.tex}
+		\caption{}
+	\end{subfigure}
+
+  \begin{subfigure}[b]{\textwidth}
+		\centering
+		\includegraphics[width=0.5\textwidth]{condensador-campexp.jpg}
+		\caption{}
+	\end{subfigure}
+  \caption{(a) Punts experimentals trobats per al condensador, amb les línies equipotencials experimentals i teòriques
+  (b) Línies de camp experimentals}
   \label{fig:camp condensador}
 \end{figure}
 
@@ -85,10 +93,19 @@ Així s'obté un valor teòric de $C_T/\epsilon = \data{2.0}{0.1}{F.m^{-1}} $. C
 \subsection{Fils para\l.lels}
 \begin{figure}[htb]
   \centering \small \sffamily
-	\input{informe-1/figs/fils.tex}
-	\includegraphics[scale=0.5]{hilos-campexp.jpg}
-  \caption{a) Punts experimentals trobats per als fils para\l.lels, amb les línies equipotencials experimentals i teòriques
-  b) Línies de camp experimentals}
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+  	\input{./informe-1/figs/fils.tex}
+		\caption{}
+	\end{subfigure}
+
+  \begin{subfigure}[b]{\textwidth}
+		\centering
+		\includegraphics[width=0.5\textwidth]{hilos-campexp.jpg}
+		\caption{}
+	\end{subfigure}
+  \caption{(a) Punts experimentals trobats pels fils para\l.lels, amb les línies equipotencials experimentals i teòriques
+  (b) Línies de camp experimentals}
   \label{fig:camp fils}
 \end{figure}
 
@@ -97,10 +114,19 @@ La segona distribució de càrrega que vam analitzar va ser la de dos fils o cab
 \subsection{Distribució lliure}
 \begin{figure}[htb]
   \centering \small \sffamily
-	\input{informe-1/figs/lliure.tex}
-	\includegraphics[scale=0.5]{libre-campexp.jpg}
-  \caption{a) Punts experimentals trobats per a la distribució lliure, amb les línies equipotencials experimentals i teòriques
-  b)Línies de camp experimentals}
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+  	\input{./informe-1/figs/lliure.tex}
+		\caption{}
+	\end{subfigure}
+
+  \begin{subfigure}[b]{\textwidth}
+		\centering
+		\includegraphics[width=0.5\textwidth]{libre-campexp.jpg}
+		\caption{}
+	\end{subfigure}
+  \caption{(a) Punts experimentals trobats per la distribució lliure, amb les línies equipotencials experimentals i 
+  (b) Línies de camp experimentals}
   \label{fig:camp lliure}
 \end{figure}
 
