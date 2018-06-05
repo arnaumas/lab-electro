@@ -18,7 +18,7 @@ L'experiment requereix de la mesura de la temperatura del metall i de la seva re
 
 Per tal de mesurar la temperatura es disposa de dos termòmetres de mercuri amb precisió de \SI{1}{\celsius}. Un dels dos s'usa en el rang de temperatures altes ---fins a uns $\SI{300}{\celsius}$--- i l'altre, en el rang de temperatures baixes ---fins a uns $ \SI{-200}{\celsius}$---.
 
-Per tal de mesurar la resistència del material s'ha usat una variació del pont de Wheatstone ---\ref{fig:wheatstone}---, el pont de fil. Com es pot apreciar, el circuit consisteix en quatre resistències connectades en forma de para\l.lelogram, tres d'elles conegudes i una desconeguda. Els vèrtex del para\l\l.elogram s'uneixen amb un amperímetre per tal de mesurar la intensitat que hi circula. El pont estarà equilibrat quan l'amperímetre marqui zero, i llavors podrem trobar la resistència desconeguda a partir de
+Per tal de mesurar la resistència del material s'ha usat una variació del pont de Wheatstone ---\ref{fig:wheatstone}---, el pont de fil. Com es pot apreciar, el circuit consisteix en quatre resistències connectades en forma de para\l.lelogram, tres d'elles conegudes i una desconeguda. Els vèrtex del para\l.lelogram s'uneixen amb un amperímetre per tal de mesurar la intensitat que hi circula. El pont estarà equilibrat quan l'amperímetre marqui zero, i llavors podrem trobar la resistència desconeguda a partir de
 \begin{equation*}
 \frac{R_1}{R_2}=\frac{R_3}{R_4}.
 \end{equation*}
@@ -46,7 +46,7 @@ on $x$ denota la longitud de fil a l'esquerra del cursor i $L$ la longitud total
 Per poder mesurar en el rang d'altes temperatures s'ha escalfat la resistència en un forn. S'ha deixat que la seva temperatura pugés fins a uns $\SI{300}{\celsius}$ i s'han pres les mesures mentre es refredava. Per pendre les mesures en el rang de baixes temperatures, la resistència s'ha submergit en un bany de nitrogen líquid. Un cop extreta del bany, la resistència s'ha mantingut en les proximitats del nitrogen per ralentir-ne el procés d'escalfament i així poder prendre les mesures amb més precisió. 
 
 \section{Resultats}
-La \cref{tab:temp i resistencia} mostra la longitud $x$ a l'esquerra del fil a cada temperatura determinada, juntament amb la resistència del metall, usant \cref{eq:pont}. La longitud total del fil ha estat fixada en $L=\data{1.000}{0.001}{\meter}$ i la resistència externa en $R_1=\data{100}{1}{\ohm}$.
+La \cref{tab:temp i resistencia} mostra la longitud $x$ a l'esquerra del fil a cada temperatura determinada, juntament amb la resistència del metall, usant l'\cref{eq:pont}. La longitud total del fil ha estat fixada en $L=\data{1.000}{0.001}{\meter}$ i la resistència externa en $R_1=\data{100}{1}{\ohm}$.
 
 La regressió lineal amb les dades de la \cref{tab:temp i resistencia} es mostra a la figura \ref{fig:temp v resistencia}. El coeficient de correlació obtingut és de 0.997, el que demostra la linealitat de les dades en l'experiment considerat. S'han obtingut valors de $\data{0.359}{0.003}{\ohm\per\celsius}$ pel pendent i de $\data{106.9}{0.4}{\ohm}$ per l'ordenada a l'origen. Relacionant aquests valors amb l'\cref{eq:regressio} s'obté $R_0=\data{106.9}{0.4}{\ohm}$ i $\beta=\data{336}{3e-5}{\ohm\per\celsius}$.
 
@@ -59,4 +59,4 @@ La regressió lineal amb les dades de la \cref{tab:temp i resistencia} es mostra
 \end{figure}
 
 \section{Conclusions}
-S'ha comprovat experimentalment la relació lineal entre la temperatura del metall usat i la seva resistència. El coeficient de correlació, de 0.997, demostra que existeix una relació com la descrita en l'\ref{eq:regressio}. A més, s'han pogut determinar els paràmetres $\beta$ i $R_0$, amb valors de $\data{336}{3e-5}{\per\celsius}$ i $\data{106.9}{0.4}{\ohm}$ respectivament.
+S'ha comprovat experimentalment la relació lineal entre la temperatura del metall usat i la seva resistència. El coeficient de correlació, de 0.997, demostra que existeix una relació com la descrita en l'equació \ref{eq:regressio}. A més, s'han pogut determinar els paràmetres $\beta$ i $R_0$, amb valors de $\data{336}{3e-5}{\per\celsius}$ i $\data{106.9}{0.4}{\ohm}$ respectivament.
